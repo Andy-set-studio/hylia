@@ -1,4 +1,10 @@
+// Import filters
+const markdownFilter = require('./src/filters/markdown-filter.js');
+
 module.exports = function(config) {
+  // Filters
+  config.addFilter('markdown', markdownFilter);
+
   // Layout aliases
   config.addLayoutAlias('home', 'layouts/home.njk');
 
