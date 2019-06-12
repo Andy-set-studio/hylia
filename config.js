@@ -3,6 +3,9 @@ const dateFilter = require('./src/filters/date-filter.js');
 const markdownFilter = require('./src/filters/markdown-filter.js');
 const w3DateFilter = require('./src/filters/w3-date-filter.js');
 
+// Import data files
+const site = require('./src/_data/site.json');
+
 module.exports = function(config) {
   // Filters
   config.addFilter('dateFilter', dateFilter);
@@ -17,7 +20,13 @@ module.exports = function(config) {
 
   // Custom collections
   config.addCollection('posts', collection => {
-    return collection.getFilteredByGlob('./src/posts/*.md');
+    return [...collection.getFilteredByGlob('./src/posts/*.md')].reverse();
+  });
+
+  config.addCollection('postFeed', collection => {
+    return [...collection.getFilteredByGlob('./src/posts/*.md')]
+      .reverse()
+      .slice(0, site.maxPostsPerPage);
   });
 
   return {

@@ -9,7 +9,7 @@
     <div class="[ inner-wrapper ] [ sf-flow ]">
       <h{{ postListHeadingLevel }} class="post-list__heading">{{ postListHeading }}</h{{ postListHeadingLevel }}>
       <ol class="[ post-list__items ] [ sf-flow ]" reversed>
-        {% for item in postListItems.reverse() %}
+        {% for item in postListItems %}
           <li class="[ post-list__item ] [ sf-flow ]">
             <h{{ postListItemHeadingLevel }}>
               <a href="{{ item.url }}" rel="bookmark">{{ item.data.title }}</a>
