@@ -1,6 +1,11 @@
 {% extends 'layouts/base.njk' %}
 {% set pageType = 'Homepage' %}
+{% set introHeading = title %}
+{% set introHeadingLevel = '2' %}
+{% set introSummary %}
+  {{ content | safe }}
+{% endset %}
 
 {% block content %}
-  {{ content | safe }}
+  {% include "partials/components/intro.njk" %}
 {% endblock %}
