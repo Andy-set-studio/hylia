@@ -3,6 +3,9 @@ const dateFilter = require('./src/filters/date-filter.js');
 const markdownFilter = require('./src/filters/markdown-filter.js');
 const w3DateFilter = require('./src/filters/w3-date-filter.js');
 
+// Import transforms
+const parseTransform = require('./src/transforms/parse-transform.js');
+
 // Import data files
 const site = require('./src/_data/site.json');
 
@@ -14,6 +17,9 @@ module.exports = function(config) {
 
   // Layout aliases
   config.addLayoutAlias('home', 'layouts/home.njk');
+
+  // Transforms
+  config.addTransform('parse', parseTransform);
 
   // Passthrough copy
   config.addPassthroughCopy('src/fonts');

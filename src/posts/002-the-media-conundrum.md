@@ -14,7 +14,7 @@ I thought that an AWS S3 bucket setup with [imgix](https://www.imgix.com/) servi
 
 But then, trying to implement that setup was pretty grim. I really struggled and couldn’t get it to work with the CMS _at all._ After a load of searching around, I kept seeing [Uploadcare](https://uploadcare.com) being mentioned. I checked it out, followed the guide and boom: images working via a CDN like a charm! Here’s my cat to celebrate, using their transforms.
 
-![My cat, sat on my lap](https://res.cloudinary.com/andybelldesign/image/upload/c_scale,f_auto,q_auto,w_1000/v1557995438/IMG_0440_kqonri.jpg)
+![My cat, sat on my lap](https://res.cloudinary.com/andybelldesign/image/upload/c_scale,f_auto,q_auto,w_1000/v1557995438/IMG_0440_kqonri.jpg "My cat, sat on my lap")
 
 This could be the winning setup for this project. Let’s see how it holds up with some light prototyping of a newsletter issue.
 
