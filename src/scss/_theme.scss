@@ -1,0 +1,17 @@
+:root {
+
+  // Pull the tokens and generate custom props
+  @each $color in $stalfos-colors {
+    #{'--color' + nth($color, 1)}: #{ nth($color, 2) };  
+  }
+
+  // Set theme aliases 
+  --color-bg: #{ get-color('light') };
+  --color-text: #{ get-color('dark') };
+  --color-stroke: #{ get-color('mid') };
+}
+
+body {
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
