@@ -25,7 +25,9 @@
               <h2>Tags</h2>
               <ul class="[ tags__list ] [ box-flex align-center pad-left-400 ] [ p-category ]">
                 {% for item in tags %}
-                  <li>{{ item }}</li>
+                  <li>
+                    <a href="/tags/{{ item }}">{{ item }}</a>
+                  </li>
                 {% endfor %}
               </ul>
             </div>
