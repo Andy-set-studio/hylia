@@ -1,0 +1,63 @@
+---
+permalink: /styleguide/
+---
+
+{% extends 'layouts/base.njk' %}
+
+{# Intro content #}
+{% set introHeading = 'Styleguide' %}
+{% set introHeadingLevel = '1' %}
+
+{# Generate colors to display #}
+{% set displayColors = [
+  {
+    name: 'Primary',
+    value: tokens.colors.primary,
+    key: 'primary'
+  }
+] %}
+
+{% block content %}
+  <style>
+    .swatches {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+      grid-gap: 1rem;
+    }
+
+    .props dt {
+      font-weight: 600;  
+    }
+
+    .props dd + dt {
+      margin-top: 0.5rem;
+      display: block;
+    }
+  </style>
+  <main id="main-content" tabindex="-1">
+    {% include "partials/components/intro.njk" %}
+    <article class="inner-wrapper">
+      <section class="[ sf-flow ] [ pad-top-500 ]">
+        <h2>Colours</h2>
+        <ul class="swatches">
+          {% for color in displayColors %}
+          <li class="sf-flow">
+            <div class="[ color ] [ pad-top-900 pad-bottom-900 ]" style="background: {{ color.value }}"></div>
+            <h3 class="font-base text-500">{{ color.name }}</h3>
+            <dl class="props">
+              <dt>Sass function</dt>
+              <dd><code>get-color('{{ color.key }}')</code></dd>
+              <dt>Custom Property</dt>
+              <dd><code>var(--color-{{ color.key }})</code></dd>
+              <dt>Text util class</dt>
+              <dd><code>color-{{ color.key }}</code></dd>
+              <dt>Background util class</dt>
+              <dd><code>bg-{{ color.key }}</code></dd>
+            </dl>
+          </li>
+        {% endfor %}
+        </div>
+      </section>
+    </article>
+  </main>
+{% endblock %}
