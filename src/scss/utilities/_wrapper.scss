@@ -1,0 +1,5 @@
+.wrapper {
+  max-width: map-get($metrics, 'wrap-max-width');
+  margin-left: auto;
+  margin-right: auto;
+}
