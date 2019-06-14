@@ -1,12 +1,11 @@
 .visually-hidden {
-  display: block;
-  height: 1px;
-  width: 1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
   overflow: hidden;
-  clip: rect(1px 1px 1px 1px);
-  clip: rect(1px, 1px, 1px, 1px);
-  clip-path: inset(1px);
-  white-space: nowrap;
+  padding: 0;
   position: absolute;
+  width: 1px;
+  white-space: nowrap;
 }
-
