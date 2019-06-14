@@ -58,6 +58,13 @@ $stalfos-config: (
     'output': 'standard',
     'property': 'margin-top'
   ),
+  'leading': (
+    'items': (
+      'tight': '1.1'
+    ),
+    'output': 'standard',
+    'property': 'line-height'
+  ),
   'pad-top': (
     'items': $stalfos-size-scale,
     'output': 'standard',

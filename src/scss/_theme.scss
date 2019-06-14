@@ -2,7 +2,7 @@
 
   // Pull the tokens and generate custom props
   @each $color in $stalfos-colors {
-    #{'--color' + nth($color, 1)}: #{ nth($color, 2) };  
+    #{'--color-' + nth($color, 1)}: #{ nth($color, 2) };  
   }
 
   // Set theme aliases 
