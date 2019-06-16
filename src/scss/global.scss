@@ -16,6 +16,15 @@ main:focus {
   outline: none;
 }
 
+hr {
+  display: block;
+  height: 1px;
+  max-width: 500px;
+  margin: 3rem auto !important;
+  background: #ccc;
+  border: none;
+}
+
 /**
  * PROJECT IMPORTS
  */
