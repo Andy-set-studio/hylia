@@ -20,6 +20,10 @@ main:focus {
  * PROJECT IMPORTS
  */
 
+// Utils
 @import 'utilities/inner-wrapper';
 @import 'utilities/visually-hidden';
 @import 'utilities/wrapper';
+
+// Components
+@import 'components/skip-link';
