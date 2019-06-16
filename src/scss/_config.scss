@@ -24,11 +24,30 @@ $stalfos-colors: map-get($tokens, 'colors');
 $stalfos-util-prefix: 'sf-';
 
 /**
+ * METRICS
+ * Various misc metrics to use around the site
+ */
+$metrics: (
+  'wrap-max-width': 58rem,
+  'wrap-inner-max-width': 52rem,
+  'md-breakpoint': 48rem
+);
+
+/**
  * CORE CONFIG
  * This powers everything from utility class generation to breakpoints
  * to enabling/disabling pre-built components/utilities.
  */
 $stalfos-config: (
+  'align': (
+    'items': (
+      'start': 'flex-start',
+      'center': 'center',
+      'end': 'flex-end'
+    ),
+    'output': 'responsive',
+    'property': 'align-items'
+  ),
   'bg': (
     'items': $stalfos-colors,
     'output': 'standard',
@@ -80,6 +99,15 @@ $stalfos-config: (
     'output': 'standard',
     'property': 'padding-left'
   ),
+  'space': (
+    'items': (
+      'between': 'space-between',
+      'around': 'space-around',
+      'before': 'flex-end'
+    ),
+    'output': 'responsive',
+    'property': 'justify-content'
+  ),
   'stack': (
     'items': (
       '300': 0,
@@ -116,7 +144,7 @@ $stalfos-config: (
     'property': 'width'
   ),
   'breakpoints': (
-    'md': '(min-width: 48em)'
+    'md': #{'(min-width: ' + map-get($metrics, 'md-breakpoint') + ')'}
   ),
   'utilities': (
     'reset': 'on',
@@ -124,13 +152,4 @@ $stalfos-config: (
     'flow': 'on',
     'wrapper': 'off'
   )
-);
-
-/**
- * METRICS
- * Various misc metrics to use around the site
- */
-$metrics: (
-  'wrap-max-width': 58rem,
-  'wrap-inner-max-width': 52rem
 );
