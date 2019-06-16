@@ -1,0 +1,7 @@
+.intro {
+  background: var(--color-flair);
+
+  &__summary {
+    --flow-space: #{get-size(600)};
+  }
+}

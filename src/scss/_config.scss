@@ -79,10 +79,19 @@ $stalfos-config: (
   ),
   'leading': (
     'items': (
-      'tight': '1.1'
+      'tight': '1.2',
+      'mid': '1.5'
     ),
     'output': 'standard',
     'property': 'line-height'
+  ),
+  'measure': (
+    'items': (
+      'long': '75ch',
+      'short': '60ch'
+    ),
+    'output': 'standard',
+    'property': 'max-width'
   ),
   'pad-top': (
     'items': $stalfos-size-scale,
