@@ -10,7 +10,8 @@
   --color-stroke: #{get-color('mid')};
   --color-action-bg: #{get-color('primary')};
   --color-action-text: #{get-color('light')};
-  --color-flair: #{get-color('highlight')};
+  --color-theme-highlight: #{get-color('highlight')};
+  --color-theme-primary: #{get-color('primary')};
 }
 
 body {
