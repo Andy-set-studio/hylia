@@ -23,9 +23,9 @@ hr {
   display: block;
   height: 1px;
   max-width: 500px;
-  margin: 3rem auto !important;
-  background: #ccc;
+  background: var(--color-stroke);
   border: none;
+  margin: get-size(900) auto;
 }
 
 /**

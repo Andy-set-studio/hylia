@@ -78,6 +78,11 @@ $stalfos-config: (
     'output': 'standard',
     'property': 'margin-top'
   ),
+  'gap-bottom': (
+    'items': $stalfos-size-scale,
+    'output': 'standard',
+    'property': 'margin-bottom'
+  ),
   'leading': (
     'items': (
       'tight': '1.2',

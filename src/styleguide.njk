@@ -16,6 +16,10 @@ permalink: /styleguide/
       grid-gap: 2.5rem 2rem;
     }
 
+    .swatches > * {
+      margin-top: 0 !important;
+    }
+
     .props dt {
       font-weight: 600;  
     }
@@ -28,13 +32,17 @@ permalink: /styleguide/
     .color {
       border: 1px solid var(--color-mid);
     }
+
+    .bg-dark code {
+      color: var(--color-light);
+    }
   </style>
 {% endblock %}
 {% block content %}
   <main id="main-content" tabindex="-1">
     {% include "partials/components/intro.njk" %}
-    <article class="inner-wrapper">
-      <section class="[ sf-flow ] [ pad-top-500 ]">
+    <article class="[ inner-wrapper ] [ post ]">
+      <section class="[ post__body ] [ sf-flow ] [ pad-top-500 pad-bottom-900 ]">
         <h2>Colours</h2>
         <p class="visually-hidden">Colour swatches with various values that you can copy.</p>
         <ul class="swatches">
@@ -74,9 +82,9 @@ permalink: /styleguide/
           <p class="text-{{ size.key }}" style="--flow-space: 1.5rem">{{ size.value }} - <code>text-{{ size.key }}</code></p>
         {% endfor %}
         <h2>Spacing</h2>
-        <p>There’s size ratio utilities that give you margin-top (<code>gap-top</code>) and padding (<code>pad-top, pad-left, pad-bottom</code>).
+        <p>There’s size ratio utilities that give you margin (<code>gap-top, gap-bottom</code>) and padding (<code>pad-top, pad-left, pad-bottom</code>).
         <h3>Margin</h3>
-        <p class="visually-hidden">Padding token classes that you can copy</p>
+        <p class="visually-hidden">Margin token classes that you can copy</p>
         <div>
           {% for size in styleguide.sizes() %}
             <div class="[ bg-dark color-light pad-top-base pad-bottom-base pad-left-base md:width-half ] [ gap-top-{{ size.key }} ]">
