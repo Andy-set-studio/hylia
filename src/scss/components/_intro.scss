@@ -4,4 +4,8 @@
   &__summary {
     --flow-space: #{get-size(600)};
   }
+
+  &__heading {
+    max-width: 20ex;
+  }
 }

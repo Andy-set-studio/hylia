@@ -17,7 +17,7 @@
     padding: get-size(300) 0;
 
     a {
-      color: var(--color-text);
+      color: currentColor;
       font-weight: 700;
 
       &:not(:hover) {
