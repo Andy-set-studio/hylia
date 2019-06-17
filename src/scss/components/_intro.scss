@@ -2,10 +2,14 @@
   background: var(--color-theme-highlight);
 
   &__summary {
-    --flow-space: #{get-size(600)};
+    --flow-space: #{get-size(500)};
   }
 
   &__heading {
     max-width: 20ex;
+  }
+
+  &__meta {
+    color: var(--color-theme-primary);
   }
 }

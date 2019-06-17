@@ -11,6 +11,9 @@
 /**
  * GLOBAL STYLES 
  */
+body {
+  scroll-behavior: smooth;
+}
 
 main:focus {
   outline: none;
@@ -35,9 +38,11 @@ hr {
 @import 'utilities/wrapper';
 
 // Components
+@import 'components/heading-permalink';
 @import 'components/intro';
 @import 'components/nav';
 @import 'components/pagination';
+@import 'components/post';
 @import 'components/post-list';
 @import 'components/site-head';
 @import 'components/site-foot';

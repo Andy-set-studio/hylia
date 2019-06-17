@@ -2,5 +2,6 @@
   max-width: map-get($metrics, 'wrap-max-width');
   margin-left: auto;
   margin-right: auto;
-  padding: 0 get-size(500);
+  padding-left: get-size(500);
+  padding-right: get-size(500);
 }
