@@ -62,6 +62,7 @@ $stalfos-config: (
     'items': (
       'block': 'block',
       'flex': 'flex',
+      'inline-flex': 'inline-flex',
       'hide': 'none'
     ),
     'output': 'responsive',
@@ -137,7 +138,7 @@ $stalfos-config: (
     'items': (
       'light': '300',
       'regular': '400',
-      'mid': '500',
+      'mid': '600',
       'bold': '700'
     ),
     'output': 'standard',

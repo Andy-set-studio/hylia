@@ -1,11 +1,11 @@
 {% if postListItems.length %}
-  <section class="[ post-list ] [ pad-top-700 pad-bottom-700 ]">
+  <section class="[ post-list ] [ pad-top-700 ]">
     <div class="[ inner-wrapper ] [ sf-flow ]">
       <h2 class="[ post-list__heading ] [ text-700 md:text-800 ]">{{ postListHeading }}</h2>
       <ol class="[ post-list__items ] [ sf-flow ] [ pad-top-300 ]" reversed>
         {% for item in postListItems %}
           <li class="post-list__item">
-            <h3 class="font-base leading-tight text-600">
+            <h3 class="font-base leading-tight text-600 weight-mid">
               <a href="{{ item.url }}" class="post-list__link" rel="bookmark">{{ item.data.title }}</a>
             </h3>
             <p class="text-500 gap-top-300 weight-mid">
