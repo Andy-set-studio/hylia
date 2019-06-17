@@ -2,23 +2,6 @@
   &__body {
     --flow-space: #{get-size(800)};
 
-    // Add a nice drop cap if the first child is a paragraph
-    & > p:first-child::first-letter {
-      color: var(--color-theme-primary);
-      font-size: 4.8em;
-      float: left;
-      margin: 0 0.8rem 0.5rem 0;
-      line-height: 1;
-
-      @include apply-utility('font', 'serif');
-    }
-
-    &::after {
-      content: '';
-      clear: both;
-      display: block;
-    }
-
     /**
      * Generic HTML styles 
      */
