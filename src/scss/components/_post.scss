@@ -106,4 +106,22 @@
       padding: 0 get-size(500);
     }
   }
+
+  &__footer {
+    background: var(--color-theme-highlight);
+
+    h2 {
+      flex-shrink: 0;
+      margin-right: get-size('base');
+    }
+
+    h2 a {
+      @extend %visually-hidden;
+    }
+
+    a {
+      background: var(--color-bg);
+      padding: 0.4rem 0.6rem;
+    }
+  }
 }

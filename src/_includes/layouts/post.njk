@@ -15,17 +15,17 @@
   <main id="main-content" tabindex="-1">
     <article class="[ post ] [ h-entry ]">
       {% include "partials/components/intro.njk" %}
-      <div class="[ post__body ] [ inner-wrapper ] [ pad-top-900 pad-top-900 text-500 ] [ sf-flow ] [ e-content ]">
+      <div class="[ post__body ] [ inner-wrapper ] [ pad-top-900 pad-bottom-900 text-500 ] [ sf-flow ] [ e-content ]">
         {{ content | safe }}
       </div>
       {% if tags %}
-        <footer class="post__footer">
+        <footer class="[ post__footer ] [ pad-top-500 pad-bottom-500 ]">
           <div class="inner-wrapper">
-            <div class="[ tags ] [ nav ] [ box-flex align-center ]">
-              <h2>Tags</h2>
-              <ul class="[ tags__list ] [ nav__list ] [ box-flex align-center pad-left-400 ] [ p-category ]">
+            <div class="[ nav ] [ box-flex align-center ]">
+              <h2 class="font-base text-600 weight-mid">Filed under</h2>
+              <ul class="[ nav__list ] [ box-flex align-center pad-left-400 ] [ p-category ]">
                 {% for item in tags %}
-                  <li>
+                  <li class="nav__item">
                     <a href="/tags/{{ item }}">{{ item }}</a>
                   </li>
                 {% endfor %}
