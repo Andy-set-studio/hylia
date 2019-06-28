@@ -1,11 +1,23 @@
-/* lora-700 - latin */
 @font-face {
-  font-family: 'Lora';
+  font-family: 'basier_circlebold';
+  src:font-url('/fonts/basiercircle-semibold-webfont.eot');
+  src:font-url('/fonts/basiercircle-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+       font-url('/fonts/basiercircle-semibold-webfont.woff2') format('woff2'),
+       font-url('/fonts/basiercircle-semibold-webfont.woff') format('woff'),
+       font-url('/fonts/basiercircle-semibold-webfont.ttf') format('truetype');
+  font-weight: normal;
   font-style: normal;
-  font-weight: 700;
-  src: local('Lora Bold'), local('Lora-Bold'),
-    url('/fonts/lora-v13-latin-700.woff2') format('woff2'),
-    url('/fonts/lora-v13-latin-700.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'basier_circleregular';
+  src: font-url('/fonts/basiercircle-regular-webfont.eot');
+  src: font-url('/fonts/basiercircle-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       font-url('/fonts/basiercircle-regular-webfont.woff2') format('woff2'),
+       font-url('/fonts/basiercircle-regular-webfont.woff') format('woff'),
+       font-url('/fonts/basiercircle-regular-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
