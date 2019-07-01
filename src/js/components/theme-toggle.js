@@ -32,7 +32,7 @@ class ThemeToggle extends HTMLElement {
       document.documentElement.setAttribute('data-user-color-scheme', currentSetting);
       this.setButtonLabelAndStatus(currentSetting);
     } else {
-      setButtonLabelAndStatus(this.getCSSCustomProp(this.COLOR_MODE_KEY));
+      this.setButtonLabelAndStatus(this.getCSSCustomProp(this.COLOR_MODE_KEY));
     }
   }
 
@@ -69,7 +69,7 @@ class ThemeToggle extends HTMLElement {
       <div class="[ theme-toggle ] [ md:ta-right gap-top-500 ]">
         <div role="status" class="[ visually-hidden ][ js-mode-status ]"></div>
         <button class="[ button ] [ font-base text-base weight-bold ] [ js-mode-toggle ]">
-          Enable dark mode
+          Dark theme
         </button>
       </div>
     `;
