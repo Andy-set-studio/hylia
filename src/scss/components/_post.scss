@@ -61,13 +61,13 @@
       }
     }
 
-    ol,
-    ul {
+    ol:not([class]),
+    ul:not([class]) {
       margin-left: get-size(800);
-    }
 
-    li + li {
-      margin-top: get-size(300);
+      li + li {
+        margin-top: get-size(300);
+      }
     }
 
     figure,
