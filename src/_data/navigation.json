@@ -6,13 +6,18 @@
       "external": false
     },
     {
+      "text": "About",
+      "url": "/pages/about",
+      "external": false
+    },
+    {
       "text": "GitHub",
-      "url": "https://github.com/andybelldesign/hylia",
+      "url": "https://github.com/keybits",
       "external": true
     },
     {
       "text": "Twitter",
-      "url": "https://twitter.com/andybelldesign",
+      "url": "https://twitter.com/keybits",
       "external": true
     }
   ]
