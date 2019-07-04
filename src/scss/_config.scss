@@ -169,6 +169,15 @@ $stalfos-config: (
     'output': 'standard',
     'property': 'font-weight'
   ),
+  'opacity': (
+    'items': (
+      '25': '.25',
+      '50': '.50',
+      '75': '.75',
+    ),
+    'output': 'standard',
+    'property': 'opacity'
+  ),
   'width': (
     'items': (
       'full': '100%',

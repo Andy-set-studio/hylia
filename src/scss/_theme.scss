@@ -23,17 +23,17 @@
 
 @include dark-mode() {
   --color-bg: #{get-color('dark')};
-  --color-bg-glare: #{get-color('slate')};
+  --color-bg-glare: #{get-color('mid')};
   --color-text: #{get-color('light')};
   --color-selection-text: #{get-color('dark')};
   --color-selection-bg: #{get-color('light')};
-  --color-stroke: #{get-color('slate')};
+  --color-stroke: #{get-color('mid')};
   --color-theme-primary: #{lighten(get-color('primary'), 50%)};
   --color-theme-primary-glare: #{lighten(get-color('primary-glare'), 50%)};
   --color-action-bg: var(--color-theme-primary-glare);
   --color-action-text: #{get-color('dark')};
   --color-theme-highlight: #{get-color('highlight')};
-  --color-theme-highlight-block: #{get-color('slate')};
+  --color-theme-highlight-block: #{get-color('mid')};
   --color-theme-feature-text: #{get-color('highlight')};
 }
 
