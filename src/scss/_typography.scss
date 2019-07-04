@@ -30,8 +30,9 @@ body {
 
 h1,
 h2,
-h3 {
-  @include apply-utility('font', 'serif');
+h3,
+h4 {
+  @include apply-utility('font', 'bold');
 }
 
 h1 {

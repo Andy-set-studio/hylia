@@ -1,11 +1,14 @@
 <a class="skip-link" href="#main-content">Skip to content</a>
-<header role="banner" class="[ site-head ] [ pad-top-700 pad-bottom-700 ">
+<header role="banner" class="[ site-head ]">
   <div class="wrapper">
     <span class="visually-hidden">{{ site.name }}: {{ pageType }}</span>
-    <div class="[ site-head__inner ] [ md:box-flex space-between align-center ]">
+    <div class="[ site-head__inner ] [ md:box-flex space-between align-center ] [ pad-top-base pad-bottom-base ]">
       <a href="/" class="[ site-head__site-name ] [ leading-tight ]"{{ 'aria-current=page' if page.url == '/' | safe }}>
         <span class="visually-hidden">{{ 'Back to homepage' if page.url != '/' else 'Homepage' }}</span>
-        <span class="[ site-head__site-name ] [ text-600 ]" aria-hidden="true">{{ site.name }}</span>
+        <span class="[ site-head__site-name ] [ text-500 ] [ md:box-flex space-between align-center ]" aria-hidden="true">
+          <img src="/images/pp-logo.svg" class="[ site-head__site-logo ]" alt="Progression Logo">
+          <span class="[ pad-left-200 ]">{{ site.name }}</span>
+        </span>
       </a>
       {% include "partials/components/nav.njk" %}
     </div>

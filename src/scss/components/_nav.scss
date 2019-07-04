@@ -14,13 +14,12 @@
   }
 
   &__item {
-    padding: get-size(300) 0;
     flex-shrink: 0;
 
     a {
       color: currentColor;
 
-      @include apply-utility('weight', 'mid');
+      @include apply-utility('weight', 'regular');
 
       &:not(:hover) {
         text-decoration: none;

@@ -1,7 +1,14 @@
 .site-head {
+  &__inner {
+    border-bottom: 1px solid #eeeeee;
+  }
   &__site-name {
-    font-weight: 700;
+    @include apply-utility('weight', 'bold');
     text-decoration: none;
     color: var(--color-text);
+  }
+  &__site-logo {
+    height: 2rem;
+    width: 2rem;
   }
 }
