@@ -19,12 +19,11 @@
     }
 
     a:not([class]) {
-      color: currentcolor;
+      color: var(--color-dark);
       position: relative;
       display: inline-block;
       background: var(--color-theme-highlight);
       padding: 0.2rem 0.4rem 0.3rem 0.4rem;
-      white-space: pre;
       text-decoration: none;
 
       @include apply-utility('leading', 'tight');
@@ -36,15 +35,17 @@
 
     code {
       font-size: 1.2em;
-      white-space: pre;
       color: var(--color-theme-primary);
       font-weight: 600;
-      margin-left: 0.5ch;
-      margin-right: 0.5ch;
+      margin-left: 0.01ch;
+      margin-right: 0.01ch;
     }
 
     pre > code {
       margin-right: 0;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
     }
 
     blockquote {
@@ -60,30 +61,34 @@
       }
     }
 
-    ol,
-    ul {
+    ol:not([class]),
+    ul:not([class]) {
       margin-left: get-size(800);
-    }
 
-    li + li {
-      margin-top: get-size(300);
+      li + li {
+        margin-top: get-size(300);
+      }
     }
 
     figure,
     figure + *,
     pre > code,
     .video-player,
-    .video-player + * {
+    .video-player + *,
+    video {
       --flow-space: #{get-size('max')};
     }
 
     figure,
     pre > code,
-    .video-player {
+    .video-player,
+    video {
       width: 100vw;
       max-width: map-get($metrics, 'wrap-max-width');
       margin-left: 50%; /*changing this value to 47% removes the horizontal scrollbar once the viewport is < 930px */
-      transform: translateX(-50%); /* changing this value to 49% allows for the suggestion above to also eliminate the horizontal scroll. */
+      transform: translateX(
+        -50%
+      ); /* changing this value to 49% allows for the suggestion above to also eliminate the horizontal scroll. */
       position: relative;
     }
 
@@ -120,6 +125,7 @@
     h2 {
       flex-shrink: 0;
       margin-right: get-size('base');
+      color: var(--color-dark);
     }
 
     h2 a {

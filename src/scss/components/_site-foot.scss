@@ -1,21 +1,18 @@
 .site-foot {
   // Reverse whatever the theme colors are
-  background: var(--color-text);
-  color: var(--color-bg);
+  background: var(--color-bg-glare);
+  color: var(--color-text);
+  border-top: 1px solid var(--color-stroke);
 
-  // Reverse selection colors
-  --color-selection-text: #{get-color('dark')};
-  --color-selection-bg: #{get-color('light')};
+  a {
+    color: currentColor;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
 
   &__credit {
     text-align: center;
-
-    a {
-      color: currentColor;
-
-      &:hover {
-        text-decoration: none;
-      }
-    }
   }
 }
