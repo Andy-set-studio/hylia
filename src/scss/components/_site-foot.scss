@@ -4,6 +4,18 @@
   color: var(--color-text);
   border-top: 1px solid var(--color-stroke);
 
+  &__list-heading {
+
+  }
+
+  ul {
+    list-style-type: none;
+    a {
+      text-decoration: none;
+      color: var(--color-primary);
+    }
+  }
+
   a {
     color: currentColor;
 
@@ -13,6 +25,6 @@
   }
 
   &__credit {
-    text-align: center;
+    font-size: get-size(300);
   }
 }

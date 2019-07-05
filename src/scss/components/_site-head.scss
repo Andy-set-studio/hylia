@@ -1,6 +1,10 @@
 .site-head {
+
+  .wrapper {
+    border-bottom: 1px solid var(--color-stroke);
+  }
+
   &__inner {
-    border-bottom: 1px solid #eeeeee;
   }
   &__site-name {
     @include apply-utility('font', 'bold');

@@ -108,7 +108,7 @@ collections:
               - {label: "Primary Glare (lighter)", name: "primary-glare", widget: "string", default: "hsl(207, 57%, 31%)"}
               - {label: "Highlight", name: "highlight", widget: "string", default: "hsl(42, 98%, 77%)"}
               - {label: "Light", name: "light", widget: "string", default: "hsl(0, 0%, 100%)"}
-              - {label: "Mid", name: "mid", widget: "string", default: "hsl(0, 0%, 80%)"}
+              - {label: "Mid", name: "mid", widget: "string", default: "hsl(0, 0%, 90%)"}
               - {label: "Dark", name: "dark", widget: "string", default: "hsl(0, 0%, 20%)"}
           - label: "Fonts"
             name: "fonts"

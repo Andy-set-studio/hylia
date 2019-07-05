@@ -1,20 +1,35 @@
-<footer role="contentinfo" class="[ site-foot ] [ pad-top-700 pad-bottom-900 ]">
-  <div class="wrapper">
-    <div class="[ site-foot__inner ] [ md:box-flex space-between align-start ]">
-      {% if site.shortDesc %}
-        <div>
-          <article class="[ site-foot__details ] [ sf-flow measure-compact ]">
-            <h2 class="font-base text-600">{{ site.name }}</h2>
-            {{ site.shortDesc | markdownFilter | safe }}
-          </article>
-        </div>
-      {% endif %}
-      <div>
-        {% include "partials/components/nav.njk" %}
-        <theme-toggle></theme-toggle>
+<footer role="contentinfo" class="[ site-foot ] [ pad-top-900 pad-bottom-900 ]">
+    <div class="wrapper">
+      <div class="[ site-foot__inner ] [ md:box-flex space-between align-start ]">
+      <div class="col">
+        <h4 class="[ site-foot__list-heading ] [ opacity-50 font-base ] [ pad-bottom-300 ]">Useful Links</h4>
+        <ul>
+          <li class="[ pad-bottom-200 ]"><a href="https://progressionapp.com">Progression for Teams</a></li>
+          <li class="[ pad-bottom-200 ]"><a href="https://progressionapp.com/solo">Progression Solo</a></li>
+          <li class="[ pad-bottom-200 ]"><a href="https://progressionapp.com/about">Why Progression?</a></li>
+          <li class="[ pad-bottom-200 ]"><a href="https://headwayapp.co/progression-updates">Changelog</a></li>
+          {# <li class="[ pad-bottom-200 ]"><theme-toggle></theme-toggle></li> #}
+        </ul>
+      </div>
+      <div class="col"></div>
+      <div class="col">
+        <h4 class="[ site-foot__list-heading ] [ opacity-50 font-base ] [ pad-bottom-300 ]">Elsewhere</h4>
+        <ul>
+          <li class="[ pad-bottom-200 ]"><a href="http://progression.fyi">progression.fyi</a></li>
+          <li class="[ pad-bottom-200 ]"><a href="http://makegrow.co/podcast">Progression Podcast</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4 class="[ site-foot__list-heading ] [ opacity-50 font-base ] [ pad-bottom-300 ]">Get in touch</h4>
+        <ul>
+          <li class="[ pad-bottom-200 ]"><a href="mailto:hello@progressionapp.com">hello@progressionapp.com</a></li>
+          <li class="[ pad-bottom-200 ]"><a href="https://twitter.com/progressionapp">@progressionapp</a></li>
+        </ul>
       </div>
     </div>
-    {% if site.showThemeCredit %}
-    {% endif %}
+    <div class="[ pad-top-700 ]">
+        <p class="[ site-foot__credit opacity-50 ]">Progression is a <a href="https://makegrow.co">Make and Grow</a> product. © Make and Grow Ltd 2019. <a href="/terms">Terms and conditions</a> <a href="/privacy">Privacy Policy</a></p>
+      </div>
+    </div>
   </div>
 </footer>
