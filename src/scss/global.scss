@@ -14,6 +14,11 @@
 /**
  * GLOBAL STYLES
  */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 body {
   scroll-behavior: smooth;
   min-height: 100vh;

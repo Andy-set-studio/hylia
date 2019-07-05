@@ -1,18 +1,8 @@
 {
   "items": [
     {
-      "text": "Home",
-      "url": "/",
-      "external": false
-    },
-    {
-      "text": "GitHub",
-      "url": "https://github.com/andybelldesign/hylia",
-      "external": true
-    },
-    {
-      "text": "Twitter",
-      "url": "https://twitter.com/andybelldesign",
+      "text": "Progression",
+      "url": "https://www.progressionapp.com",
       "external": true
     }
   ]
