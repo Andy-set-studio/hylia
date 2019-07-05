@@ -26,7 +26,6 @@ body {
   // Strip the unit off the size ratio to generate a line height
   $line-height: get-size(600);
   line-height: $line-height / ($line-height * 0 + 1);
-
   @include apply-utility('font', 'base');
 }
 
@@ -34,6 +33,7 @@ h1,
 h2,
 h3,
 h4 {
+  @include apply-utility('color', 'dark');
   @include apply-utility('font', 'bold');
 }
 
@@ -61,4 +61,8 @@ h3 {
   h3 {
     font-size: get-size(700);
   }
+}
+
+b, strong {
+  @include apply-utility('font', 'bold');
 }

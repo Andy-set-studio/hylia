@@ -4,20 +4,32 @@
 {# Intro content #}
 {% set introHeading = title %}
 {% set introSummary %}
-<p class="[ intro__meta ] [ text-500 leading-tight ]">
-  {% if date %}
-    <time datetime="{{ date | w3DateFilter }}" class="dt-published">{{ date | dateFilter }}</time>
-  {% endif %}
-  <span role="text">— {{ helpers.getReadingTime(content) }} minute read</span>
-</p>
+  <p class="[ intro__meta ] [ text-500 leading-tight ] [ opacity-75 ]">
+    {% if date %}
+      <time datetime="{{ date | w3DateFilter }}" class="dt-published">{{ date | dateFilter }}</time>
+    {% endif %}
+    <span role="text" class="" >— {{ helpers.getReadingTime(content) }} minute read</span>
+  </p>
 {% endset %}
 
 {% block content %}
   <main id="main-content" tabindex="-1">
     <article class="[ post ] [ h-entry ]">
-      {% include "partials/components/intro.njk" %}
+      <div class="[ inner-wrapper no-pad ] [ pad-left-none pad-right-none ]">
+        {% include "partials/components/intro.njk" %}
+      </div>
       <div class="[ post__body ] [ inner-wrapper ] [ pad-top-900 {{ 'pad-bottom-900' if not site.enableThirdPartyComments }} text-500 ] [ sf-flow ] [ e-content ]">
         {{ content | safe }}
+      </div>
+      <hr>
+      <div class="[ inner-wrapper ] [ pad-top-500 ] [ pad-bottom-900 ]">
+        <p class="" ><span class="[ opacity-75 ]">Posted by {{ author }} in </span>
+        {% if tags %}
+          {% for item in tags %}
+              <span class="[ post__tag ]"><a href="/tags/{{ item }}">{{ item }}</a></span>
+          {% endfor %}
+        {% endif %}
+        </p>
       </div>
       {% if site.enableThirdPartyComments %}
         <hr />
@@ -25,24 +37,9 @@
           {% include "partials/global/third-party-comments.njk" %}
         </aside>
       {% endif %}
-      {% if tags %}
-        <footer class="[ post__footer ] [ pad-top-500 pad-bottom-500 ]">
-          <div class="inner-wrapper">
-            <div class="[ nav ] [ box-flex align-center ]">
-              <h2 class="font-base text-600 weight-mid">Filed under</h2>
-              <ul class="[ nav__list ] [ box-flex align-center pad-left-400 ] [ p-category ]">
-                {% for item in tags %}
-                  <li class="nav__item">
-                    <a href="/tags/{{ item }}">{{ item }}</a>
-                  </li>
-                {% endfor %}
-              </ul>
-            </div>
-          </div>
-        </footer>
-      {% endif %}
     </article>
   </main>
 {% endblock %}
+
 
 {{ content | safe }}

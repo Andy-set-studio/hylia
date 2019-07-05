@@ -73,6 +73,16 @@ $stalfos-config: (
     'output': 'standard',
     'property': 'font-family'
   ),
+  'shadow': (
+    'items': map-get($tokens, 'shadows'),
+    'output': 'standard',
+    'property': 'box-shadow'
+  ),
+  'radius': (
+    'items': map-get($tokens, 'radii'),
+    'output': 'standard',
+    'property': 'border-radius'
+  ),
   'gap-top': (
     'items': $stalfos-size-scale,
     'output': 'standard',

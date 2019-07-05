@@ -3,7 +3,7 @@
     --flow-space: #{get-size(800)};
 
     /**
-     * Generic HTML styles 
+     * Generic HTML styles
      */
     h2 + *,
     h3 + * {
@@ -101,11 +101,12 @@
     figure img {
       position: relative;
       z-index: 1;
+      @include apply-utility('radius', 'small');
     }
 
     figcaption {
       font-size: 0.8em;
-      font-style: italic;
+      @include apply-utility('opacity', '50');
       max-width: map-get($metrics, 'wrap-inner-max-width');
       margin: 0.5rem auto 0 auto;
       padding: 0 get-size(500);
@@ -119,8 +120,14 @@
     }
   }
 
+ &__tag {
+  a {
+    color: var(--color-primary);
+  }
+ }
+
   &__footer {
-    background: var(--color-theme-highlight);
+    // background: var(--color-theme-highlight);
 
     h2 {
       flex-shrink: 0;

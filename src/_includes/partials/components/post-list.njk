@@ -1,16 +1,26 @@
 {% if postListItems.length %}
   <section class="[ post-list ] [ pad-top-700 gap-bottom-900 ]">
-    <div class="[ inner-wrapper ] [ sf-flow ]">
+    <div class="[ wrapper ] [ sf-flow ]">
       <h2 class="[ post-list__heading ] [ text-700 md:text-800 ]">{{ postListHeading }}</h2>
       <ol class="[ post-list__items ] [ sf-flow ] [ pad-top-300 ]" reversed>
         {% for item in postListItems %}
-          <li class="post-list__item">
-            <h3 class="font-base leading-tight text-600 weight-mid">
-              <a href="{{ item.url }}" class="post-list__link" rel="bookmark">{{ item.data.title }}</a>
-            </h3>
-            <p class="text-500 gap-top-300 weight-mid">
-              <time datetime="{{ item.date | w3DateFilter }}">{{ item.date | dateFilter }}</time>
-            </p>
+          <li class="[ post-list__item ]">
+            <a href="{{ item.url }}" class="post-list__link" rel="bookmark">
+              <div class="post-list__item-content">
+                <div class="post-list__cover-image [ shadow-light ] [ radius-small ] [ gap-bottom-300 ]">
+                  {% if item.data.feature_image %}
+                    <img src=" {{ item.data.feature_image }}" alt="{{ item.data.title }}">
+                  {% endif %}
+                </div>
+                <h3 class="font-bold leading-tight text-500 [ gap-bottom-200 ]">
+                  {{ item.data.title }}
+                </h3>
+                <p class="text-400 weight-regular opacity-50">
+                  {% if item.data.author %}By {{ item.data.author }} on {% endif %}
+                  <time datetime="{{ item.date | w3DateFilter }}">{{ item.date | dateFilter }}</time>
+                </p>
+              </div>
+            </a>
           </li>
         {% endfor %}
       </ol>

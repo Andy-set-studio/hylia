@@ -12,10 +12,17 @@
 @import 'typography';
 
 /**
- * GLOBAL STYLES 
+ * GLOBAL STYLES
  */
 body {
   scroll-behavior: smooth;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
 }
 
 main:focus {
