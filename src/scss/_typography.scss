@@ -1,23 +1,25 @@
 @font-face {
   font-family: 'basier_circlebold';
-  src:font-url('/fonts/basiercircle-semibold-webfont.eot');
-  src:font-url('/fonts/basiercircle-semibold-webfont.eot?#iefix') format('embedded-opentype'),
-       font-url('/fonts/basiercircle-semibold-webfont.woff2') format('woff2'),
-       font-url('/fonts/basiercircle-semibold-webfont.woff') format('woff'),
-       font-url('/fonts/basiercircle-semibold-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  src: local('basier_circlebold'), local('basier_circlebold'),
+    url('/fonts/basiercircle-semibold-webfont.eot'),
+    url('/fonts/basiercircle-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/basiercircle-semibold-webfont.woff2') format('woff2'),
+    url('/fonts/basiercircle-semibold-webfont.woff') format('woff'),
+    url('/fonts/basiercircle-semibold-webfont.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'basier_circleregular';
-  src: font-url('/fonts/basiercircle-regular-webfont.eot');
-  src: font-url('/fonts/basiercircle-regular-webfont.eot?#iefix') format('embedded-opentype'),
-       font-url('/fonts/basiercircle-regular-webfont.woff2') format('woff2'),
-       font-url('/fonts/basiercircle-regular-webfont.woff') format('woff'),
-       font-url('/fonts/basiercircle-regular-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  src:  local('basier_circleregular'), local('basier_circleregular'),
+    url('/fonts/basiercircle-regular-webfont.eot'),
+    url('/fonts/basiercircle-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/basiercircle-regular-webfont.woff2') format('woff2'),
+    url('/fonts/basiercircle-regular-webfont.woff') format('woff'),
+    url('/fonts/basiercircle-regular-webfont.ttf') format('truetype');
 }
 
 body {
@@ -32,7 +34,9 @@ h1,
 h2,
 h3,
 h4 {
-  @include apply-utility('font', 'bold');
+  font-family: "basier_circlebold";
+  font-weight: normal;
+  // @include apply-utility('font', 'bold');
 }
 
 h1 {
