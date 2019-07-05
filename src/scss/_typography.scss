@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'basier_circlebold';
-  font-weight: normal;
+  font-weight: 700;
   font-style: normal;
   src: local('basier_circlebold'), local('basier_circlebold'),
     url('/fonts/basiercircle-semibold-webfont.eot'),
@@ -34,9 +34,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "basier_circlebold";
-  font-weight: normal;
-  // @include apply-utility('font', 'bold');
+  @include apply-utility('font', 'bold');
 }
 
 h1 {
