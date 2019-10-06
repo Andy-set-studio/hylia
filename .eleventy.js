@@ -14,6 +14,24 @@ const parseTransform = require('./src/transforms/parse-transform.js');
 const site = require('./src/_data/site.json');
 
 module.exports = function(config) {
+  // Setup markdown-it
+  let md = require('markdown-it');
+  let mdI = require('markdown-it-for-inline');
+  let options = {
+    html: true
+  };
+  let markdownLib = md(options)
+    .use(mdI, 'url_new_win', 'link_open', function(tokens, idx) {
+      var aIndex = tokens[idx].attrIndex('target');
+
+      if (aIndex < 0) {
+        tokens[idx].attrPush(['target', '_blank']);
+      } else {
+        tokens[idx].attrs[aIndex][1] = '_blank';
+      }
+    });
+  config.setLibrary('md', markdownLib);
+
   // Filters
   config.addFilter('dateFilter', dateFilter);
   config.addFilter('markdownFilter', markdownFilter);
