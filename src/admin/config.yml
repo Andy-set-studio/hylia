@@ -14,7 +14,6 @@ collections:
         delete: false
         file: "src/index.md"
         slug: "{{slug}}"
-        create: false
         fields:
           - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/njk.njk"}
           - {label: "Title", name: "title", widget: "string"}
