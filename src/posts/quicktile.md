@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ---
+=======
+--
+>>>>>>> 2e397799c44b1612e26d53f25d50499d738be7c6
 title: QuickTile - Simple tiling window management for X11
 date: '2013-07-04'
 tags:
