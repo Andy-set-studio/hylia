@@ -10,5 +10,6 @@
   "enableThirdPartyComments": false,
   "maxPostsPerPage": 5,
   "paymentPointer": "$pay.stronghold.co/1a1d5ecbf6f988e4be3abc11cfb0a0b912d",
+  "aboutPayment": "Frontend Weekly TokyoではWeb MonetizationがWeb標準となることを期待して、[Coil](https://coil.com/)を通じたマネタイズを行っています。Coilが提供しているWebブラウザのエクステンションとCoilのサブスクリプションをお持ちの方が本サイトにアクセスする度に数円ほどが我々Frontend Weekly編集部に支払われます。",
   "faviconPath": "/images/favicon.png"
 }

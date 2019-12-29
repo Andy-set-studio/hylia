@@ -10,9 +10,9 @@
                 <a href="{{ item.url }}" class="post-list__link" rel="bookmark">{{ item.data.title }}</a>
               </h3>
               <div class="gap-top-300">
-				<p class="text-500 weight-mid">
-					<a href="{{ item.url }}" class="post-list__link" rel="bookmark">{{ item.data.desc }}</a>
-				</p>
+								<p class="text-500 weight-mid">
+									<a href="{{ item.url }}" class="post-list__link" rel="bookmark">{{ item.data.desc }}</a>
+								</p>
                 <time class="font-serif" datetime="{{ item.date | w3DateFilter }}">{{ item.date | dateFilter }}</time>
               </div>
             </li>

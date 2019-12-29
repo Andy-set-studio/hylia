@@ -1,18 +1,18 @@
 <footer role="contentinfo" class="[ site-foot ] [ pad-top-700 pad-bottom-900 ]">
   <div class="wrapper">
     <div class="[ site-foot__inner ] [ md:box-flex space-between align-start ]">
-		<div>
-	  		<article class="[ site-foot__details ] [ sf-flow ]">
-				<h2 class="font-serif text-700">💵 Support Us</h2>
-				<p>
-					Frontend Weekly TokyoではWeb MonetizationがWeb標準となることを期待して、<a href="https://coil.com/">Coil</a>を通じたマネタイズを行っています。Coilが提供しているWebブラウザのエクステンションとCoilのサブスクリプションをお持ちの方が本サイトにアクセスする度に数円ほどが我々Frontend Weekly編集部に支払われます。
-				</p>
-	  		</article>
-		</div>
-      	<div>
-        	{% include "partials/components/nav.njk" %}
-        	<theme-toggle></theme-toggle>
-      	</div>
+		{% if site.paymentPointer %}
+			<div>
+				<article class="[ site-foot__details ] [ sf-flow ]">
+					<h2 class="font-serif text-700">💵 Support Us</h2>
+					{{ site.aboutPayment | markdownFilter | safe }}
+				</article>
+			</div>
+		{% endif %}
+			<div>
+				{% include "partials/components/nav.njk" %}
+				<theme-toggle></theme-toggle>
+			</div>
     </div>
     {% if site.showThemeCredit %}
       <p class="[ site-foot__credit ] [ pad-top-900 ]">

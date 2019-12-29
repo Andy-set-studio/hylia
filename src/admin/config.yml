@@ -63,15 +63,17 @@ collections:
         file: "src/_data/site.json"
         fields:
           - {label: "Site Name", name: "name", widget: "string"}
+          - {label: "Site Logo", name: "logoSvg", widget: "string"}
           - {label: "Site Url", name: "url", widget: "string"}
           - {label: "Author Name", name: "authorName", widget: "string"}
           - {label: "Author Email Address", name: "authorEmail", widget: "string"}
           - {label: "Author Twitter Handle", name: "authorHandle", widget: "string", required: false}
-          - {label: "Footer Short Description", name: "shortDesc", widget: "string"}
+          - {label: "Short Description", name: "shortDesc", widget: "string"}
           - {label: "Maximum Posts Per Page", name: "maxPostsPerPage", widget: "number", default: 5}
           - {label: "Show Theme Credit", name: "showThemeCredit", widget: "boolean", default: true}
           - {label: "Enable Third Party Comments Area", name: "enableThirdPartyComments", widget: "boolean", default: false}
           - {label: "Payment Pointer (Web Monetization: https://bit.ly/2kTRI1b)", name: "paymentPointer", widget: "string"}
+          - {label: "Support Us (It's about Coil)", name: "aboutPayment", , widget: "markdown"}
           - {label: "Favicon path (EG: /images/favicon.png)", name: "faviconPath", widget: "string"}
       - label: "Navigation"
         name: "nav"
