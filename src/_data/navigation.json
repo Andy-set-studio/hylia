@@ -6,14 +6,14 @@
       "external": false
     },
     {
-      "text": "Archive",
-      "url": "https://github.com/frontendweekly/frontendweekly.tokyo/tree/master/content",
-      "external": true
-    },
-    {
       "text": "Twitter",
       "url": "https://twitter.com/frontend_weekly",
       "external": true
-    }
+    },
+	{
+	  "text": "GitHub",
+	  "url": "https://github.com/frontendweekly/frontendweekly.tokyo/tree/master/content",
+	  "external": true
+	}
   ]
 }
