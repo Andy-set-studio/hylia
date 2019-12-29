@@ -3,12 +3,16 @@
     --flow-space: #{get-size(800)};
 
     /**
-     * Generic HTML styles 
+     * Generic HTML styles
      */
     h2 + *,
     h3 + * {
       --flow-space: #{get-size(500)};
     }
+
+	h2 + h4 {
+	  --flow-space: #{get-size(300)};
+	}
 
     h2,
     h3 {
@@ -18,7 +22,14 @@
       @include apply-utility('leading', 'tight');
     }
 
-    a:not([class]) {
+	h2 a:not([class]),
+	h3 a:not([class]),
+	li a:not([class]) strong {
+	  color: var(--color-dark);
+	  text-decoration: none;
+	}
+
+    p a:not([class]) {
       color: var(--color-dark);
       position: relative;
       display: inline-block;
@@ -30,7 +41,7 @@
       @include apply-utility('leading', 'tight');
     }
 
-    a:not([class]):hover {
+    p a:not([class]):hover {
       text-decoration: underline;
     }
 
