@@ -22,28 +22,17 @@
       @include apply-utility('leading', 'tight');
     }
 
-	h2 a:not([class]),
-	h3 a:not([class]),
-	li a:not([class]) strong {
+	a:not([class]) {
 	  color: var(--color-text);
-	  text-decoration: none;
+	  font-weight: 700;
+	  text-decoration: underline;
+
+	  @include apply-utility('leading', 'tight');
 	}
 
-    p a:not([class]) {
-      color: var(--color-dark);
-      position: relative;
-      display: inline-block;
-      background: var(--color-theme-highlight);
-      padding: 0.2rem 0.4rem 0.3rem 0.4rem;
-      text-decoration: none;
-      word-break: break-word;
-
-      @include apply-utility('leading', 'tight');
-    }
-
-    p a:not([class]):hover {
-      text-decoration: underline;
-    }
+	a:not([class]):hover {
+	  text-decoration: none;
+	}
 
     code {
       font-size: 1.2em;
