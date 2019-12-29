@@ -51,6 +51,7 @@ collections:
       - {label: "SEO Meta Description", name: "metaDesc", widget: "string", required: false}
       - {label: "Social Image", name: "socialImage", widget: "image", required: false}
       - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "desc", widget: "string", allow_add: true}
       - {label: "Tags", name: "tags", widget: "list", allow_add: true}
       - {label: "Body", name: "body", widget: "markdown"}
   - label: "Globals"
@@ -92,7 +93,7 @@ collections:
           - label: "Size Scale"
             name: "size-scale"
             widget: "object"
-            fields: 
+            fields:
               - {label: "Base Size", name: "base", widget: "string", default: "1rem"}
               - {label: "Ratio: 300", name: "300", widget: "string", default: "0.8rem"}
               - {label: "Ratio: 500", name: "500", widget: "string", default: "1.25rem"}
@@ -104,7 +105,7 @@ collections:
           - label: "Colors"
             name: "colors"
             widget: "object"
-            fields: 
+            fields:
               - {label: "Primary", name: "primary", widget: "string", default: "hsl(208, 57%, 21%)"}
               - {label: "Primary Shade (darker)", name: "primary-shade", widget: "string", default: "hsl(208, 56%, 14%)"}
               - {label: "Primary Glare (lighter)", name: "primary-glare", widget: "string", default: "hsl(207, 57%, 31%)"}
