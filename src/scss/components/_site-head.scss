@@ -4,4 +4,14 @@
     text-decoration: none;
     color: var(--color-text);
   }
+
+  &__site-svg {
+	height: 50px;
+	width: 50px;
+	display: block;
+  }
+
+  svg {
+	border-radius: 12%;
+  }
 }
