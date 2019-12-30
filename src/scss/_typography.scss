@@ -13,6 +13,7 @@ body {
   // Strip the unit off the size ratio to generate a line height
   $line-height: get-size(600);
   line-height: $line-height / ($line-height * 0 + 1);
+  text-rendering: optimizeLegibility;
 
   @include apply-utility('font', 'base');
 }
@@ -21,6 +22,7 @@ h1,
 h2,
 h3 {
   @include apply-utility('font', 'serif');
+  font-variant-ligatures: common-ligatures;
 }
 
 h1 {
