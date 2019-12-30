@@ -42,7 +42,7 @@
     "serve": "cross-env ELEVENTY_ENV=development npx eleventy --serve",
     "serve:lambda": "netlify-lambda serve _lambda",
     "build:lambda": "netlify-lambda build _lambda",
-    "production": "npm run sass:process && npm run cms:precompile && npm run cms:bundle && npm run build:lambda && npx eleventy"
+    "production": "npm run sass:process && npm run cms:precompile && npm run cms:bundle && npx eleventy"
   },
   "repository": {
     "type": "git",
