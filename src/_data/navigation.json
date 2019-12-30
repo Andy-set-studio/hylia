@@ -6,9 +6,9 @@
       "external": false
     },
     {
-      "text": "Twitter",
-      "url": "https://twitter.com/frontend_weekly",
-      "external": true
+      "text": "Tweets",
+      "url": "/tweet",
+      "external": false
     },
 	{
 	  "text": "GitHub",
