@@ -5,11 +5,6 @@
       "url": "/",
       "external": false
     },
-    {
-      "text": "Tweets",
-      "url": "/tweet",
-      "external": false
-    },
 	{
 	  "text": "Old Posts",
 	  "url": "https://github.com/frontendweekly/frontendweekly.tokyo/tree/master/content",
