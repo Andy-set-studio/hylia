@@ -12,6 +12,14 @@
     }
   }
 
+  .theme-toggle {
+	text-align: center;
+  }
+
+  .icon svg {
+	fill: var(--color-text);
+  }
+
   &__credit {
     text-align: center;
   }

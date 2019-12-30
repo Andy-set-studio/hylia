@@ -29,3 +29,8 @@
 .button:active {
   transform: scale(0.99);
 }
+
+.button--transparent {
+  background-color: transparent;
+  color: var(--color-text);
+}
