@@ -1,23 +1,41 @@
 <footer role="contentinfo" class="[ site-foot ] [ pad-top-700 pad-bottom-900 ]">
   <div class="wrapper">
     <div class="[ site-foot__inner ] [ md:box-flex space-between align-start ]">
-		{% if site.paymentPointer %}
+			{% if site.paymentPointer %}
 			<div>
 				<article class="[ site-foot__details ] [ sf-flow ]">
 					<h2 class="font-serif text-700">💵 Support Us</h2>
 					{{ site.aboutPayment | markdownFilter | safe }}
 				</article>
 			</div>
-		{% endif %}
-			<div>
-				{% include "partials/components/nav.njk" %}
-				<theme-toggle></theme-toggle>
-			</div>
+			{% endif %}
     </div>
-    {% if site.showThemeCredit %}
-      <p class="[ site-foot__credit ] [ pad-top-900 ]">
-        Powered by the <a href="https://hylia.website" rel="external">Hylia Eleventy Starter Kit v{{ pkg.version }}</a>.
-      </p>
-    {% endif %}
-  </div>
+		<div class="[ pad-top-700 ]">
+			{% include "partials/components/nav.njk" %}
+			<theme-toggle></theme-toggle>
+		</div>
+
+		{% if smallprint %}
+		<div class="[ small-print ] [ pad-top-700 ]">
+			<div class="[ small-print__inner ] [ md:box-flex align-center ]">
+				<div class="[ small-print__details ]">
+					<strong>Contact</strong>
+					<br>
+					<a href="mailto:{{ smallprint.contact }}" rel="me">{{ smallprint.contact }}</a>
+				</div>
+				<div class="[ small-print__details ]">
+					<strong>Social</strong>
+					<br>
+					<a href="{{ smallprint.twitter }}" title="Twitter" rel="me">Twitter</a> / <a href="{{ smallprint.github }}" title="GitHub" rel="me">GitHub</a>
+				</div>
+			</div>
+		</div>
+		{% endif %}
+
+		{% if site.showThemeCredit %}
+			<p class="[ site-foot__credit ] [ pad-top-900 ]">
+				Powered by the <a href="https://hylia.website" rel="external">Hylia Eleventy Starter Kit v{{ pkg.version }}</a>.
+			</p>
+		{% endif %}
+	</div>
 </footer>

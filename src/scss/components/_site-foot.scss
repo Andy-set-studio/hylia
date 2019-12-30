@@ -24,3 +24,11 @@
     text-align: center;
   }
 }
+
+.small-print__inner {
+  justify-content: center;
+
+  > *:first-child {
+	margin-right: get-size(500);
+  }
+}

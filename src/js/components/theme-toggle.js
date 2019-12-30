@@ -72,7 +72,7 @@ class ThemeToggle extends HTMLElement {
 
   render() {
     this.innerHTML = html`
-      <div class="[ theme-toggle ] [ md:ta-right gap-top-500 ]">
+      <div class="[ theme-toggle ]">
         <div role="status" class="[ visually-hidden ][ js-mode-status ]"></div>
         <button class="[ button button--transparent ] [ font-base text-base ] [ js-mode-toggle ]">
           <span class="[ icon ] [ js-mode-icon ]"></span>
