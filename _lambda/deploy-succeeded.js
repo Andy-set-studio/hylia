@@ -51,7 +51,7 @@ const processPosts = async posts => {
 	try {
 		// check twitter for any tweets containing note URL.
 		// if there are none, publish it.
-		const q = await twitter.get('search/tweets', { q: latestNote.url });
+		const q = await twitter.get('search/tweets', { q: latestPost.url });
 		if (q.statuses && q.statuses.length === 0) {
 			return publishPost(latestPost)
 		} else {
