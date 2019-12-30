@@ -1,0 +1,27 @@
+---
+permalink: '/feed.json'
+---
+{
+	"version": "https://jsonfeed.org/version/1",
+	"user_comment": "This is a blog feed. You can add this to your feed reader using the following URL: {{ site.url }}/feed.json",
+	"title": "{{ site.name }}",
+	"home_page_url": "{{ site.url }}",
+	"feed_url": "{{ site.url }}/feed.json",
+	"author": {
+		"name": "{{ site.authorName }}",
+		"url": "{{ site.url }}"
+	},
+	"items": [
+		{% for post in collections.posts %}
+			{% set absolutePostUrl %}{{ site.url }}{{ post.url | url }}{% endset %}
+			{
+				"id": "{{ absolutePostUrl }}",
+				"url": "{{ absolutePostUrl }}",
+				"title": "{{ post.data.title }}",
+				"summary": "{{ post.data.desc }}",
+				"date_published": "{{ post.date | rssDate }}"
+			}
+			{{ "," if not loop.last }}
+		{% endfor %}
+	]
+}
