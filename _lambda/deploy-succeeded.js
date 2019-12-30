@@ -71,24 +71,18 @@ const prepareStatusText = post => {
 	const entities = new Entities();
 
 	// strip html tags and decode entities
-	let text = post.content.trim().replace(/<[^>]+>/g, '');
-	text = entities.decode(text);
+	let title = post.title.trim().replace(/<[^>]+>/g, '');
+	title = entities.decode(title);
 
 	// truncate note text if its too long for a tweet.
-	if (text.length > maxLength) {
-		text = text.substring(0, maxLength) + '...';
+	if (title.length > maxLength) {
+		title = title.substring(0, maxLength) + '...';
 	}
 
-	// include the note url at the end;
-	text += ' ' + post.url;
+	// include the post url at the end;
+	title += ' ' + post.url;
 
-	// if it has a link, let that be the last url
-	// so twitter picks it up for the preview
-	if (post.link && post.link.length) {
-		text += ' ' + post.link;
-	}
-
-	return text
+	return title
 };
 
 // Push a new note to Twitter
