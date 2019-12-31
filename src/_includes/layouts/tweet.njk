@@ -5,14 +5,15 @@
 {% set introHeading = title %}
 
 {# Post list content #}
-{% set postListHeading = 'Recent Tweets' %}
+{% set postListHeading = 'Recent @cssradar Tweets' %}
 {% set twitter = tweets %}
+{% set twitterURL = 'https://twitter.com/cssradar/' %}
 
 {% if postListItems.length %}
 	{% block content %}
 		<main id="main-content" tabindex="-1">
 			{% include "partials/components/intro.njk" %}
-			<section class="[ post-list ] [ pad-top-700 gap-bottom-900 ]">
+			<section class="[ post-list post-list--tweet ] [ pad-top-700 gap-bottom-900 ]">
 				<div class="[ inner-wrapper ] [ sf-flow ]">
 					<h2 class="[ post-list__heading ] [ text-700 md:text-800 ]">{{ postListHeading }}</h2>
 						<ol class="[ post-list__items ] [ sf-flow ] [ pad-top-300 ]">
@@ -20,15 +21,25 @@
 							{% if not item.is_quote_status and not item.retweeted %}
 								<li class="post-list__item">
 									<p class="text-500 weight-mid">
-										<a href="https://twitter.com/cssradar/{{ item.id_str }}" class="post-list__link" target="_blank" rel="noopener">
+										<a href="{{ twitterURL }}/status/{{ item.id_str }}" class="post-list__link" target="_blank" rel="noopener">
 											{{ item.text | tweetRemoveLink }}
 										</a>
 									</p>
-									<time class="font-serif" datetime="{{ item.created_at | w3DateFilter }}">{{ item.created_at | dateFilter }}</time>
+									<time class="font-serif" datetime="{{ item.created_at | w3DateFilter }}">
+										{{ item.created_at | dateFilter }}
+									</time>
 								</li>
 							{% endif %}
 						{%- endfor -%}
 						</ol>
+				</div>
+				<hr />
+				<div class="inner-wrapper">
+					<footer class="[ link-to-tweet ] [ pad-bottom-900 ]">
+						<a class="[ leading-tight text-600 weight-mid font-serif ]" href="{{ twitterURL }}" target="_blank" rel="noopener">
+							Follow Me @cssradar
+						</a>
+					</footer>
 				</div>
 			</section>
 		</main>
