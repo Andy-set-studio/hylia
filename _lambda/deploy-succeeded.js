@@ -103,7 +103,7 @@ const publishPost = async post => {
 	} catch (err) {
 		return handleError(err)
 	}
-}
+};
 
 // Main Lambda Function Handler
 exports.handler = async () => {
@@ -113,4 +113,4 @@ exports.handler = async () => {
 		.then(response => response.json())
 		.then(processPosts)
 		.catch(handleError)
-}
+};

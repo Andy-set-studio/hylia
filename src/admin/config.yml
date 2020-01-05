@@ -47,11 +47,11 @@ collections:
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk"}
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "desc", widget: "string", allow_add: true}
       - {label: "SEO Meta Title", name: "metaTitle", widget: "string", required: false}
       - {label: "SEO Meta Description", name: "metaDesc", widget: "string", required: false}
       - {label: "Social Image", name: "socialImage", widget: "image", required: false}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "desc", widget: "string", allow_add: true}
       - {label: "Tags", name: "tags", widget: "list", allow_add: true}
       - {label: "Body", name: "body", widget: "markdown"}
   - label: "Globals"
@@ -75,6 +75,7 @@ collections:
           - {label: "Payment Pointer (Web Monetization: https://bit.ly/2kTRI1b)", name: "paymentPointer", widget: "string"}
           - {label: "Support Us (It's about Coil)", name: "aboutPayment", , widget: "markdown"}
           - {label: "Favicon path (EG: /images/favicon.png)", name: "faviconPath", widget: "string"}
+          - {label: "WebSub Provider URL", name: "WebSubHubURL", widget: "string"}
       - label: "Navigation"
         name: "nav"
         delete: false
