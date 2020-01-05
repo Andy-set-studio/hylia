@@ -8,6 +8,7 @@ npm-debug.*
 node_modules
 dist
 .envrc
+.env
 
 # Specifics
 

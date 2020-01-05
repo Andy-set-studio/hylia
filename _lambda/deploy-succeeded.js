@@ -5,9 +5,7 @@ import dotenv from 'dotenv';
 import Twitter from 'twitter';
 import { AllHtmlEntities as Entities } from 'html-entities';
 
-dotenv.config({
-	path: `${process.cwd()}/.envrc`
-});
+dotenv.config();
 
 // URL of site JSON feed
 const FEED_URL = 'https://frontendweekly.tokyo/feed.json';
