@@ -28,7 +28,7 @@
 .small-print__inner {
   justify-content: center;
 
-  > *:first-child {
+  > *:not(first-child) {
 	margin-right: get-size(500);
   }
 }

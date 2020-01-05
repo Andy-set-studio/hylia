@@ -7,6 +7,8 @@ permalink: '/feed.json'
 	"title": "{{ site.name }}",
 	"home_page_url": "{{ site.url }}",
 	"feed_url": "{{ site.url }}/feed.json",
+	"description": "{{ site.shortDesc }}",
+	"favicon": "{{ site.url }}/{{ faviconPath }}",
 	"author": {
 		"name": "{{ site.authorName }}",
 		"url": "{{ site.url }}"
@@ -19,9 +21,9 @@ permalink: '/feed.json'
 				"url": "{{ absolutePostUrl }}",
 				"title": "{{ post.data.title }}",
 				"summary": "{{ post.data.desc }}",
+				"content_html": "{{ post.templateContent | jsonify }}",
 				"date_published": "{{ post.date | rssDate }}"
-			}
-			{{ "," if not loop.last }}
+			}{{ "," if not loop.last }}
 		{% endfor %}
 	]
 }

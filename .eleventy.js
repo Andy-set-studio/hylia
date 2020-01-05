@@ -1,6 +1,6 @@
 const rssPlugin = require('@11ty/eleventy-plugin-rss');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
-const fs = require("fs");
+const fs = require('fs');
 
 // Import filters
 const dateFilter = require('./src/filters/date-filter.js');
@@ -20,7 +20,10 @@ module.exports = function(config) {
   config.addFilter('dateFilter', dateFilter);
   config.addFilter('markdownFilter', markdownFilter);
   config.addFilter('w3DateFilter', w3DateFilter);
-	config.addFilter("tweetRemoveLink", tweetRemoveLink);
+	config.addFilter('tweetRemoveLink', tweetRemoveLink);
+	config.addFilter('jsonify', function (value) {
+		return JSON.stringify(value);
+	});
 
   // Layout aliases
   config.addLayoutAlias('home', 'layouts/home.njk');
