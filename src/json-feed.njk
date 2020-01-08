@@ -21,7 +21,7 @@ permalink: '/feed.json'
 				"url": "{{ absolutePostUrl }}",
 				"title": "{{ post.data.title }}",
 				"summary": "{{ post.data.desc }}",
-				"content_html": "{{ post.templateContent | jsonify }}",
+				"content_html": {{ post.templateContent | jsonify | safe }},
 				"date_published": "{{ post.date | rssDate }}"
 			}{{ "," if not loop.last }}
 		{% endfor %}
