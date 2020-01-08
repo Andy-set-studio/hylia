@@ -47,7 +47,7 @@ const processPosts = async posts => {
 	const latestPost = posts[0];
 
 	try {
-		// check twitter for any tweets containing note URL.
+		// check twitter for any tweets containing post URL.
 		// if there are none, publish it.
 		const q = await twitter.get('search/tweets', { q: latestPost.url });
 		if (q.statuses && q.statuses.length === 0) {
@@ -86,7 +86,7 @@ const prepareStatusText = post => {
 // Push a new note to Twitter
 const publishPost = async post => {
 	try {
-		const statusText = prepareStatusText(post)
+		const statusText = prepareStatusText(post);
 		const tweet = await twitter.post('statuses/update', {
 			status: statusText
 		});
@@ -99,7 +99,7 @@ const publishPost = async post => {
 			return status(422, 'Error posting to Twitter API.')
 		}
 	} catch (err) {
-		return handleError(err)
+		return handleError(err);
 	}
 };
 
@@ -110,5 +110,5 @@ exports.handler = async () => {
 	return fetch(FEED_URL)
 		.then(response => response.json())
 		.then(processPosts)
-		.catch(handleError)
+		.catch(handleError);
 };
