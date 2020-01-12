@@ -29,11 +29,7 @@ const POSTS_DIR = path.resolve(process.env.PWD, 'src/posts');
 /// Helper Function to return unknown errors
 const handleError = err => {
 	console.error(err);
-	const msg = Array.isArray(err) ? err[0].message : err.message;
-	return {
-		statusCode: 422,
-		body: String(msg)
-	}
+	process.exit(1);
 };
 
 /// Generate querystring for Trello cards API
@@ -55,18 +51,19 @@ const prepareTemplateData = (response) => {
 		return value.replace(regex, '').trim();
 	};
 
-	const fixDescCallBack = (accumulator, currentElement) => {
-		const fixDesc = {
+	const transformCallBack = (accumulator, currentElement) => {
+		const transform = {
 			...currentElement,
-			desc: removeNoise(currentElement.desc)
+			desc: removeNoise(currentElement.desc),
+			attachments: currentElement.attachments[0].url
 		};
 
 		// Return the value for the next step by using the array from the previous step and
-		// replace desc
-		return [...accumulator, fixDesc];
+		// replace desc and attachments
+		return [...accumulator, transform];
 	};
 
-	return response.reduce(fixDescCallBack, []);
+	return response.reduce(transformCallBack, []);
 };
 
 /// Fetch cards from Trello
@@ -82,16 +79,87 @@ const getCards = async () => {
 	}
 };
 
-/// Put templateData in POSTS_DIR
-const putData = templateData => {
+/// option handler
+const optionHandler = () => {
 	// If opts.vol isn't passed then exit
 	if (!opts.vol) {
-		console.error(`opts.vol is REQUIRED. Please add post vol using the '--vol=' parameter`);
-		process.exit(1)
+		handleError(`opts.vol is REQUIRED. Please add post vol using the '--vol=' parameter`);
 	}
 
+	// If opts.date isn't passed then exit
+	if (!opts.date) {
+		handleError(`opts.date is REQUIRED. Please add post vol using the '--date=YYYY-MM-DD' parameter`);
+	}
+
+	return opts;
+};
+
+/// Generate a post file
+const generatePost = tmplData => {
+	const options = optionHandler();
+
+	const makeTitle = vol => `title: Vol.${vol}`;
+	const makeDate = date => `date: '${date}'`;
+	const makeDesc = () => `desc: '3 OF TRANSLATED TITLE、ほか計${tmplData.length}リンク'`;
+
+	const frontMatter = () => `---
+${makeTitle(options.vol)}
+${makeDate(options.date)}
+${makeDesc()}
+---
+`;
+
+	const description = element => element ? element : `FILL ME`;
+
+	// A typical post would look like this:
+	// ## [${Title}(${Link})
+	// #### ${Translated Title}
+	// ${Excerpt}
+	// ↑ We will have 3 of this.
+	const makeFeatured = element => `## [${element.name}](${element.attachments})
+#### TRANSLATED TITLE
+${description(element.desc)}
+
+`;
+
+	// ## [${Title}(${Link})
+	// ${Excerpt}
+	// ↑ We will have 4 of this.
+	const makeOtherInterested = element => `## [${element.name}](${element.attachments})
+${description(element.desc)}
+
+`;
+
+	// In Brief heading
+	const makeInBriefHeading = () => `# In Brief`;
+
+	// InBrief is
+	// - **[${Title}(${Link})]**: ${Translated Title}
+	// ↑ We will have 5 of this.
+	const makeInBrief = element => `- **[${element.name}(${element.attachments})**: TRANSLATED TITLE
+`;
+
+	const glue = () => {
+		const featured = tmplData.slice(0, 3).map(elements => makeFeatured(elements)).join('');
+		const other = tmplData.slice(3, 7).map(elements => makeOtherInterested(elements)).join('');
+		const inBrief = tmplData.slice(7).map(elements => makeInBrief(elements)).join('');
+
+		return `${frontMatter()}
+${featured}
+${other}
+${makeInBriefHeading()}
+${inBrief}`;
+	};
+
+	return glue();
+};
+
+/// Save post as md
+const savePost = post => {
+	const options = optionHandler();
+
 	try {
-		fs.writeFileSync(`${POSTS_DIR}/${opts.vol}.11tydata.json`, JSON.stringify(templateData, null, 2),'utf-8')
+		fs.writeFileSync(`${POSTS_DIR}/${options.date}-v${options.vol}.md`, post,'utf-8');
 	} catch (err) {
 		handleError(err);
 	}
@@ -99,8 +167,9 @@ const putData = templateData => {
 
 // Main Function
 async function main() {
-	const templateData = await getCards();
-	putData(templateData);
+	const tmplData = await getCards();
+	const post = generatePost(tmplData);
+	savePost(post);
 }
 
 main();
