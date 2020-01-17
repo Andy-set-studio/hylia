@@ -136,7 +136,7 @@ ${description(element.desc)}
 	// InBrief is
 	// - **[${Title}(${Link})]**: ${Translated Title}
 	// ↑ We will have 5 of this.
-	const makeInBrief = element => `- **[${element.name}(${element.attachments})**: TRANSLATED TITLE
+	const makeInBrief = element => `- **[${element.name}](${element.attachments})**: TRANSLATED TITLE
 `;
 
 	const glue = () => {
