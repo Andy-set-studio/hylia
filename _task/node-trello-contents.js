@@ -37,7 +37,7 @@ const params = () => {
 	return querystring.stringify({
 		attachments: true,
 		card_attachment_fields: "url",
-		fields: "id,name,desc",
+		fields: "id,name,desc,labels",
 		key: TRELLO_API.access_token_key,
 		token: TRELLO_API.access_token_secret
 	});
@@ -55,7 +55,8 @@ const prepareTemplateData = (response) => {
 		const transform = {
 			...currentElement,
 			desc: removeNoise(currentElement.desc),
-			attachments: currentElement.attachments[0].url
+			attachments: currentElement.attachments[0].url,
+			labels: currentElement.labels[0].name
 		};
 
 		// Return the value for the next step by using the array from the previous step and
@@ -116,7 +117,9 @@ ${makeDesc()}
 	// #### ${Translated Title}
 	// ${Excerpt}
 	// ↑ We will have 3 of this.
-	const makeFeatured = element => `## [${element.name}](${element.attachments})
+	// In Trello, MUSTREAD MUST be labeled as MUSTREAD
+	const isMustRead = element => element.labels === 'MUSTREAD';
+	const makeMustRead = element => `## [${element.name}](${element.attachments})
 #### TRANSLATED TITLE
 ${description(element.desc)}
 
@@ -124,8 +127,10 @@ ${description(element.desc)}
 
 	// ## [${Title}(${Link})
 	// ${Excerpt}
-	// ↑ We will have 4 of this.
-	const makeOtherInterested = element => `## [${element.name}](${element.attachments})
+	// ↑ We will have about 4 of this.
+	// In Trello, FEATURED MUST be labeled as FEATURED
+	const isFeatured = element => element.labels === 'FEATURED';
+	const makeFeatured = element => `## [${element.name}](${element.attachments})
 ${description(element.desc)}
 
 `;
@@ -135,21 +140,31 @@ ${description(element.desc)}
 
 	// InBrief is
 	// - **[${Title}(${Link})]**: ${Translated Title}
-	// ↑ We will have 5 of this.
+	// ↑ We will have about 5 of this.
+	// In Trello, INBRIEF MUST be labeled as INBRIEF
+	const isInBrief = element => element.labels === 'INBRIEF';
 	const makeInBrief = element => `- **[${element.name}](${element.attachments})**: TRANSLATED TITLE
 `;
 
 	const glue = () => {
-		const featured = tmplData.slice(0, 3).map(elements => makeFeatured(elements)).join('');
-		const other = tmplData.slice(3, 7).map(elements => makeOtherInterested(elements)).join('');
-		const inBrief = tmplData.slice(7).map(elements => makeInBrief(elements)).join('');
+		const mustread = tmplData
+							.filter(element => isMustRead(element))
+							.map(elements => makeMustRead(elements)).join('');
+		const featured = tmplData
+							.filter(element => isFeatured(element))
+							.map(elements => makeFeatured(elements)).join('');
+		const inBrief = tmplData
+							.filter(element => isInBrief(element))
+							.map(elements => makeInBrief(elements)).join('');
 
 		return `${frontMatter()}
+${mustread}
 ${featured}
-${other}
 ${makeInBriefHeading()}
 ${inBrief}`;
 	};
+
+	console.log(glue());
 
 	return glue();
 };
@@ -169,7 +184,7 @@ const savePost = post => {
 async function main() {
 	const tmplData = await getCards();
 	const post = generatePost(tmplData);
-	savePost(post);
+	// savePost(post);
 }
 
 main();
