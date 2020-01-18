@@ -11,7 +11,7 @@ dotenv.config();
 
 // Configuration
 /// Trello API URL
-const TRELLO_API_URL_PREFIX = "https://api.trello.com/1/lists/";
+const TRELLO_API_URL_PREFIX = 'https://api.trello.com/1/lists/';
 
 /// Configure Trello API Client
 const TRELLO_API = {
@@ -36,8 +36,8 @@ const handleError = err => {
 const params = () => {
 	return querystring.stringify({
 		attachments: true,
-		card_attachment_fields: "url",
-		fields: "id,name,desc,labels",
+		card_attachment_fields: 'url',
+		fields: 'id,name,desc,labels',
 		key: TRELLO_API.access_token_key,
 		token: TRELLO_API.access_token_secret
 	});
@@ -71,7 +71,7 @@ const prepareTemplateData = (response) => {
 const getCards = async () => {
 	try {
 		const response = await fetch(`${TRELLO_API_URL_PREFIX}${TRELLO_FE_WEEKLY_LIST}/cards?${params()}`, {
-			"method": "GET"
+			'method': 'GET'
 		});
 
 		return prepareTemplateData(await response.json());
@@ -154,14 +154,14 @@ ${description(element.desc)}
 
 	const glue = () => {
 		const mustread = tmplData
-							.filter(element => isMustRead(element))
-							.map(elements => makeMustRead(elements)).join('');
+			.filter(element => isMustRead(element))
+			.map(elements => makeMustRead(elements)).join('');
 		const featured = tmplData
-							.filter(element => isFeatured(element))
-							.map(elements => makeFeatured(elements)).join('');
+			.filter(element => isFeatured(element))
+			.map(elements => makeFeatured(elements)).join('');
 		const inBrief = tmplData
-							.filter(element => isInBrief(element))
-							.map(elements => makeInBrief(elements)).join('');
+			.filter(element => isInBrief(element))
+			.map(elements => makeInBrief(elements)).join('');
 
 		return `${frontMatter()}
 ${mustread}
@@ -178,7 +178,7 @@ const savePost = post => {
 	const options = optionHandler();
 
 	try {
-		fs.writeFileSync(`${POSTS_DIR}/${options.date}-v${options.vol}.md`, post,'utf-8');
+		fs.writeFileSync(`${POSTS_DIR}/${options.date}-v${options.vol}.md`, post, 'utf-8');
 	} catch (err) {
 		handleError(err);
 	}
@@ -188,7 +188,7 @@ const savePost = post => {
 async function main() {
 	const tmplData = await getCards();
 	const post = generatePost(tmplData);
-	// savePost(post);
+	savePost(post);
 }
 
 main();

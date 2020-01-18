@@ -16,7 +16,7 @@
 			<section class="[ post-list post-list--tweet ] [ pad-top-700 gap-bottom-900 ]">
 				<div class="[ inner-wrapper ] [ sf-flow ]">
 					<h2 class="[ post-list__heading ] [ text-700 md:text-800 ]">{{ postListHeading }}</h2>
-						<ol class="[ post-list__items ] [ sf-flow ] [ pad-top-300 ]">
+					<ol class="[ post-list__items ] [ sf-flow ] [ pad-top-300 ]">
 						{%- for item in twitter -%}
 							{% if not item.is_quote_status and not item.retweeted %}
 								{% set tweetURL %}{{ twitterURL }}/status/{{ item.id_str }}{% endset %}
@@ -32,12 +32,13 @@
 								</li>
 							{% endif %}
 						{%- endfor -%}
-						</ol>
+					</ol>
 				</div>
-				<hr />
+				<hr/>
 				<div class="inner-wrapper">
 					<footer class="[ link-to-tweet ] [ pad-bottom-900 ]">
-						<a class="[ leading-tight text-600 weight-mid font-serif ]" href="{{ twitterURL }}" target="_blank" rel="noopener">
+						<a class="[ leading-tight text-600 weight-mid font-serif ]" href="{{ twitterURL }}" target="_blank"
+							 rel="noopener">
 							Follow Me @cssradar
 						</a>
 					</footer>

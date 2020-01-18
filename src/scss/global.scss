@@ -1,4 +1,4 @@
-@import 'config';
+s@import 'config';
 
 // Pull in the stalfos lib
 @import '../../node_modules/stalfos/stalfos.scss';
@@ -26,8 +26,9 @@ body {
 
 main {
   flex: 1 0 auto;
+
   &:focus {
-    outline: none;
+	outline: none;
   }
 }
 

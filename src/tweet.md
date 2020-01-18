@@ -1,4 +1,4 @@
 ---
-title: 'Tweets Archive'
+title: 'Tweets'
 layout: 'layouts/tweet.njk'
 ---

@@ -1,33 +1,34 @@
 <!DOCTYPE html>
 <html lang="ja" class="no-js">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}/feed.xml" />
-  <link rel="icon" href="{{ site.faviconPath }}" type="image/png" />
-  {% include "partials/global/meta-info.njk" %}
-  <script>document.documentElement.classList.remove('no-js');</script>
-  <style>{% include "assets/css/global.css" %}</style>
-  {% block head %}
-  {% endblock %}
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}/feed.xml"/>
+	<link rel="icon" href="{{ site.faviconPath }}" type="image/png"/>
+	{% include "partials/global/meta-info.njk" %}
+	<script>document.documentElement.classList.remove('no-js');</script>
+	<style>{% include "assets/css/global.css" %}</style>
+	{% block head %}
+	{% endblock %}
 </head>
 <body>
-  {% include "partials/global/site-head.njk" %}
-  {% block content %}
-  {% endblock content %}
-  {% include "partials/global/site-foot.njk" %}
-  {% block foot %}
-  {% endblock %}
-  <script type="module" src="/js/components/theme-toggle.js" async defer></script>
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/service-worker.js');
-      });
-    }
-  </script>
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" async defer></script>
-	<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+{% include "partials/global/site-head.njk" %}
+{% block content %}
+{% endblock content %}
+{% include "partials/global/site-foot.njk" %}
+{% block foot %}
+{% endblock %}
+<script type="module" src="/js/components/theme-toggle.js" async defer></script>
+<script>
+	if ('serviceWorker' in navigator) {
+		window.addEventListener('load', () => {
+			navigator.serviceWorker.register('/service-worker.js');
+		});
+	}
+</script>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js" async defer></script>
+<script src="//instant.page/3.0.0" type="module" defer
+				integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
 </body>
 </html>
