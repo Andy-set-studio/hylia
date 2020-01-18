@@ -16,6 +16,8 @@
   &__item {
     padding: get-size(300) 0;
     flex-shrink: 0;
+	font-variant-ligatures: common-ligatures;
+	font-variant-numeric: oldstyle-nums;
 
     a {
       color: currentColor;

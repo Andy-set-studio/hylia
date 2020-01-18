@@ -3,10 +3,10 @@ module.exports = {
     return parseInt(currentLevel, 10) + 1;
   },
   getReadingTime(text) {
-  	// Stealed from https://github.com/pritishvaidya/read-time-estimate
+  	// Stolen from https://github.com/pritishvaidya/read-time-estimate
   	const WORDS_PER_MIN = 270;
 		const IMAGE_READ_TIME = 12;
-		const CHINESE_KOREAN_READ_TIME = 400;
+		const CHINESE_KOREAN_READ_TIME = 380;
 		const IMAGE_TAGS = ['img', 'Image'];
 
 		function stripWhitespace(string) {
@@ -92,7 +92,7 @@ module.exports = {
 				wordTime,
 				wordCount,
 			} = wordsReadTime(strippedString, customWordTime);
-			return Math.ceil(imageTime + wordTime);
+			return Math.ceil(imageTime + otherLanguageTime);
 		}
 
 		return readTime()

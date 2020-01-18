@@ -100,13 +100,16 @@ const generatePost = tmplData => {
 	const options = optionHandler();
 
 	const makeTitle = vol => `title: Vol.${vol}`;
-	const makeDate = date => `date: '${date}'`;
+	const makeDate = date => `date: ${date}`;
 	const makeDesc = () => `desc: '3 OF TRANSLATED TITLE、ほか計${tmplData.length}リンク'`;
+	const makePermalink = vol => `permalink: ${vol}`;
 
-	const frontMatter = () => `---
+	const frontMatter = () =>
+`---
 ${makeTitle(options.vol)}
 ${makeDate(options.date)}
 ${makeDesc()}
+${makePermalink()}
 ---
 `;
 
@@ -119,7 +122,8 @@ ${makeDesc()}
 	// ↑ We will have 3 of this.
 	// In Trello, MUSTREAD MUST be labeled as MUSTREAD
 	const isMustRead = element => element.labels === 'MUSTREAD';
-	const makeMustRead = element => `## [${element.name}](${element.attachments})
+	const makeMustRead = element =>
+`## [${element.name}](${element.attachments})
 #### TRANSLATED TITLE
 ${description(element.desc)}
 
@@ -130,7 +134,8 @@ ${description(element.desc)}
 	// ↑ We will have about 4 of this.
 	// In Trello, FEATURED MUST be labeled as FEATURED
 	const isFeatured = element => element.labels === 'FEATURED';
-	const makeFeatured = element => `## [${element.name}](${element.attachments})
+	const makeFeatured = element =>
+`## [${element.name}](${element.attachments})
 ${description(element.desc)}
 
 `;
@@ -143,7 +148,8 @@ ${description(element.desc)}
 	// ↑ We will have about 5 of this.
 	// In Trello, INBRIEF MUST be labeled as INBRIEF
 	const isInBrief = element => element.labels === 'INBRIEF';
-	const makeInBrief = element => `- **[${element.name}(${element.attachments})**: TRANSLATED TITLE
+	const makeInBrief = element =>
+`- **[${element.name}](${element.attachments})**: TRANSLATED TITLE
 `;
 
 	const glue = () => {
@@ -163,8 +169,6 @@ ${featured}
 ${makeInBriefHeading()}
 ${inBrief}`;
 	};
-
-	console.log(glue());
 
 	return glue();
 };

@@ -4,6 +4,8 @@
   &__summary {
     --flow-space: #{get-size(500)};
     font-size: get-size(500);
+	font-variant-ligatures: common-ligatures;
+	font-variant-numeric: oldstyle-nums;
 
     a {
       color: currentColor;
