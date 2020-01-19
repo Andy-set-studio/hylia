@@ -43,7 +43,7 @@ const params = () => {
 	});
 };
 
-/// Prepare 11ty's Template Data
+/// Prepare Template
 const prepareTemplateData = (response) => {
 	// Strip URL and /n from desc
 	const removeNoise = value => {
@@ -102,7 +102,7 @@ const generatePost = tmplData => {
 	const makeTitle = vol => `title: Vol.${vol}`;
 	const makeDate = date => `date: ${date}`;
 	const makeDesc = () => `desc: '3 OF TRANSLATED TITLE、ほか計${tmplData.length}リンク'`;
-	const makePermalink = vol => `permalink: ${vol}`;
+	const makePermalink = vol => `permalink: /posts/${vol}`;
 
 	const frontMatter = () =>
 `---
@@ -152,25 +152,19 @@ ${description(element.desc)}
 `- **[${element.name}](${element.attachments})**: TRANSLATED TITLE
 `;
 
-	const glue = () => {
-		const mustread = tmplData
-			.filter(element => isMustRead(element))
-			.map(elements => makeMustRead(elements)).join('');
-		const featured = tmplData
-			.filter(element => isFeatured(element))
-			.map(elements => makeFeatured(elements)).join('');
-		const inBrief = tmplData
-			.filter(element => isInBrief(element))
-			.map(elements => makeInBrief(elements)).join('');
+	const mustread = tmplData
+			.filter(isMustRead).map(makeMustRead).join('');
+	const featured = tmplData
+			.filter(isFeatured).map(makeFeatured).join('');
+	const inBrief = tmplData
+			.filter(isInBrief).map(makeInBrief).join('');
 
-		return `${frontMatter()}
+	return `${frontMatter()}
 ${mustread}
 ${featured}
 ${makeInBriefHeading()}
 ${inBrief}`;
-	};
 
-	return glue();
 };
 
 /// Save post as md
