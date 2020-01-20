@@ -164,8 +164,6 @@ ${makeInBriefHeading()}
 ${inBrief}`;
 	};
 
-	console.log(glue());
-
 	return glue();
 };
 
@@ -184,7 +182,7 @@ const savePost = post => {
 async function main() {
 	const tmplData = await getCards();
 	const post = generatePost(tmplData);
-	// savePost(post);
+	savePost(post);
 }
 
 main();
