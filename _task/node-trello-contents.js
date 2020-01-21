@@ -143,7 +143,7 @@ ${description(element.desc)}
 	// ↑ We will have about 5 of this.
 	// In Trello, INBRIEF MUST be labeled as INBRIEF
 	const isInBrief = element => element.labels === 'INBRIEF';
-	const makeInBrief = element => `- **[${element.name}(${element.attachments})**: TRANSLATED TITLE
+	const makeInBrief = element => `- **[${element.name}](${element.attachments})**: TRANSLATED TITLE
 `;
 
 	const glue = () => {
@@ -164,8 +164,6 @@ ${makeInBriefHeading()}
 ${inBrief}`;
 	};
 
-	console.log(glue());
-
 	return glue();
 };
 
@@ -184,7 +182,7 @@ const savePost = post => {
 async function main() {
 	const tmplData = await getCards();
 	const post = generatePost(tmplData);
-	// savePost(post);
+	savePost(post);
 }
 
 main();
