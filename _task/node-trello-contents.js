@@ -149,7 +149,8 @@ ${description(element.desc)}
 	// In Trello, INBRIEF MUST be labeled as INBRIEF
 	const isInBrief = element => element.labels === 'INBRIEF';
 	const makeInBrief = element =>
-`- **[${element.name}](${element.attachments})**: TRANSLATED TITLE
+`
+- **[${element.name}](${element.attachments})**: TRANSLATED TITLE
 `;
 
 	const mustread = tmplData
@@ -163,8 +164,7 @@ ${description(element.desc)}
 ${mustread}
 ${featured}
 ${makeInBriefHeading()}
-${inBrief}`;
-
+${inBrief}`
 };
 
 /// Save post as md
