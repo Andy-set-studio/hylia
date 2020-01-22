@@ -1,12 +1,12 @@
 module.exports = {
-  getNextHeadingLevel(currentLevel) {
-    return parseInt(currentLevel, 10) + 1;
-  },
-  getReadingTime(text) {
-  	// Stealed from https://github.com/pritishvaidya/read-time-estimate
-  	const WORDS_PER_MIN = 270;
+	getNextHeadingLevel(currentLevel) {
+		return parseInt(currentLevel, 10) + 1;
+	},
+	getReadingTime(text) {
+		// Stolen from https://github.com/pritishvaidya/read-time-estimate
+		const WORDS_PER_MIN = 270;
 		const IMAGE_READ_TIME = 12;
-		const CHINESE_KOREAN_READ_TIME = 400;
+		const CHINESE_KOREAN_READ_TIME = 380;
 		const IMAGE_TAGS = ['img', 'Image'];
 
 		function stripWhitespace(string) {
@@ -35,7 +35,7 @@ module.exports = {
 			return {
 				count,
 				time,
-				formattedString,
+				formattedString
 			};
 		}
 
@@ -43,7 +43,7 @@ module.exports = {
 			const {
 				count: characterCount,
 				time: otherLanguageTime,
-				formattedString,
+				formattedString
 			} = otherLanguageReadTime(string);
 			const wordCount = wordsCount(formattedString);
 			const wordTime = wordCount / wordsPerMin;
@@ -51,7 +51,7 @@ module.exports = {
 				characterCount,
 				otherLanguageTime,
 				wordTime,
-				wordCount,
+				wordCount
 			};
 		}
 
@@ -73,7 +73,7 @@ module.exports = {
 			}
 			return {
 				time: seconds / 60,
-				count,
+				count
 			};
 		}
 
@@ -82,19 +82,19 @@ module.exports = {
 			customWordTime = WORDS_PER_MIN,
 			customImageTime = IMAGE_READ_TIME,
 			chineseKoreanReadTime = CHINESE_KOREAN_READ_TIME,
-			imageTags = IMAGE_TAGS,
+			imageTags = IMAGE_TAGS
 		) {
-			const { time: imageTime, count: imageCount } = imageReadTime(customImageTime, imageTags, string);
+			const {time: imageTime, count: imageCount} = imageReadTime(customImageTime, imageTags, string);
 			const strippedString = stripTags(stripWhitespace(string));
 			const {
 				characterCount,
 				otherLanguageTime,
 				wordTime,
-				wordCount,
+				wordCount
 			} = wordsReadTime(strippedString, customWordTime);
-			return Math.ceil(imageTime + wordTime);
+			return Math.ceil(imageTime + otherLanguageTime);
 		}
 
-		return readTime()
-  }
+		return readTime();
+	}
 };

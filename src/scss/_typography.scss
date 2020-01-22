@@ -23,6 +23,7 @@ h2,
 h3 {
   @include apply-utility('font', 'serif');
   font-variant-ligatures: common-ligatures;
+  font-variant-numeric: oldstyle-nums;
 }
 
 h1 {

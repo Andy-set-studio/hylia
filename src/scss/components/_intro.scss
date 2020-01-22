@@ -2,24 +2,26 @@
   background: var(--color-theme-highlight-block);
 
   &__summary {
-    --flow-space: #{get-size(500)};
-    font-size: get-size(500);
+	--flow-space: #{get-size(500)};
+	font-size: get-size(500);
+	font-variant-ligatures: common-ligatures;
+	font-variant-numeric: oldstyle-nums;
 
-    a {
-      color: currentColor;
+	a {
+	  color: currentColor;
 
-      &:hover {
-        text-decoration: none;
-      }
-    }
+	  &:hover {
+		text-decoration: none;
+	  }
+	}
   }
 
   &__heading {
-    max-width: 40ex;
-    color: var(--color-theme-feature-text);
+	max-width: 40ex;
+	color: var(--color-theme-feature-text);
 
-    &--compact {
-      max-width: 21ex;
-    }
+	&--compact {
+	  max-width: 21ex;
+	}
   }
 }

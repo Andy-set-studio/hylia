@@ -21,9 +21,7 @@ module.exports = function(config) {
   config.addFilter('markdownFilter', markdownFilter);
   config.addFilter('w3DateFilter', w3DateFilter);
 	config.addFilter('tweetRemoveLink', tweetRemoveLink);
-	config.addFilter('jsonify', function (value) {
-		return JSON.stringify(value);
-	});
+	config.addFilter('jsonify', value => JSON.stringify(value));
 
   // Layout aliases
   config.addLayoutAlias('home', 'layouts/home.njk');
