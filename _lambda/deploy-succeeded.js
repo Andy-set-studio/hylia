@@ -1,9 +1,8 @@
-// Steal from https://github.com/maxboeck/mxb/blob/master/_lambda/deploy-succeeded.js
+// Stolen from https://github.com/maxboeck/mxb/blob/master/_lambda/deploy-succeeded.js
 
 import fetch from 'node-fetch';
 import dotenv from 'dotenv';
 import Twitter from 'twitter';
-import { AllHtmlEntities as Entities } from 'html-entities';
 
 dotenv.config();
 
@@ -39,12 +38,16 @@ const status = (code, msg) => {
 
 // Check existing posts
 const processPosts = async posts => {
-	if (!posts.length) {
+	const items = posts.items;
+
+	if (!items.length) {
 		return status(404, 'No posts found to process.')
 	}
 
 	// assume the last post is not yet syndicated
-	const latestPost = posts[0];
+	const latestPost = items[0];
+
+	console.log('latestPost.url is ', latestPost.url);
 
 	try {
 		// check twitter for any tweets containing post URL.
@@ -65,25 +68,31 @@ const processPosts = async posts => {
 
 // Prepare the content string for tweet format
 const prepareStatusText = post => {
+	// Tweet will be
+	// title === Vol.252
+	// summary === Containプロパティを用いたブラウザの最適化、クリーンなコードが全てではない、Webにおけるフォントサイズの変遷、ほか計12リンク
+	// url === https://frontendweekly.tokyo/posts/252/
+	// `${title} ${summary} {$url}`
+	// `${title} ${summary}`.length MUST be within maxLength
 	const maxLength = 280 - 3 - 1 - 23 - 20;
-	const entities = new Entities();
 
-	// strip html tags and decode entities
-	let title = post.title.trim().replace(/<[^>]+>/g, '');
-	title = entities.decode(title);
+	const title = post.title;
+	const summary = post.summary;
 
-	// truncate note text if its too long for a tweet.
-	if (title.length > maxLength) {
-		title = title.substring(0, maxLength) + '...';
+	let tweetText = `${title} ${summary}`;
+
+	// truncate text if its too long for a tweet.
+	if (tweetText.length > maxLength) {
+		tweetText = tweetText.substring(0, maxLength) + '...';
 	}
 
 	// include the post url at the end;
-	title += ' ' + post.url;
+	tweetText += ` | ${post.url}`;
 
-	return title
+	return tweetText
 };
 
-// Push a new note to Twitter
+// Push a new post to Twitter
 const publishPost = async post => {
 	try {
 		const statusText = prepareStatusText(post);
@@ -105,7 +114,7 @@ const publishPost = async post => {
 
 // Main Lambda Function Handler
 exports.handler = async () => {
-	// Fetch the list of published notes to work on,
+	// Fetch the list of published posts to work on,
 	// then process them to check if an action is necessary
 	return fetch(FEED_URL)
 		.then(response => response.json())
