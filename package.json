@@ -36,6 +36,7 @@
     "rollup-plugin-json": "^4.0.0"
   },
   "scripts": {
+	"postinstall": "netlify-lambda install",
     "sass:tokens": "npx json-to-scss src/_data/tokens.json src/scss/_tokens.scss",
     "sass:process": "npm run sass:tokens && sass src/scss/global.scss src/_includes/assets/css/global.css --style=compressed",
     "cms:precompile": "make-dir dist/admin && nunjucks-precompile src/_includes > dist/admin/templates.js -i \"\\.(njk|css|svg)$\"",
