@@ -11,7 +11,7 @@ dotenv.config();
 
 // Configuration
 /// Trello API URL
-const TRELLO_API_URL_PREFIX = "https://api.trello.com/1/lists/";
+const TRELLO_API_URL_PREFIX = 'https://api.trello.com/1/lists/';
 
 /// Configure Trello API Client
 const TRELLO_API = {
@@ -36,14 +36,14 @@ const handleError = err => {
 const params = () => {
 	return querystring.stringify({
 		attachments: true,
-		card_attachment_fields: "url",
-		fields: "id,name,desc,labels",
+		card_attachment_fields: 'url',
+		fields: 'id,name,desc,labels',
 		key: TRELLO_API.access_token_key,
 		token: TRELLO_API.access_token_secret
 	});
 };
 
-/// Prepare 11ty's Template Data
+/// Prepare Template
 const prepareTemplateData = (response) => {
 	// Strip URL and /n from desc
 	const removeNoise = value => {
@@ -71,7 +71,7 @@ const prepareTemplateData = (response) => {
 const getCards = async () => {
 	try {
 		const response = await fetch(`${TRELLO_API_URL_PREFIX}${TRELLO_FE_WEEKLY_LIST}/cards?${params()}`, {
-			"method": "GET"
+			'method': 'GET'
 		});
 
 		return prepareTemplateData(await response.json());
@@ -100,13 +100,16 @@ const generatePost = tmplData => {
 	const options = optionHandler();
 
 	const makeTitle = vol => `title: Vol.${vol}`;
-	const makeDate = date => `date: '${date}'`;
+	const makeDate = date => `date: ${date}`;
 	const makeDesc = () => `desc: '3 OF TRANSLATED TITLE、ほか計${tmplData.length}リンク'`;
+	const makePermalink = vol => `permalink: /posts/${vol}`;
 
-	const frontMatter = () => `---
+	const frontMatter = () =>
+`---
 ${makeTitle(options.vol)}
 ${makeDate(options.date)}
 ${makeDesc()}
+${makePermalink()}
 ---
 `;
 
@@ -119,7 +122,8 @@ ${makeDesc()}
 	// ↑ We will have 3 of this.
 	// In Trello, MUSTREAD MUST be labeled as MUSTREAD
 	const isMustRead = element => element.labels === 'MUSTREAD';
-	const makeMustRead = element => `## [${element.name}](${element.attachments})
+	const makeMustRead = element =>
+`## [${element.name}](${element.attachments})
 #### TRANSLATED TITLE
 ${description(element.desc)}
 
@@ -130,7 +134,8 @@ ${description(element.desc)}
 	// ↑ We will have about 4 of this.
 	// In Trello, FEATURED MUST be labeled as FEATURED
 	const isFeatured = element => element.labels === 'FEATURED';
-	const makeFeatured = element => `## [${element.name}](${element.attachments})
+	const makeFeatured = element =>
+`## [${element.name}](${element.attachments})
 ${description(element.desc)}
 
 `;
@@ -143,30 +148,23 @@ ${description(element.desc)}
 	// ↑ We will have about 5 of this.
 	// In Trello, INBRIEF MUST be labeled as INBRIEF
 	const isInBrief = element => element.labels === 'INBRIEF';
-	const makeInBrief = element => `- **[${element.name}(${element.attachments})**: TRANSLATED TITLE
+	const makeInBrief = element =>
+`
+- **[${element.name}](${element.attachments})**: TRANSLATED TITLE
 `;
 
-	const glue = () => {
-		const mustread = tmplData
-							.filter(element => isMustRead(element))
-							.map(elements => makeMustRead(elements)).join('');
-		const featured = tmplData
-							.filter(element => isFeatured(element))
-							.map(elements => makeFeatured(elements)).join('');
-		const inBrief = tmplData
-							.filter(element => isInBrief(element))
-							.map(elements => makeInBrief(elements)).join('');
+	const mustread = tmplData
+			.filter(isMustRead).map(makeMustRead).join('');
+	const featured = tmplData
+			.filter(isFeatured).map(makeFeatured).join('');
+	const inBrief = tmplData
+			.filter(isInBrief).map(makeInBrief).join('');
 
-		return `${frontMatter()}
+	return `${frontMatter()}
 ${mustread}
 ${featured}
 ${makeInBriefHeading()}
-${inBrief}`;
-	};
-
-	console.log(glue());
-
-	return glue();
+${inBrief}`
 };
 
 /// Save post as md
@@ -174,7 +172,7 @@ const savePost = post => {
 	const options = optionHandler();
 
 	try {
-		fs.writeFileSync(`${POSTS_DIR}/${options.date}-v${options.vol}.md`, post,'utf-8');
+		fs.writeFileSync(`${POSTS_DIR}/${options.date}-v${options.vol}.md`, post, 'utf-8');
 	} catch (err) {
 		handleError(err);
 	}
@@ -184,7 +182,7 @@ const savePost = post => {
 async function main() {
 	const tmplData = await getCards();
 	const post = generatePost(tmplData);
-	// savePost(post);
+	savePost(post);
 }
 
 main();
