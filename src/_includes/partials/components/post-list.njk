@@ -1,24 +1,24 @@
 {% if postListItems.length %}
-	<section class="[ post-list ] [ pad-top-700 gap-bottom-900 ]">
-		<div class="[ inner-wrapper ] [ sf-flow ]">
-			<h2 class="[ post-list__heading ] [ text-700 md:text-800 ]">{{ postListHeading }}</h2>
-			<ol class="[ post-list__items ] [ sf-flow ] [ pad-top-300 ]" reversed>
-				{% for item in postListItems %}
-					{% if item.date.getTime() <= global.now %}
-						<li class="post-list__item">
-							<h3 class="font-serif leading-tight text-700 weight-mid">
-								<a href="{{ item.url }}" class="post-list__link" rel="bookmark">{{ item.data.title }}</a>
-							</h3>
-							<div class="gap-top-300">
-								<p class="text-500 weight-mid">
-									<a href="{{ item.url }}" class="post-list__link" rel="bookmark">{{ item.data.desc }}</a>
-								</p>
-								<time class="font-serif" datetime="{{ item.date | w3DateFilter }}">{{ item.date | dateFilter }}</time>
-							</div>
-						</li>
-					{% endif %}
-				{% endfor %}
-			</ol>
-		</div>
-	</section>
+  <section class="[ post-list ] [ pad-top-700 gap-bottom-900 ]">
+    <div class="[ inner-wrapper ] [ sf-flow ]">
+      <h2 class="[ post-list__heading ]">{{ postListHeading }}</h2>
+      <ol class="[ post-list__items ] [ sf-flow ] [ pad-top-300 ]" reversed>
+        {% for item in postListItems %}
+          {% if item.date.getTime() <= global.now %}
+            <li class="post-list__item">
+              <h3 class="font-serif leading-tight">
+                <a href="{{ item.url }}" class="post-list__link" rel="bookmark">{{ item.data.title }}</a>
+              </h3>
+              <div class="gap-top-300">
+                <p>
+                  <a href="{{ item.url }}" class="post-list__link" rel="bookmark">{{ item.data.desc }}</a>
+                </p>
+                <time class="font-serif" datetime="{{ item.date | w3DateFilter }}">{{ item.date | dateFilter }}</time>
+              </div>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ol>
+    </div>
+  </section>
 {% endif %}

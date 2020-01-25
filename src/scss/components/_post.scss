@@ -15,7 +15,8 @@
     }
 
     h2,
-    h3 {
+    h3,
+    h4 {
       position: relative;
       /*display: flex;*/
 
@@ -41,7 +42,7 @@
     }
 
     code {
-      font-size: 1.2em;
+      font-size: 0.9em;
       color: var(--color-theme-primary);
       font-weight: 600;
       margin-left: 0.01ch;

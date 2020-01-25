@@ -1,11 +1,6 @@
 .post-list {
   &__item {
     --flow-space: #{get-size(700)};
-
-	time {
-	  font-variant-ligatures: common-ligatures;
-	  font-variant-numeric: oldstyle-nums;
-	}
   }
 
   &__link {

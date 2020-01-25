@@ -1,12 +1,26 @@
-/* lora-700 - latin */
 @font-face {
   font-family: 'et-book';
+  src: url('/fonts/etbookot-roman-webfont.woff2') format('woff2'),
+  url('/fonts/etbookot-roman-webfont.woff') format('woff');
+  font-weight: normal;
   font-style: normal;
-  font-weight: 700;
   font-display: swap;
-  src: local('ETBook Bold'), local('ETBookOT-Bold'),
-    url('/fonts/etbookot-bold-webfont.woff2') format('woff2'),
-    url('/fonts/etbookot-bold-webfont') format('woff');
+}
+@font-face {
+  font-family: 'et-book';
+  src: url('/fonts/etbookot-italic-webfont.woff2') format('woff2'),
+  url('/fonts/etbookot-italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'et-book';
+  src: url('/fonts/etbookot-bold-webfont.woff2') format('woff2'),
+  url('/fonts/etbookot-bold-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 body {
@@ -14,6 +28,8 @@ body {
   $line-height: get-size(600);
   line-height: $line-height / ($line-height * 0 + 1);
   text-rendering: optimizeLegibility;
+  font-variant-ligatures: common-ligatures;
+  font-variant-numeric: oldstyle-nums;
 
   @include apply-utility('font', 'base');
 }
@@ -22,8 +38,7 @@ h1,
 h2,
 h3 {
   @include apply-utility('font', 'serif');
-  font-variant-ligatures: common-ligatures;
-  font-variant-numeric: oldstyle-nums;
+  font-weight: 400;
 }
 
 h1 {
@@ -38,6 +53,10 @@ h3 {
   font-size: get-size(500);
 }
 
+h4 {
+  font-size: get-size(300);
+}
+
 @include media-query('md') {
   h1 {
     font-size: get-size(900);
@@ -49,5 +68,9 @@ h3 {
 
   h3 {
     font-size: get-size(700);
+  }
+
+  h4 {
+	font-size: get-size(500);
   }
 }
