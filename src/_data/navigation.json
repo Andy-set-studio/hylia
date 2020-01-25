@@ -1,14 +1,9 @@
 {
   "items": [
-	{
-	  "text": "Home",
-	  "url": "/",
-	  "external": false
-	},
-	{
-	  "text": "Tweets",
-	  "url": "/tweet",
-	  "external": false
-	}
+    {
+      "text": "Home",
+      "url": "/",
+      "external": false
+    }
   ]
 }
