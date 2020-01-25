@@ -25,7 +25,6 @@
 
     a:not([class]) {
       color: var(--color-text);
-      font-weight: 700;
       text-decoration: underline;
 
       @include apply-utility('leading', 'tight');
