@@ -14,6 +14,10 @@ const parseTransform = require('./src/transforms/parse-transform.js');
 // Import data files
 const site = require('./src/_data/site.json');
 
+// Markdown-it
+const markdownIt = require('markdown-it');
+const markdownItClassy = require('markdown-it-classy');
+
 module.exports = function(config) {
   // Filters
   config.addFilter('dateFilter', dateFilter);
@@ -35,6 +39,13 @@ module.exports = function(config) {
   config.addPassthroughCopy('src/admin/config.yml');
   config.addPassthroughCopy('src/admin/previews.js');
   config.addPassthroughCopy('node_modules/nunjucks/browser/nunjucks-slim.js');
+
+  // Markdown it
+  config.setLibrary('md', markdownIt({
+    html: true,
+    breaks: true,
+    linkify: true
+  }).use(markdownItClassy));
 
   const now = new Date();
 
@@ -71,11 +82,14 @@ module.exports = function(config) {
     }
   });
 
+  //
+
   return {
     dir: {
       input: 'src',
       output: 'dist'
     },
-    passthroughFileCopy: true
+    passthroughFileCopy: true,
+    markdownTemplateEngine: 'njk'
   };
 };

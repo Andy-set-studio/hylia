@@ -125,6 +125,12 @@
       padding: get-size(700);
       font-size: get-size(500);
     }
+
+    .inbrief + ul strong {
+      font-weight: 400;
+
+      @include apply-utility('font', 'serif');
+    }
   }
 
   &__footer {
