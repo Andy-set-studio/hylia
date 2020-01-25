@@ -10,9 +10,9 @@
       --flow-space: #{get-size(500)};
     }
 
-	h2 + h4 {
-	  --flow-space: #{get-size(300)};
-	}
+    h2 + h4 {
+      --flow-space: #{get-size(300)};
+    }
 
     h2,
     h3 {
@@ -22,17 +22,23 @@
       @include apply-utility('leading', 'tight');
     }
 
-	a:not([class]) {
-	  color: var(--color-text);
-	  font-weight: 700;
-	  text-decoration: underline;
+    a:not([class]) {
+      color: var(--color-text);
+      font-weight: 700;
+      text-decoration: underline;
 
-	  @include apply-utility('leading', 'tight');
-	}
+      @include apply-utility('leading', 'tight');
+    }
 
-	a:not([class]):hover {
-	  text-decoration: none;
-	}
+    a:not([class]):hover {
+      text-decoration: none;
+    }
+
+    code,
+    pre > code {
+      font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+      -webkit-text-size-adjust: 100%;
+    }
 
     code {
       font-size: 1.2em;
