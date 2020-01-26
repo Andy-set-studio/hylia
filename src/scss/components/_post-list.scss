@@ -15,15 +15,3 @@
     }
   }
 }
-
-.post-list--tweet .link-to-tweet {
-	text-align: center;
-
-  a {
-	color: var(--color-theme-primary);
-
-	&:not(:hover) {
-	  text-decoration: none;
-	}
-  }
-}
