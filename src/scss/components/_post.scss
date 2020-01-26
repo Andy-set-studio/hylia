@@ -65,10 +65,11 @@
     blockquote {
       border-left: 0.4rem solid var(--color-theme-primary-glare);
       margin-left: 0;
+      margin-right: 0;
       padding-left: get-size(500);
       font-style: italic;
-      font-size: get-size(600);
-
+      font-size: 1.1em;
+      line-height: 1.4;
       p {
         opacity: 0.85;
         padding: get-size(500) 0;
