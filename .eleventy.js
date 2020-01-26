@@ -41,11 +41,7 @@ module.exports = function(config) {
   config.addPassthroughCopy('node_modules/nunjucks/browser/nunjucks-slim.js');
 
   // Markdown it
-  config.setLibrary('md', markdownIt({
-    html: true,
-    breaks: true,
-    linkify: true
-  }).use(markdownItClassy));
+  config.setLibrary('md', markdownIt().use(markdownItClassy));
 
   const now = new Date();
 

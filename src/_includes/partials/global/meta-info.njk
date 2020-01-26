@@ -4,11 +4,11 @@
 {% set currentUrl = site.url + page.url %}
 
 {% if metaTitle %}
-	{% set pageTitle = metaTitle %}
+  {% set pageTitle = metaTitle %}
 {% endif %}
 
 {% if desc %}
-	{% set metaDesc = desc %}
+  {% set metaDesc = desc %}
 {% endif %}
 
 <title>{{ pageTitle }}</title>
@@ -20,32 +20,32 @@
 <meta property="og:url" content="{{ currentUrl }}"/>
 
 {% if site.authorHandle %}
-	<meta name="twitter:creator" content="@{{ site.authorHandle | replace('@', '') }}"/>
+  <meta name="twitter:creator" content="@{{ site.authorHandle | replace('@', '') }}"/>
 {% endif %}
 
 {% if metaDesc %}
-	<meta name="description" content="{{ metaDesc }}"/>
-	<meta name="twitter:description" content="{{ metaDesc }}"/>
-	<meta property="og:description" content="{{ metaDesc }}"/>
+  <meta name="description" content="{{ metaDesc }}"/>
+  <meta name="twitter:description" content="{{ metaDesc }}"/>
+  <meta property="og:description" content="{{ metaDesc }}"/>
 {% endif %}
 
 {% if socialImage %}
-	<meta property="og:image" content="{{ socialImage }}"/>
-	<meta name="twitter:image" content="{{ socialImage }}"/>
-	<meta property="og:image:alt" content="Page image for {{ site.name }}"/>
-	<meta name="twitter:image:alt" content="Page image for {{ site.name }}"/>
+  <meta property="og:image" content="{{ socialImage }}"/>
+  <meta name="twitter:image" content="{{ socialImage }}"/>
+  <meta property="og:image:alt" content="Page image for {{ site.name }}"/>
+  <meta name="twitter:image:alt" content="Page image for {{ site.name }}"/>
 {% endif %}
 
 {% if site.paymentPointer %}
-	<meta name="monetization" content="{{ site.paymentPointer }}"/>
+  <meta name="monetization" content="{{ site.paymentPointer }}"/>
 {% endif %}
 
 <link rel="alternate" title="{{ siteTitle }}" type="application/json" href="{{ site.url }}/feed.json"/>
 <link rel="alternate" title="{{ siteTitle }}" type="application/rss+xml" href="{{ site.url }}/feed.xml"/>
 
 {% if site.WebSubHubURL %}
-	<link rel="self" href="{{ site.url }}/feed.xml"/>
-	<link rel="hub" href="{{ site.WebSubHubURL }}"/>
+  <link rel="self" href="{{ site.url }}/feed.xml"/>
+  <link rel="hub" href="{{ site.WebSubHubURL }}"/>
 {% endif %}
 
 <link rel="webmention" href="https://webmention.io/frontendweekly.tokyo/webmention"/>

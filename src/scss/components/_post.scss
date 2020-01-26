@@ -2,7 +2,7 @@
   &__body {
     --flow-space: #{get-size(800)};
 
-    font-size: calc( 1em + (2 - 1) * ( (100vw - 20em) / ( 100 - 20) ));
+    font-size: calc( 1em + (1.7 - 1.56) * ( (100vw - 20em) / ( 100 - 20) ));
 
     @include media-query('md') {
       font-size: #{get-size(500)}
