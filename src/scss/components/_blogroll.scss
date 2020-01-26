@@ -1,0 +1,36 @@
+.blogroll {
+  &__item {
+    --flow-space: #{get-size(700)};
+  }
+
+  &__link {
+    &,
+    &:visited {
+      color: var(--color-theme-primary);
+      text-decoration: none;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__link--feed-url {
+    & {
+      display: inline-flex;
+    }
+    &,
+    &:visited {
+      color: var(--color-text);
+    }
+
+    svg {
+      width: 1em;
+      height: 1em;
+      margin-top: auto;
+      margin-bottom: auto;
+      margin-right: 0.25em;
+      fill: currentColor;
+    }
+  }
+}

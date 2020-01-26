@@ -13,11 +13,11 @@
   }
 
   .theme-toggle {
-	text-align: center;
+    text-align: center;
   }
 
   .icon svg {
-	fill: var(--color-text);
+    fill: var(--color-text);
   }
 
   &__credit {
@@ -29,6 +29,6 @@
   justify-content: center;
 
   > *:not(first-child) {
-	margin-right: get-size(500);
+    margin-right: get-size(500);
   }
 }

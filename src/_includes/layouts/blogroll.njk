@@ -1,0 +1,41 @@
+{% extends 'layouts/base.njk' %}
+{% set pageType = 'Blogroll' %}
+
+{# Intro content #}
+{% set introHeading = title %}
+{% set introSummary %}
+  <p class="[ intro__meta ] [ text-500 leading-tight ]">
+    Frontend Weeklyは以下の{{ opml.items | length }}にのぼる素晴らしいブログのコンテンツをベースに成り立っています。<br>
+    この場を借りて、すべての書き手に感謝致します。<br><br>
+    最終更新日: <time datetime="{{ opml.dateCreated | w3DateFilter }}" class="dt-published">{{ opml.dateCreated | dateFilter }}</time>
+  </p>
+{% endset %}
+
+{% block content %}
+  <main id="main-content" tabindex="-1">
+    {% include "partials/components/intro.njk" %}
+    <section class="[ blogroll ] [ pad-top-700 gap-bottom-900 ]">
+      <div class="[ inner-wrapper ] [ sf-flow ]">
+        <ul class="[ blogroll__items ] [ sf-flow ] [ pad-top-300 ]">
+          {% for item in opml.items %}
+          <li class="blogroll__item">
+            <h3 class="leading-tight">
+              <a href="{{ item._htmlUrl }}" rel="external" class="blogroll__link blogroll__link--site-name">
+                {{ item._title }}
+              </a>
+            </h3>
+            <a href="{{ item._xmlUrl }}" rel="external" class="blogroll__link blogroll__link--feed-url">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <title>Feed</title>
+                <circle cx="6.18" cy="17.82" r="2.18"/>
+                <path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/>
+              </svg>
+              <span>{{ item._xmlUrl }}</span>
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </section>
+  </main>
+{% endblock %}

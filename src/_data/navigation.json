@@ -4,6 +4,11 @@
       "text": "Home",
       "url": "/",
       "external": false
+    },
+    {
+      "text": "Blogroll",
+      "url": "/blogroll",
+      "external": false
     }
   ]
 }
