@@ -1,9 +1,9 @@
 {
-  "dateCreated": "Sun, 26 Jan 2020 12:01:26 +0000",
+  "dateCreated": "Mon, 27 Jan 2020 15:35:27 +0000",
   "items": [
     {
-      "_text": "A List Apart: The Full Feed",
-      "_title": "A List Apart: The Full Feed",
+      "_text": "A List Apart",
+      "_title": "A List Apart",
       "_type": "rss",
       "_xmlUrl": "http://feeds.feedburner.com/alistapart/main",
       "_htmlUrl": "https://alistapart.com"
@@ -1689,8 +1689,8 @@
       "_htmlUrl": "https://timkadlec.com/"
     },
     {
-      "_text": "Articles on Smashing Magazine — For Web Designers And Developers",
-      "_title": "Articles on Smashing Magazine — For Web Designers And Developers",
+      "_text": "Smashing Magazine — For Web Designers And Developers",
+      "_title": "Smashing Magazine — For Web Designers And Developers",
       "_type": "rss",
       "_xmlUrl": "https://www.smashingmagazine.com/feed/",
       "_htmlUrl": "https://www.smashingmagazine.com/articles/"
@@ -1792,6 +1792,13 @@
       "_type": "rss",
       "_xmlUrl": "https://vhf.github.io/blog/atom.xml",
       "_htmlUrl": "https://draft.li"
+    },
+    {
+      "_text": "OutlierDeveloper",
+      "_title": "OutlierDeveloper",
+      "_type": "rss",
+      "_xmlUrl": "http://outlierdeveloper.com/feed/",
+      "_htmlUrl": "http://outlierdeveloper.com"
     },
     {
       "_text": "LinkedIn Engineering",
@@ -2604,13 +2611,6 @@
       "_type": "rss",
       "_xmlUrl": "https://blog.izs.me/rss.xml",
       "_htmlUrl": "http://github.com/dylang/node-rss"
-    },
-    {
-      "_text": "Comments for OutlierDeveloper",
-      "_title": "Comments for OutlierDeveloper",
-      "_type": "rss",
-      "_xmlUrl": "http://outlierdeveloper.com/comments/feed/",
-      "_htmlUrl": "http://outlierdeveloper.com"
     },
     {
       "_text": "Blake Embrey",
