@@ -1,12 +1,12 @@
 {
-  "dateCreated": "Mon, 27 Jan 2020 15:35:27 +0000",
+  "dateCreated": "Tue, 28 Jan 2020 14:56:04 +0000",
   "items": [
     {
       "_text": "A List Apart",
       "_title": "A List Apart",
       "_type": "rss",
       "_xmlUrl": "http://feeds.feedburner.com/alistapart/main",
-      "_htmlUrl": "https://alistapart.com"
+      "_htmlUrl": "&#10;\t\t\thttps://alistapart.com"
     },
     {
       "_text": "Changelog",
@@ -21,13 +21,6 @@
       "_type": "rss",
       "_xmlUrl": "http://feeds.feedburner.com/codinghorror/",
       "_htmlUrl": "https://blog.codinghorror.com/"
-    },
-    {
-      "_text": "Cognition by Happy Cog",
-      "_title": "Cognition by Happy Cog",
-      "_type": "rss",
-      "_xmlUrl": "http://feeds.feedburner.com/cognitionfeed",
-      "_htmlUrl": "http://cognition.happycog.com/feed"
     },
     {
       "_text": "Infrequently Noted",
@@ -177,13 +170,6 @@
       "_htmlUrl": "https://blog.mozilla.org/javascript"
     },
     {
-      "_text": "456 Berea Street",
-      "_title": "456 Berea Street",
-      "_type": "rss",
-      "_xmlUrl": "http://feeds.feedburner.com/456bereastreet",
-      "_htmlUrl": "http://www.456bereastreet.com/"
-    },
-    {
       "_text": "Google Analytics Blog",
       "_title": "Google Analytics Blog",
       "_type": "rss",
@@ -317,13 +303,6 @@
       "_htmlUrl": "https://marcozehe.de"
     },
     {
-      "_text": "Paul Rouget's home.",
-      "_title": "Paul Rouget's home.",
-      "_type": "rss",
-      "_xmlUrl": "http://paulrouget.com/index.xml",
-      "_htmlUrl": "http://paulrouget.com"
-    },
-    {
       "_text": "pmuellr",
       "_title": "pmuellr",
       "_type": "rss",
@@ -415,13 +394,6 @@
       "_htmlUrl": "https://webaim.org/blog"
     },
     {
-      "_text": "Web Performance Today",
-      "_title": "Web Performance Today",
-      "_type": "rss",
-      "_xmlUrl": "http://www.webperformancetoday.com/feed/",
-      "_htmlUrl": "http://www.webperformancetoday.com"
-    },
-    {
       "_text": "XK72 Spacelab - blog of Karl von Randow",
       "_title": "XK72 Spacelab - blog of Karl von Randow",
       "_type": "rss",
@@ -457,13 +429,6 @@
       "_htmlUrl": "https://scottberkun.com"
     },
     {
-      "_text": "Web Browsers News and Reviews",
-      "_title": "Web Browsers News and Reviews",
-      "_type": "rss",
-      "_xmlUrl": "http://feeds.feedburner.com/FavoriteBrowser",
-      "_htmlUrl": "http://www.favbrowser.com"
-    },
-    {
       "_text": "Brett Terpstra",
       "_title": "Brett Terpstra",
       "_type": "rss",
@@ -497,13 +462,6 @@
       "_type": "rss",
       "_xmlUrl": "http://feeds.feedburner.com/blogspot/amDG",
       "_htmlUrl": "http://webmasters.googleblog.com/"
-    },
-    {
-      "_text": "UX Magazine",
-      "_title": "UX Magazine",
-      "_type": "rss",
-      "_xmlUrl": "http://feeds.feedburner.com/UXM",
-      "_htmlUrl": "http://uxmag.com/uxm.xml/favicon.ico/favicon.ico"
     },
     {
       "_text": "Design Staff",
@@ -672,20 +630,6 @@
       "_type": "rss",
       "_xmlUrl": "http://programmingisterrible.com/rss",
       "_htmlUrl": "https://programmingisterrible.com/"
-    },
-    {
-      "_text": "Learning WebGL",
-      "_title": "Learning WebGL",
-      "_type": "rss",
-      "_xmlUrl": "http://learningwebgl.com/blog/?feed=rss2",
-      "_htmlUrl": "http://learningwebgl.com/blog"
-    },
-    {
-      "_text": "ZURB",
-      "_title": "ZURB",
-      "_type": "rss",
-      "_xmlUrl": "http://feeds.feedburner.com/zurb/blog",
-      "_htmlUrl": "http://zurb.com/blog/posts"
     },
     {
       "_text": "The Corner",
@@ -905,13 +849,6 @@
       "_htmlUrl": "http://thenewcode.com"
     },
     {
-      "_text": "Adaptive Path",
-      "_title": "Adaptive Path",
-      "_type": "rss",
-      "_xmlUrl": "http://www.adaptivepath.com/rss",
-      "_htmlUrl": "https://www.adaptivepath.com"
-    },
-    {
       "_text": "Bram.us",
       "_title": "Bram.us",
       "_type": "rss",
@@ -947,13 +884,6 @@
       "_htmlUrl": "http://tavmjong.free.fr/blog"
     },
     {
-      "_text": "Tech.Pro - Tutorials",
-      "_title": "Tech.Pro - Tutorials",
-      "_type": "rss",
-      "_xmlUrl": "http://tech.pro/rss/Tutorials?q=&amp;algo=New",
-      "_htmlUrl": "http://tech.pro/rss/Tutorials?q=&amp;algo=New"
-    },
-    {
       "_text": "Andy Davies",
       "_title": "Andy Davies",
       "_type": "rss",
@@ -980,13 +910,6 @@
       "_type": "rss",
       "_xmlUrl": "http://feeds.feedburner.com/tobyho",
       "_htmlUrl": "http://tobyho.com"
-    },
-    {
-      "_text": "UsabilityGeek - Usability &amp; User Experience Blog",
-      "_title": "UsabilityGeek - Usability &amp; User Experience Blog",
-      "_type": "rss",
-      "_xmlUrl": "http://feeds.feedburner.com/UsabilityGeek",
-      "_htmlUrl": "https://usabilitygeek.com"
     },
     {
       "_text": "Ghost in the Pixel",
@@ -1073,32 +996,11 @@
       "_htmlUrl": "https://www.soeren-hentzschel.at"
     },
     {
-      "_text": "Modern Web Development: Tales of a Developer Advocate on Modern Web Development: Tales of a Developer Advocate",
-      "_title": "Modern Web Development: Tales of a Developer Advocate on Modern Web Development: Tales of a Developer Advocate",
-      "_type": "rss",
-      "_xmlUrl": "http://paul.kinlan.me/atom.xml",
-      "_htmlUrl": "https://paul.kinlan.me/"
-    },
-    {
-      "_text": "MailChimp Email Marketing Blog",
-      "_title": "MailChimp Email Marketing Blog",
-      "_type": "rss",
-      "_xmlUrl": "https://blog.mailchimp.com/feed/",
-      "_htmlUrl": "https://blog.mailchimp.com"
-    },
-    {
       "_text": "Benhowdle.im",
       "_title": "Benhowdle.im",
       "_type": "rss",
       "_xmlUrl": "http://benhowdle.im/feed.xml",
       "_htmlUrl": "http://benhowdle.im"
-    },
-    {
-      "_text": "Learnings at Eastros",
-      "_title": "Learnings at Eastros",
-      "_type": "rss",
-      "_xmlUrl": "http://www.to-string.com/feed/",
-      "_htmlUrl": "http://learn.eastros.com"
     },
     {
       "_text": "Jster's Blog",
@@ -1113,13 +1015,6 @@
       "_type": "rss",
       "_xmlUrl": "http://www.nicholascloud.com/feed/",
       "_htmlUrl": "http://www.nicholascloud.com"
-    },
-    {
-      "_text": "Pinboard (network items for studiomohawk)",
-      "_title": "Pinboard (network items for studiomohawk)",
-      "_type": "rss",
-      "_xmlUrl": "http://feeds.pinboard.in/rss/secret:b3469ed096a36b08668e/u:studiomohawk/network/",
-      "_htmlUrl": "http://feeds.pinboard.in"
     },
     {
       "_text": "Programming – O'Reilly Radar",
@@ -1288,27 +1183,6 @@
       "_type": "rss",
       "_xmlUrl": "http://feeds.feedblitz.com/derickbailey",
       "_htmlUrl": "https://derickbailey.com"
-    },
-    {
-      "_text": "Ryan Morr",
-      "_title": "Ryan Morr",
-      "_type": "rss",
-      "_xmlUrl": "http://ryanmorr.com/feed/",
-      "_htmlUrl": "http://ryanmorr.com"
-    },
-    {
-      "_text": "The Distilled Hype Feed",
-      "_title": "The Distilled Hype Feed",
-      "_type": "rss",
-      "_xmlUrl": "http://distilledhype.net/feed",
-      "_htmlUrl": "http://distilledhype.net/"
-    },
-    {
-      "_text": "JVNRSS Feed - Update Entry",
-      "_title": "JVNRSS Feed - Update Entry",
-      "_type": "rss",
-      "_xmlUrl": "https://jvn.jp/rss/jvn.rdf",
-      "_htmlUrl": "https://jvn.jp/"
     },
     {
       "_text": "Mike Taylr Dot Com Web Blog",
@@ -1619,13 +1493,6 @@
       "_htmlUrl": "https://www.twnsnd.com/"
     },
     {
-      "_text": "Lickity Split",
-      "_title": "Lickity Split",
-      "_type": "rss",
-      "_xmlUrl": "https://zoompf.com/blog/feed",
-      "_htmlUrl": "https://zoompf.com"
-    },
-    {
       "_text": "Adrian Roselli",
       "_title": "Adrian Roselli",
       "_type": "rss",
@@ -1666,13 +1533,6 @@
       "_type": "rss",
       "_xmlUrl": "https://quickleft.com/rss-feed/",
       "_htmlUrl": "https://quickleft.com/blog"
-    },
-    {
-      "_text": "Rebecca Murphey - Adventures in JavaScript Development",
-      "_title": "Rebecca Murphey - Adventures in JavaScript Development",
-      "_type": "rss",
-      "_xmlUrl": "http://rmurphey.com/feed.xml",
-      "_htmlUrl": "http://rmurphey.com"
     },
     {
       "_text": "WPOStats.com",
@@ -1815,13 +1675,6 @@
       "_htmlUrl": "https://www.toptal.com/blog"
     },
     {
-      "_text": "Fastly Blog RSS feed",
-      "_title": "Fastly Blog RSS feed",
-      "_type": "rss",
-      "_xmlUrl": "https://www.fastly.com/blog_rss.xml",
-      "_htmlUrl": "https://www.fastly.com/rss.xml"
-    },
-    {
       "_text": "Max Stoibers Blog",
       "_title": "Max Stoibers Blog",
       "_type": "rss",
@@ -1920,20 +1773,6 @@
       "_htmlUrl": "https://www.webreflection.co.uk/"
     },
     {
-      "_text": "Jen Simmons : Writing",
-      "_title": "Jen Simmons : Writing",
-      "_type": "rss",
-      "_xmlUrl": "http://jensimmons.com/blog.xml",
-      "_htmlUrl": "http://jensimmons.com/writing"
-    },
-    {
-      "_text": "Joe Zim's JavaScript Corner",
-      "_title": "Joe Zim's JavaScript Corner",
-      "_type": "rss",
-      "_xmlUrl": "https://www.joezimjs.com/feed/",
-      "_htmlUrl": "https://www.joezimjs.com/"
-    },
-    {
       "_text": "BlogGeek.me",
       "_title": "BlogGeek.me",
       "_type": "rss",
@@ -1988,6 +1827,13 @@
       "_type": "rss",
       "_xmlUrl": "https://ethanmarcotte.com/wrote/feed.xml",
       "_htmlUrl": "https://ethanmarcotte.com"
+    },
+    {
+      "_text": "Samsung Internet Developers - Medium",
+      "_title": "Samsung Internet Developers - Medium",
+      "_type": "rss",
+      "_xmlUrl": "https://medium.com/feed/samsung-internet-dev",
+      "_htmlUrl": "https://medium.com/samsung-internet-dev?source=rss----42759d5da545---4"
     },
     {
       "_text": "Martin Fowler",
@@ -2200,6 +2046,13 @@
       "_htmlUrl": "http://damonbauer.me"
     },
     {
+      "_text": "Fastly Blog",
+      "_title": "Fastly Blog",
+      "_type": "rss",
+      "_xmlUrl": "https://www.fastly.com/feed.xml",
+      "_htmlUrl": "https://www.fastly.com/rss.xml"
+    },
+    {
       "_text": "Dmitri Pavlutin Blog",
       "_title": "Dmitri Pavlutin Blog",
       "_type": "rss",
@@ -2207,11 +2060,11 @@
       "_htmlUrl": "https://dmitripavlutin.com"
     },
     {
-      "_text": "Catalin Red",
-      "_title": "Catalin Red",
+      "_text": "Usability Geek",
+      "_title": "Usability Geek",
       "_type": "rss",
-      "_xmlUrl": "https://feeds.feedburner.com/catalinred",
-      "_htmlUrl": "https://catalin.red/"
+      "_xmlUrl": "https://usabilitygeek.com/feed/",
+      "_htmlUrl": "https://usabilitygeek.com"
     },
     {
       "_text": "JavaScript at Tumblr",
@@ -2403,13 +2256,6 @@
       "_htmlUrl": "https://css-irl.info"
     },
     {
-      "_text": "Jeremy Dormitzer",
-      "_title": "Jeremy Dormitzer",
-      "_type": "rss",
-      "_xmlUrl": "https://jeremydormitzer.com/feed/",
-      "_htmlUrl": "https://jeremydormitzer.com"
-    },
-    {
       "_text": "Etienne Margraff",
       "_title": "Etienne Margraff",
       "_type": "rss",
@@ -2485,13 +2331,6 @@
       "_type": "rss",
       "_xmlUrl": "https://www.w3.org/blog/wotig/feed/",
       "_htmlUrl": "https://www.w3.org/blog/wotig"
-    },
-    {
-      "_text": "Samsung Internet Dev Hub - Resources for developers",
-      "_title": "Samsung Internet Dev Hub - Resources for developers",
-      "_type": "rss",
-      "_xmlUrl": "https://samsunginter.net/rss.xml",
-      "_htmlUrl": "https://samsunginter.net"
     },
     {
       "_text": "Google Ads",
@@ -2669,6 +2508,13 @@
       "_htmlUrl": "https://blog.thepete.net/blog/"
     },
     {
+      "_text": "Jeremy Dormitzer's blog",
+      "_title": "Jeremy Dormitzer's blog",
+      "_type": "rss",
+      "_xmlUrl": "https://jeremydormitzer.com/blog/feed.xml",
+      "_htmlUrl": "https://jeremydormitzer.com/blog"
+    },
+    {
       "_text": "@mdo",
       "_title": "@mdo",
       "_type": "rss",
@@ -2681,6 +2527,34 @@
       "_type": "rss",
       "_xmlUrl": "https://hindenburgresearch.com/feed/",
       "_htmlUrl": "https://hindenburgresearch.com"
+    },
+    {
+      "_text": "Modern Web Development: Tales of a Developer Advocate",
+      "_title": "Modern Web Development: Tales of a Developer Advocate",
+      "_type": "rss",
+      "_xmlUrl": "https://paul.kinlan.me/index.json",
+      "_htmlUrl": "https://paul.kinlan.me/"
+    },
+    {
+      "_text": "Rigor",
+      "_title": "Rigor",
+      "_type": "rss",
+      "_xmlUrl": "https://rigor.com/feed",
+      "_htmlUrl": "https://rigor.com"
+    },
+    {
+      "_text": "Catalin Red",
+      "_title": "Catalin Red",
+      "_type": "rss",
+      "_xmlUrl": "https://catalin.red/feed",
+      "_htmlUrl": "https://catalin.red/"
+    },
+    {
+      "_text": "UX Magazine",
+      "_title": "UX Magazine",
+      "_type": "rss",
+      "_xmlUrl": "https://feeds.uxmag.com/uxm",
+      "_htmlUrl": "http://uxmag.com/uxm.xml/favicon.ico/favicon.ico"
     }
   ]
 }
