@@ -69,14 +69,14 @@ const prepareStatusText = post => {
   // title === Vol.252
   // summary === Containプロパティを用いたブラウザの最適化、クリーンなコードが全てではない、Webにおけるフォントサイズの変遷、ほか計12リンク
   // url === https://frontendweekly.tokyo/posts/252/
-  // `${title} ${summary} {$url}`
-  // `${title} ${summary}`.length MUST be within maxLength
+  // `${summary} Frontend Weekly ${title} {$url}`
+  // `${summary} Frontend Weekly ${title}`.length MUST be within maxLength
   const maxLength = 280 - 3 - 1 - 23 - 20;
 
   const title = post.title;
   const summary = post.summary;
 
-  let tweetText = `${title} ${summary}`;
+  let tweetText = `${summary} Frontend Weekly ${title}`;
 
   // truncate text if its too long for a tweet.
   if (tweetText.length > maxLength) {
@@ -84,7 +84,7 @@ const prepareStatusText = post => {
   }
 
   // include the post url at the end;
-  tweetText += ` | ${post.url}`;
+  tweetText += ` ${post.url}`;
 
   return tweetText;
 };
