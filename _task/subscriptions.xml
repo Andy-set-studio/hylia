@@ -7,7 +7,7 @@
   </head>
   <body>
     <outline text="Blogs" title="Blogs">
-<outline text="A List Apart" title="A List Apart" type="rss" xmlUrl="http://feeds.feedburner.com/alistapart/main" htmlUrl="&#10;			https://alistapart.com		"/>
+<outline text="A List Apart" title="A List Apart" type="rss" xmlUrl="http://feeds.feedburner.com/alistapart/main" htmlUrl="https://alistapart.com"/>
 <outline text="Changelog" title="Changelog" type="rss" xmlUrl="http://feeds.feedburner.com/thechangelog" htmlUrl="https://changelog.com/"/>
 <outline text="Coding Horror" title="Coding Horror" type="rss" xmlUrl="http://feeds.feedburner.com/codinghorror/" htmlUrl="https://blog.codinghorror.com/"/>
 <outline text="Infrequently Noted" title="Infrequently Noted" type="rss" xmlUrl="http://infrequently.org/feed/" htmlUrl="https://infrequently.org"/>
