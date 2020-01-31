@@ -29,6 +29,7 @@ try {
 
   const parsed = parser.parse(opml, options, true);
   const uniqueObj = removeDuplicates(parsed.opml.body.outline.outline, '_xmlUrl');
+
   const finalObj = {
     dateCreated: parsed.opml.head.dateCreated,
     items: uniqueObj
