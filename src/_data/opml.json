@@ -1,5 +1,5 @@
 {
-  "dateCreated": "Sat, 01 Feb 2020 08:30:12 +0000",
+  "dateCreated": "Sat, 01 Feb 2020 10:50:02 +0000",
   "items": [
     {
       "_title": "24 Accessibility",
@@ -19,7 +19,7 @@
     {
       "_title": "A List Apart",
       "_xmlUrl": "https://alistapart.com/main/feed/",
-      "_htmlUrl": "https://alistapart.com"
+      "_htmlUrl": "&#10;\t\t\thttps://alistapart.com"
     },
     {
       "_title": "Aaron Gustafson: Latest Posts &amp; Links",
