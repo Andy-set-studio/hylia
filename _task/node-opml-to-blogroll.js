@@ -17,9 +17,7 @@ const transformJSON = async json => {
   };
 
   try {
-    transformed = await jq.run(filter, json, option);
-
-    return transformed;
+    return await jq.run(filter, json, option);
   } catch (error) {
     console.log(error);
   }
