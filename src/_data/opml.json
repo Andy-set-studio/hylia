@@ -1,13 +1,6 @@
 {
-  "dateCreated": "Tue, 28 Jan 2020 14:56:04 +0000",
+  "dateCreated": "Sat, 01 Feb 2020 02:46:08 +0000",
   "items": [
-    {
-      "_text": "A List Apart",
-      "_title": "A List Apart",
-      "_type": "rss",
-      "_xmlUrl": "http://feeds.feedburner.com/alistapart/main",
-      "_htmlUrl": "&#10;\t\t\thttps://alistapart.com"
-    },
     {
       "_text": "Changelog",
       "_title": "Changelog",
@@ -72,13 +65,6 @@
       "_htmlUrl": "http://warpspire.com/"
     },
     {
-      "_text": "Mark Grabanski",
-      "_title": "Mark Grabanski",
-      "_type": "rss",
-      "_xmlUrl": "http://feeds.feedburner.com/allTrades",
-      "_htmlUrl": "http://marcgrabanski.com"
-    },
-    {
       "_text": "QuirksBlog",
       "_title": "QuirksBlog",
       "_type": "rss",
@@ -128,13 +114,6 @@
       "_htmlUrl": "http://www.standardista.com"
     },
     {
-      "_text": "Gmail Blog",
-      "_title": "Gmail Blog",
-      "_type": "rss",
-      "_xmlUrl": "http://feeds.feedburner.com/OfficialGmailBlog",
-      "_htmlUrl": "https://www.blog.google/products/gmail/"
-    },
-    {
       "_text": "Google Chrome Releases",
       "_title": "Google Chrome Releases",
       "_type": "rss",
@@ -163,20 +142,6 @@
       "_htmlUrl": "https://hacks.mozilla.org"
     },
     {
-      "_text": "JavaScript",
-      "_title": "JavaScript",
-      "_type": "rss",
-      "_xmlUrl": "https://blog.mozilla.org/javascript/feed/",
-      "_htmlUrl": "https://blog.mozilla.org/javascript"
-    },
-    {
-      "_text": "Google Analytics Blog",
-      "_title": "Google Analytics Blog",
-      "_type": "rss",
-      "_xmlUrl": "http://feeds.feedburner.com/blogspot/tRaA",
-      "_htmlUrl": "http://analytics.googleblog.com/"
-    },
-    {
       "_text": "Paul Irish",
       "_title": "Paul Irish",
       "_type": "rss",
@@ -198,13 +163,6 @@
       "_htmlUrl": "https://uxmovement.com"
     },
     {
-      "_text": "Little Big Details",
-      "_title": "Little Big Details",
-      "_type": "rss",
-      "_xmlUrl": "http://feeds.feedburner.com/littlebigdetails",
-      "_htmlUrl": "https://littlebigdetails.com/"
-    },
-    {
       "_text": "simurai",
       "_title": "simurai",
       "_type": "rss",
@@ -217,13 +175,6 @@
       "_type": "rss",
       "_xmlUrl": "http://feeds2.feedburner.com/contrast/blog",
       "_htmlUrl": "https://www.intercom.com/blog"
-    },
-    {
-      "_text": "mir.aculo.us",
-      "_title": "mir.aculo.us",
-      "_type": "rss",
-      "_xmlUrl": "http://feeds.feedburner.com/miraculous",
-      "_htmlUrl": "http://mir.aculo.us"
     },
     {
       "_text": "giant robots smashing into other giant robots",
@@ -289,25 +240,11 @@
       "_htmlUrl": "https://infrequently.org"
     },
     {
-      "_text": "Matteo Spinelli's Cubiq.org",
-      "_title": "Matteo Spinelli's Cubiq.org",
-      "_type": "rss",
-      "_xmlUrl": "http://feeds.feedburner.com/cubiq",
-      "_htmlUrl": "http://cubiq.org"
-    },
-    {
       "_text": "Marco's Accessibility Blog",
       "_title": "Marco's Accessibility Blog",
       "_type": "rss",
       "_xmlUrl": "http://www.marcozehe.de/feed/",
       "_htmlUrl": "https://marcozehe.de"
-    },
-    {
-      "_text": "pmuellr",
-      "_title": "pmuellr",
-      "_type": "rss",
-      "_xmlUrl": "http://feeds.feedburner.com/pmuellr",
-      "_htmlUrl": "http://pmuellr.blogspot.com/"
     },
     {
       "_text": "Remy Sharp",
@@ -331,13 +268,6 @@
       "_htmlUrl": "https://phoboslab.org/log"
     },
     {
-      "_text": "Rawkes - Captain's Blog",
-      "_title": "Rawkes - Captain's Blog",
-      "_type": "rss",
-      "_xmlUrl": "http://feeds.feedburner.com/rawkes",
-      "_htmlUrl": "http://rawkes.com"
-    },
-    {
       "_text": "Rey Bango",
       "_title": "Rey Bango",
       "_type": "rss",
@@ -359,13 +289,6 @@
       "_htmlUrl": "https://paulbakaus.com"
     },
     {
-      "_text": "Ryan Seddon",
-      "_title": "Ryan Seddon",
-      "_type": "rss",
-      "_xmlUrl": "http://feeds.feedburner.com/TheCSSNinja",
-      "_htmlUrl": "https://www.thecssninja.com"
-    },
-    {
       "_text": "Thoughts From Eric",
       "_title": "Thoughts From Eric",
       "_type": "rss",
@@ -378,27 +301,6 @@
       "_type": "rss",
       "_xmlUrl": "http://feeds.feedburner.com/westonruter",
       "_htmlUrl": "https://weston.ruter.net"
-    },
-    {
-      "_text": "Web Reflection",
-      "_title": "Web Reflection",
-      "_type": "rss",
-      "_xmlUrl": "http://feeds.feedburner.com/WebReflection",
-      "_htmlUrl": "http://webreflection.blogspot.com/"
-    },
-    {
-      "_text": "WebAIM Blog",
-      "_title": "WebAIM Blog",
-      "_type": "rss",
-      "_xmlUrl": "http://webaim.org/blog/feed/",
-      "_htmlUrl": "https://webaim.org/blog"
-    },
-    {
-      "_text": "XK72 Spacelab - blog of Karl von Randow",
-      "_title": "XK72 Spacelab - blog of Karl von Randow",
-      "_type": "rss",
-      "_xmlUrl": "http://blog.xk72.com/rss",
-      "_htmlUrl": "http://blog.xk72.com/"
     },
     {
       "_text": "Brad Frost Web » Brad Frost Web",
@@ -471,39 +373,11 @@
       "_htmlUrl": "https://library.gv.com?source=rss----dfc85068874c---4"
     },
     {
-      "_text": "The UX Booth",
-      "_title": "The UX Booth",
-      "_type": "rss",
-      "_xmlUrl": "http://feeds.feedburner.com/uxbooth",
-      "_htmlUrl": "http://www.uxbooth.com/"
-    },
-    {
-      "_text": "Parse Blog",
-      "_title": "Parse Blog",
-      "_type": "rss",
-      "_xmlUrl": "http://blog.parse.com/feed/",
-      "_htmlUrl": "http://blog.parse.com"
-    },
-    {
-      "_text": "This Is Responsive",
-      "_title": "This Is Responsive",
-      "_type": "rss",
-      "_xmlUrl": "http://responsive.rga.com/rss",
-      "_htmlUrl": "https://responsive.rga.com/"
-    },
-    {
       "_text": "Facebook Developer Blog",
       "_title": "Facebook Developer Blog",
       "_type": "rss",
       "_xmlUrl": "https://developers.facebook.com/blog/feed",
       "_htmlUrl": "https://developers.facebook.com/blog/"
-    },
-    {
-      "_text": "Mozilla Research",
-      "_title": "Mozilla Research",
-      "_type": "rss",
-      "_xmlUrl": "https://blog.mozilla.org/research/feed/",
-      "_htmlUrl": "https://research.mozilla.org"
     },
     {
       "_text": "Planet WebKit",
@@ -569,20 +443,6 @@
       "_htmlUrl": "https://meiert.com/en/"
     },
     {
-      "_text": "Chris Webb",
-      "_title": "Chris Webb",
-      "_type": "rss",
-      "_xmlUrl": "http://feeds.feedburner.com/mediumequalsmessage/cwebbdesign",
-      "_htmlUrl": "http://blog.mediumequalsmessage.com"
-    },
-    {
-      "_text": "Bokardo",
-      "_title": "Bokardo",
-      "_type": "rss",
-      "_xmlUrl": "http://bokardo.com/feed/atom/",
-      "_htmlUrl": "http://bokardo.com"
-    },
-    {
       "_text": "Lea Verou",
       "_title": "Lea Verou",
       "_type": "rss",
@@ -632,39 +492,11 @@
       "_htmlUrl": "https://programmingisterrible.com/"
     },
     {
-      "_text": "The Corner",
-      "_title": "The Corner",
-      "_type": "rss",
-      "_xmlUrl": "http://feeds.feedburner.com/corner-squareup-com",
-      "_htmlUrl": "http://corner.squareup.com"
-    },
-    {
-      "_text": "Hans Muller's WebKit Blog",
-      "_title": "Hans Muller's WebKit Blog",
-      "_type": "rss",
-      "_xmlUrl": "http://hansmuller-webkit.blogspot.com/feeds/posts/default",
-      "_htmlUrl": "http://hansmuller-webkit.blogspot.com/"
-    },
-    {
-      "_text": "zomigi.com",
-      "_title": "zomigi.com",
-      "_type": "rss",
-      "_xmlUrl": "http://zomigi.com/feed/",
-      "_htmlUrl": "http://zomigi.com"
-    },
-    {
       "_text": "TGF - Shots of Things that Work",
       "_title": "TGF - Shots of Things that Work",
       "_type": "rss",
       "_xmlUrl": "http://feeds.feedburner.com/thegodfounder",
       "_htmlUrl": "https://thegodfounder.com/"
-    },
-    {
-      "_text": "90 Percent of Everything - by Harry Brignull",
-      "_title": "90 Percent of Everything - by Harry Brignull",
-      "_type": "rss",
-      "_xmlUrl": "http://feeds.feedburner.com/90percentofeverything/feed",
-      "_htmlUrl": "https://www.90percentofeverything.com"
     },
     {
       "_text": "kirupa.com",
@@ -695,46 +527,11 @@
       "_htmlUrl": "https://www.davidairey.com"
     },
     {
-      "_text": "sitr.us",
-      "_title": "sitr.us",
-      "_type": "rss",
-      "_xmlUrl": "http://feeds.feedburner.com/hallettj",
-      "_htmlUrl": "http://sitr.us/"
-    },
-    {
-      "_text": "Broken Links",
-      "_title": "Broken Links",
-      "_type": "rss",
-      "_xmlUrl": "http://www.broken-links.com/feed/",
-      "_htmlUrl": "https://www.broken-links.com"
-    },
-    {
-      "_text": "pamela fox's blog",
-      "_title": "pamela fox's blog",
-      "_type": "rss",
-      "_xmlUrl": "http://blog.pamelafox.org/feeds/posts/default",
-      "_htmlUrl": "http://blog.pamelafox.org/"
-    },
-    {
-      "_text": "Bits Up!",
-      "_title": "Bits Up!",
-      "_type": "rss",
-      "_xmlUrl": "http://bitsup.blogspot.com/feeds/posts/default",
-      "_htmlUrl": "http://bitsup.blogspot.com/"
-    },
-    {
       "_text": "Bocoup Web Log",
       "_title": "Bocoup Web Log",
       "_type": "rss",
       "_xmlUrl": "http://feeds.feedburner.com/bocoup",
       "_htmlUrl": "https://bocoup.com"
-    },
-    {
-      "_text": "The UX Bookmark",
-      "_title": "The UX Bookmark",
-      "_type": "rss",
-      "_xmlUrl": "http://www.theuxbookmark.com/feed/",
-      "_htmlUrl": "https://www.theuxbookmark.com"
     },
     {
       "_text": "Nieman Lab",
@@ -758,25 +555,11 @@
       "_htmlUrl": "https://smus.com"
     },
     {
-      "_text": "Comments on: insights blog",
-      "_title": "Comments on: insights blog",
-      "_type": "rss",
-      "_xmlUrl": "http://www.svproduct.com/articles/rss",
-      "_htmlUrl": "http://www.svproduct.com/articles/"
-    },
-    {
       "_text": "johnon.com",
       "_title": "johnon.com",
       "_type": "rss",
       "_xmlUrl": "http://www.johnon.com/feed",
       "_htmlUrl": "http://www.johnon.com"
-    },
-    {
-      "_text": "The Log Book of Manuel Kiessling",
-      "_title": "The Log Book of Manuel Kiessling",
-      "_type": "rss",
-      "_xmlUrl": "http://manuel.kiessling.net/feed/",
-      "_htmlUrl": "http://manuel.kiessling.net"
     },
     {
       "_text": "Can I Use updates",
@@ -807,25 +590,11 @@
       "_htmlUrl": "https://www.theguardian.com/info/series/digital-blog"
     },
     {
-      "_text": "Konklone",
-      "_title": "Konklone",
-      "_type": "rss",
-      "_xmlUrl": "http://konklone.com/rss.xml",
-      "_htmlUrl": "https://konklone.com"
-    },
-    {
       "_text": "Platformability",
       "_title": "Platformability",
       "_type": "rss",
       "_xmlUrl": "http://blog.caplin.com/feed/",
       "_htmlUrl": "https://blog.caplin.com"
-    },
-    {
-      "_text": "Terrill Thompson",
-      "_title": "Terrill Thompson",
-      "_type": "rss",
-      "_xmlUrl": "http://terrillthompson.com/blog/feed",
-      "_htmlUrl": "https://terrillthompson.com"
     },
     {
       "_text": "Zach Leatherman",
@@ -842,25 +611,11 @@
       "_htmlUrl": "https://medium.com/the-year-of-the-looking-glass?source=rss----dc18a905b310---4"
     },
     {
-      "_text": "demosthenes.info",
-      "_title": "demosthenes.info",
-      "_type": "rss",
-      "_xmlUrl": "http://demosthenes.info/feed.php",
-      "_htmlUrl": "http://thenewcode.com"
-    },
-    {
       "_text": "Bram.us",
       "_title": "Bram.us",
       "_type": "rss",
       "_xmlUrl": "http://www.bram.us/feed/",
       "_htmlUrl": "https://www.bram.us"
-    },
-    {
-      "_text": "Miller Medeiros",
-      "_title": "Miller Medeiros",
-      "_type": "rss",
-      "_xmlUrl": "http://blog.millermedeiros.com/feed/atom/",
-      "_htmlUrl": "http://blog.millermedeiros.com"
     },
     {
       "_text": "Robert O'Callahan",
@@ -877,25 +632,11 @@
       "_htmlUrl": "https://tantek.com/"
     },
     {
-      "_text": "Tavmjong Bah's Blog",
-      "_title": "Tavmjong Bah's Blog",
-      "_type": "rss",
-      "_xmlUrl": "http://tavmjong.free.fr/blog/?feed=rss2",
-      "_htmlUrl": "http://tavmjong.free.fr/blog"
-    },
-    {
       "_text": "Andy Davies",
       "_title": "Andy Davies",
       "_type": "rss",
       "_xmlUrl": "http://feeds.feedburner.com/andydavies",
       "_htmlUrl": "https://andydavies.me/"
-    },
-    {
-      "_text": "Simply Accessible",
-      "_title": "Simply Accessible",
-      "_type": "rss",
-      "_xmlUrl": "http://simplyaccessible.com/feed/",
-      "_htmlUrl": "http://simplyaccessible.com"
     },
     {
       "_text": "Boagworld - User Experience Advice",
@@ -905,25 +646,11 @@
       "_htmlUrl": "https://boagworld.com"
     },
     {
-      "_text": "Toby Ho. Javascript. WWW. Code.",
-      "_title": "Toby Ho. Javascript. WWW. Code.",
-      "_type": "rss",
-      "_xmlUrl": "http://feeds.feedburner.com/tobyho",
-      "_htmlUrl": "http://tobyho.com"
-    },
-    {
       "_text": "Ghost in the Pixel",
       "_title": "Ghost in the Pixel",
       "_type": "rss",
       "_xmlUrl": "http://www.ghostinthepixel.com/?feed=rss2",
       "_htmlUrl": "http://www.ghostinthepixel.com"
-    },
-    {
-      "_text": "ChrisLord.net",
-      "_title": "ChrisLord.net",
-      "_type": "rss",
-      "_xmlUrl": "http://chrislord.net/index.php/feed/",
-      "_htmlUrl": "http://www.chrislord.net"
     },
     {
       "_text": "benfrain.com - blog of technology writer and web designer Ben Frain.",
@@ -945,13 +672,6 @@
       "_type": "rss",
       "_xmlUrl": "http://blog.kazuhooku.com/feeds/posts/default",
       "_htmlUrl": "http://blog.kazuhooku.com/"
-    },
-    {
-      "_text": "Airbnb Engineering",
-      "_title": "Airbnb Engineering",
-      "_type": "rss",
-      "_xmlUrl": "http://nerds.airbnb.com/feed/",
-      "_htmlUrl": "http://nerds.airbnb.com"
     },
     {
       "_text": "Web Axe",
@@ -982,13 +702,6 @@
       "_htmlUrl": "https://myakura.hatenablog.com/"
     },
     {
-      "_text": "UIE Brain Sparks",
-      "_title": "UIE Brain Sparks",
-      "_type": "rss",
-      "_xmlUrl": "https://www.uie.com/brainsparks/feed/",
-      "_htmlUrl": "https://archive.uie.com/brainsparks"
-    },
-    {
       "_text": "soeren-hentzschel.at",
       "_title": "soeren-hentzschel.at",
       "_type": "rss",
@@ -996,53 +709,11 @@
       "_htmlUrl": "https://www.soeren-hentzschel.at"
     },
     {
-      "_text": "Benhowdle.im",
-      "_title": "Benhowdle.im",
-      "_type": "rss",
-      "_xmlUrl": "http://benhowdle.im/feed.xml",
-      "_htmlUrl": "http://benhowdle.im"
-    },
-    {
       "_text": "Jster's Blog",
       "_title": "Jster's Blog",
       "_type": "rss",
       "_xmlUrl": "http://feeds.feedburner.com/jster",
       "_htmlUrl": "http://jster.net/"
-    },
-    {
-      "_text": "nicholascloud.com",
-      "_title": "nicholascloud.com",
-      "_type": "rss",
-      "_xmlUrl": "http://www.nicholascloud.com/feed/",
-      "_htmlUrl": "http://www.nicholascloud.com"
-    },
-    {
-      "_text": "Programming – O'Reilly Radar",
-      "_title": "Programming – O'Reilly Radar",
-      "_type": "rss",
-      "_xmlUrl": "http://feeds.feedburner.com/oreilly/programming",
-      "_htmlUrl": "http://radar.oreilly.com"
-    },
-    {
-      "_text": "Karl Groves",
-      "_title": "Karl Groves",
-      "_type": "rss",
-      "_xmlUrl": "http://www.karlgroves.com/feed/",
-      "_htmlUrl": "http://www.karlgroves.com"
-    },
-    {
-      "_text": "Gary Sieling",
-      "_title": "Gary Sieling",
-      "_type": "rss",
-      "_xmlUrl": "http://feeds.feedburner.com/garysieling/blog",
-      "_htmlUrl": "http://garysieling.com/blog"
-    },
-    {
-      "_text": "David Bushell",
-      "_title": "David Bushell",
-      "_type": "rss",
-      "_xmlUrl": "http://dbushell.com/rss/",
-      "_htmlUrl": "http://dbushell.com"
     },
     {
       "_text": "HTML + CSS + JavaScript",
@@ -1066,39 +737,11 @@
       "_htmlUrl": "http://jakearchibald.com/"
     },
     {
-      "_text": "maxvoltar",
-      "_title": "maxvoltar",
-      "_type": "rss",
-      "_xmlUrl": "http://maxvoltar.com/feed/",
-      "_htmlUrl": "http://maxvoltar.com/"
-    },
-    {
       "_text": "②ality – JavaScript and more",
       "_title": "②ality – JavaScript and more",
       "_type": "rss",
       "_xmlUrl": "http://feeds.feedburner.com/2ality?format=xml",
       "_htmlUrl": "https://2ality.com/"
-    },
-    {
-      "_text": "Dan Mall: Articles",
-      "_title": "Dan Mall: Articles",
-      "_type": "rss",
-      "_xmlUrl": "http://feeds.feedburner.com/danielmall-articles",
-      "_htmlUrl": "http://www.danielmall.com/"
-    },
-    {
-      "_text": "Reactive Programming",
-      "_title": "Reactive Programming",
-      "_type": "rss",
-      "_xmlUrl": "http://blog.reactiveprogramming.org/?feed=rss2",
-      "_htmlUrl": "http://blog.reactiveprogramming.org"
-    },
-    {
-      "_text": "Tim Taubert",
-      "_title": "Tim Taubert",
-      "_type": "rss",
-      "_xmlUrl": "http://timtaubert.de/atom.xml",
-      "_htmlUrl": "https://timtaubert.de/"
     },
     {
       "_text": "Rands In Repose",
@@ -1157,32 +800,11 @@
       "_htmlUrl": "https://fettblog.eu/"
     },
     {
-      "_text": "The EisenbergEffect Blog",
-      "_title": "The EisenbergEffect Blog",
-      "_type": "rss",
-      "_xmlUrl": "http://eisenbergeffect.bluespire.com/rss/",
-      "_htmlUrl": "http://bluespire.com/eisenbergeffect/blog"
-    },
-    {
       "_text": "Atom Blog",
       "_title": "Atom Blog",
       "_type": "rss",
       "_xmlUrl": "http://blog.atom.io/feed.xml",
       "_htmlUrl": "https://blog.atom.io/"
-    },
-    {
-      "_text": "Let’s Code JavaScript",
-      "_title": "Let’s Code JavaScript",
-      "_type": "rss",
-      "_xmlUrl": "http://www.letscodejavascript.com/feed",
-      "_htmlUrl": "https://www.letscodejavascript.com/v3/blog"
-    },
-    {
-      "_text": "DerickBailey.com",
-      "_title": "DerickBailey.com",
-      "_type": "rss",
-      "_xmlUrl": "http://feeds.feedblitz.com/derickbailey",
-      "_htmlUrl": "https://derickbailey.com"
     },
     {
       "_text": "Mike Taylr Dot Com Web Blog",
@@ -1199,27 +821,6 @@
       "_htmlUrl": "https://filamentgroup.com/lab/"
     },
     {
-      "_text": "JavaScript, JavaScript...",
-      "_title": "JavaScript, JavaScript...",
-      "_type": "rss",
-      "_xmlUrl": "https://javascriptweblog.wordpress.com/feed/",
-      "_htmlUrl": "https://javascriptweblog.wordpress.com"
-    },
-    {
-      "_text": "ModernWeb",
-      "_title": "ModernWeb",
-      "_type": "rss",
-      "_xmlUrl": "http://feeds.feedburner.com/ModernWebHQ",
-      "_htmlUrl": "https://modernweb.com"
-    },
-    {
-      "_text": "Yonatan's dev blog",
-      "_title": "Yonatan's dev blog",
-      "_type": "rss",
-      "_xmlUrl": "http://blog.cowchimp.com/rss/",
-      "_htmlUrl": "https://blog.yonatan.dev/"
-    },
-    {
       "_text": "HeydonWorks",
       "_title": "HeydonWorks",
       "_type": "rss",
@@ -1232,13 +833,6 @@
       "_type": "rss",
       "_xmlUrl": "http://blog.servo.org/feed.xml",
       "_htmlUrl": "https://blog.servo.org/"
-    },
-    {
-      "_text": "Dev.Opera articles",
-      "_title": "Dev.Opera articles",
-      "_type": "rss",
-      "_xmlUrl": "https://dev.opera.com/feed/",
-      "_htmlUrl": "https://dev.opera.com/"
     },
     {
       "_text": "Adactio: Journal",
@@ -1290,13 +884,6 @@
       "_htmlUrl": "https://keithclark.co.uk/"
     },
     {
-      "_text": "hood.ie",
-      "_title": "hood.ie",
-      "_type": "rss",
-      "_xmlUrl": "http://hood.ie/feed.xml",
-      "_htmlUrl": "http://hood.ie/blog"
-    },
-    {
       "_text": "Software As She's Developed",
       "_title": "Software As She's Developed",
       "_type": "rss",
@@ -1332,13 +919,6 @@
       "_htmlUrl": "https://reactjs.org"
     },
     {
-      "_text": "XSS Jigsaw",
-      "_title": "XSS Jigsaw",
-      "_type": "rss",
-      "_xmlUrl": "http://blog.innerht.ml/rss/",
-      "_htmlUrl": "https://blog.innerht.ml/"
-    },
-    {
       "_text": "Microsoft Edge Blog",
       "_title": "Microsoft Edge Blog",
       "_type": "rss",
@@ -1358,13 +938,6 @@
       "_type": "rss",
       "_xmlUrl": "https://ericportis.com/feed/",
       "_htmlUrl": "http://ericportis.com"
-    },
-    {
-      "_text": "Aerotwist Blog",
-      "_title": "Aerotwist Blog",
-      "_type": "rss",
-      "_xmlUrl": "https://aerotwist.com/blog/feed/",
-      "_htmlUrl": "http://aerotwist.com"
     },
     {
       "_text": "Read the Tea Leaves",
@@ -1409,20 +982,6 @@
       "_htmlUrl": "https://hiddedevries.nl/en/blog/"
     },
     {
-      "_text": "JavaScript Code Readability",
-      "_title": "JavaScript Code Readability",
-      "_type": "rss",
-      "_xmlUrl": "http://www.codereadability.com/rss/",
-      "_htmlUrl": "https://www.codereadability.com/"
-    },
-    {
-      "_text": "Empathy is Everything",
-      "_title": "Empathy is Everything",
-      "_type": "rss",
-      "_xmlUrl": "http://empathyiseverything.com/rss",
-      "_htmlUrl": "https://empathyiseverything.com/"
-    },
-    {
       "_text": "Louder Than Ten Issues",
       "_title": "Louder Than Ten Issues",
       "_type": "rss",
@@ -1437,32 +996,11 @@
       "_htmlUrl": "https://developers.google.com/web/updates/?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=updates_feed"
     },
     {
-      "_text": "Eager Blog",
-      "_title": "Eager Blog",
-      "_type": "rss",
-      "_xmlUrl": "https://eager.io/blog/feed.xml",
-      "_htmlUrl": "https://eager.io/blog/"
-    },
-    {
-      "_text": "thenewcode.com",
-      "_title": "thenewcode.com",
-      "_type": "rss",
-      "_xmlUrl": "http://thenewcode.com/feed.php",
-      "_htmlUrl": "http://thenewcode.com"
-    },
-    {
       "_text": "justmarkup",
       "_title": "justmarkup",
       "_type": "rss",
       "_xmlUrl": "https://justmarkup.com/log/feed/",
       "_htmlUrl": "https://justmarkup.com/log"
-    },
-    {
-      "_text": "James K Nelson",
-      "_title": "James K Nelson",
-      "_type": "rss",
-      "_xmlUrl": "http://jamesknelson.com/feed/",
-      "_htmlUrl": "http://jamesknelson.com"
     },
     {
       "_text": "Bjango Articles",
@@ -1472,25 +1010,11 @@
       "_htmlUrl": "https://bjango.com/articles/"
     },
     {
-      "_text": "Neovim Newsletter",
-      "_title": "Neovim Newsletter",
-      "_type": "rss",
-      "_xmlUrl": "https://neovim.io/news.xml",
-      "_htmlUrl": "https://neovim.io/news"
-    },
-    {
       "_text": "Pony Foo",
       "_title": "Pony Foo",
       "_type": "rss",
       "_xmlUrl": "https://ponyfoo.com/articles/feed",
       "_htmlUrl": "https://ponyfoo.com"
-    },
-    {
-      "_text": "twnsnd",
-      "_title": "twnsnd",
-      "_type": "rss",
-      "_xmlUrl": "https://www.twnsnd.com/feed.xml",
-      "_htmlUrl": "https://www.twnsnd.com/"
     },
     {
       "_text": "Adrian Roselli",
@@ -1507,32 +1031,11 @@
       "_htmlUrl": "https://viljamis.com/"
     },
     {
-      "_text": "MarcySutton.com",
-      "_title": "MarcySutton.com",
-      "_type": "rss",
-      "_xmlUrl": "http://marcysutton.com/feed/",
-      "_htmlUrl": "https://marcysutton.com"
-    },
-    {
-      "_text": "Lee Jordan",
-      "_title": "Lee Jordan",
-      "_type": "rss",
-      "_xmlUrl": "http://www.lendmeyourear.net/feed",
-      "_htmlUrl": "http://www.lendmeyourear.net"
-    },
-    {
       "_text": "otsukare",
       "_title": "otsukare",
       "_type": "rss",
       "_xmlUrl": "http://www.otsukare.info/feeds/atom.xml",
       "_htmlUrl": "http://www.otsukare.info/"
-    },
-    {
-      "_text": "Cognizant Quick Left Blog",
-      "_title": "Cognizant Quick Left Blog",
-      "_type": "rss",
-      "_xmlUrl": "https://quickleft.com/rss-feed/",
-      "_htmlUrl": "https://quickleft.com/blog"
     },
     {
       "_text": "WPOStats.com",
@@ -1577,13 +1080,6 @@
       "_htmlUrl": "https://www.w3.org/blog"
     },
     {
-      "_text": "Js Tips - A JavaScript tip per day!",
-      "_title": "Js Tips - A JavaScript tip per day!",
-      "_type": "rss",
-      "_xmlUrl": "http://www.jstips.co/feed.xml",
-      "_htmlUrl": "http://jstips.co/"
-    },
-    {
       "_text": "codahale.com",
       "_title": "codahale.com",
       "_type": "rss",
@@ -1610,6 +1106,13 @@
       "_type": "rss",
       "_xmlUrl": "https://daniel.haxx.se/blog/feed/",
       "_htmlUrl": "https://daniel.haxx.se/blog"
+    },
+    {
+      "_text": "Airbnb Engineering &amp; Data Science - Medium",
+      "_title": "Airbnb Engineering &amp; Data Science - Medium",
+      "_type": "rss",
+      "_xmlUrl": "https://medium.com/feed/airbnb-engineering",
+      "_htmlUrl": "https://medium.com/airbnb-engineering?source=rss----53c7c27702d5---4"
     },
     {
       "_text": "Accessibility Wins",
@@ -1647,20 +1150,6 @@
       "_htmlUrl": "https://webkit.org"
     },
     {
-      "_text": "victor felder",
-      "_title": "victor felder",
-      "_type": "rss",
-      "_xmlUrl": "https://vhf.github.io/blog/atom.xml",
-      "_htmlUrl": "https://draft.li"
-    },
-    {
-      "_text": "OutlierDeveloper",
-      "_title": "OutlierDeveloper",
-      "_type": "rss",
-      "_xmlUrl": "http://outlierdeveloper.com/feed/",
-      "_htmlUrl": "http://outlierdeveloper.com"
-    },
-    {
       "_text": "LinkedIn Engineering",
       "_title": "LinkedIn Engineering",
       "_type": "rss",
@@ -1673,13 +1162,6 @@
       "_type": "rss",
       "_xmlUrl": "https://www.toptal.com/blog.rss",
       "_htmlUrl": "https://www.toptal.com/blog"
-    },
-    {
-      "_text": "Max Stoibers Blog",
-      "_title": "Max Stoibers Blog",
-      "_type": "rss",
-      "_xmlUrl": "http://blog.mxstbr.com/feed.atom",
-      "_htmlUrl": "https://mxstbr.blog/"
     },
     {
       "_text": "Shopify Engineering - Shopify Engineering",
@@ -1703,13 +1185,6 @@
       "_htmlUrl": "https://www.joedolson.com"
     },
     {
-      "_text": "Shane Tomlinson",
-      "_title": "Shane Tomlinson",
-      "_type": "rss",
-      "_xmlUrl": "https://shanetomlinson.com/rss/",
-      "_htmlUrl": "https://shanetomlinson.com/"
-    },
-    {
       "_text": "Nathan's Blog",
       "_title": "Nathan's Blog",
       "_type": "rss",
@@ -1729,13 +1204,6 @@
       "_type": "rss",
       "_xmlUrl": "https://ishadeed.com/feed.xml",
       "_htmlUrl": "http://ishadeed.com/"
-    },
-    {
-      "_text": "GDS Digital Engagement",
-      "_title": "GDS Digital Engagement",
-      "_type": "rss",
-      "_xmlUrl": "https://gdsengagement.blog.gov.uk/feed/",
-      "_htmlUrl": "https://gdsengagement.blog.gov.uk"
     },
     {
       "_text": "Nick Fitzgerald",
@@ -1764,13 +1232,6 @@
       "_type": "rss",
       "_xmlUrl": "https://ariya.io/index.xml",
       "_htmlUrl": "https://ariya.io/"
-    },
-    {
-      "_text": "WebReflection Limited",
-      "_title": "WebReflection Limited",
-      "_type": "rss",
-      "_xmlUrl": "https://www.webreflection.co.uk/blog/feed.atom",
-      "_htmlUrl": "https://www.webreflection.co.uk/"
     },
     {
       "_text": "BlogGeek.me",
@@ -1806,20 +1267,6 @@
       "_type": "rss",
       "_xmlUrl": "https://jasonformat.com/rss/",
       "_htmlUrl": "http://jasonformat.com/"
-    },
-    {
-      "_text": "The Feedback Loop",
-      "_title": "The Feedback Loop",
-      "_type": "rss",
-      "_xmlUrl": "http://thefeedbackloop.xyz/rss/",
-      "_htmlUrl": "http://thefeedbackloop.xyz/"
-    },
-    {
-      "_text": "Max Design",
-      "_title": "Max Design",
-      "_type": "rss",
-      "_xmlUrl": "http://maxdesign.com.au/feed/",
-      "_htmlUrl": "http://maxdesign.com.au"
     },
     {
       "_text": "Ethan Marcotte’s website",
@@ -1871,25 +1318,11 @@
       "_htmlUrl": "https://www.blog.google/products/chrome/"
     },
     {
-      "_text": "The Internet of Secure Things",
-      "_title": "The Internet of Secure Things",
-      "_type": "rss",
-      "_xmlUrl": "https://tacticalsecret.com/rss/",
-      "_htmlUrl": "https://tacticalsecret.com/"
-    },
-    {
       "_text": "Vivaldi Browser",
       "_title": "Vivaldi Browser",
       "_type": "rss",
       "_xmlUrl": "https://vivaldi.com/feed/",
       "_htmlUrl": "https://vivaldi.com"
-    },
-    {
-      "_text": "Mozilla Marketing Engineering &amp; Operations",
-      "_title": "Mozilla Marketing Engineering &amp; Operations",
-      "_type": "rss",
-      "_xmlUrl": "https://mozilla.github.io/meao/atom.xml",
-      "_htmlUrl": "https://mozilla.github.io/meao/"
     },
     {
       "_text": "The Typekit Blog",
@@ -1916,7 +1349,7 @@
       "_text": "Inclusive Components",
       "_title": "Inclusive Components",
       "_type": "rss",
-      "_xmlUrl": "https://inclusive-components.club/rss/",
+      "_xmlUrl": "https://inclusive-components.design/rss/",
       "_htmlUrl": "https://inclusive-components.design/"
     },
     {
@@ -1925,20 +1358,6 @@
       "_type": "rss",
       "_xmlUrl": "http://www.scottohara.me/feed.xml",
       "_htmlUrl": "https://scottohara.me//"
-    },
-    {
-      "_text": "Experiencing Information",
-      "_title": "Experiencing Information",
-      "_type": "rss",
-      "_xmlUrl": "https://experiencinginformation.com/feed/",
-      "_htmlUrl": "https://experiencinginformation.com"
-    },
-    {
-      "_text": "Columbia Journalism Review",
-      "_title": "Columbia Journalism Review",
-      "_type": "rss",
-      "_xmlUrl": "https://www.cjr.org/index.xml",
-      "_htmlUrl": "https://www.cjr.org"
     },
     {
       "_text": "CSS Wizardry",
@@ -1990,13 +1409,6 @@
       "_htmlUrl": "https://webplatform.news/"
     },
     {
-      "_text": "Paul Frazee",
-      "_title": "Paul Frazee",
-      "_type": "rss",
-      "_xmlUrl": "https://pfrazee.hashbase.io/feed.xml",
-      "_htmlUrl": "/"
-    },
-    {
       "_text": "Deque",
       "_title": "Deque",
       "_type": "rss",
@@ -2039,13 +1451,6 @@
       "_htmlUrl": "https://www.mobify.com"
     },
     {
-      "_text": "damonbauer.me",
-      "_title": "damonbauer.me",
-      "_type": "rss",
-      "_xmlUrl": "http://feeds.feedburner.com/damonbauer",
-      "_htmlUrl": "http://damonbauer.me"
-    },
-    {
       "_text": "Fastly Blog",
       "_title": "Fastly Blog",
       "_type": "rss",
@@ -2072,13 +1477,6 @@
       "_type": "rss",
       "_xmlUrl": "https://javascript.tumblr.com/rss",
       "_htmlUrl": "https://javascript.tumblr.com/"
-    },
-    {
-      "_text": "The Node Security Project",
-      "_title": "The Node Security Project",
-      "_type": "rss",
-      "_xmlUrl": "https://blog.liftsecurity.io/feeds/all.atom.xml",
-      "_htmlUrl": "https://blog.liftsecurity.io/"
     },
     {
       "_text": "24 Accessibility",
@@ -2123,13 +1521,6 @@
       "_htmlUrl": "https://www.stefanjudis.com"
     },
     {
-      "_text": "The blog of Seva Zaikov",
-      "_title": "The blog of Seva Zaikov",
-      "_type": "rss",
-      "_xmlUrl": "https://blog.bloomca.me/atom.xml",
-      "_htmlUrl": "https://blog.bloomca.me"
-    },
-    {
       "_text": "The Paciello Group Blog",
       "_title": "The Paciello Group Blog",
       "_type": "rss",
@@ -2137,25 +1528,11 @@
       "_htmlUrl": "https://developer.paciellogroup.com"
     },
     {
-      "_text": "Jefferson + W3C Collaboration",
-      "_title": "Jefferson + W3C Collaboration",
-      "_type": "rss",
-      "_xmlUrl": "https://medium.com/feed/jefferson-w3c-collaboration",
-      "_htmlUrl": "https://medium.com/jefferson-w3c-collaboration?source=rss----3fcf583b3ddf---4"
-    },
-    {
       "_text": "Web Development - James Sinclair",
       "_title": "Web Development - James Sinclair",
       "_type": "rss",
       "_xmlUrl": "https://jrsinclair.com/web-development/index.rss",
       "_htmlUrl": "http://jrsinclair.com"
-    },
-    {
-      "_text": "Paul Calvano",
-      "_title": "Paul Calvano",
-      "_type": "rss",
-      "_xmlUrl": "https://paulcalvano.com/index.php/feed/",
-      "_htmlUrl": "https://paulcalvano.com"
     },
     {
       "_text": "Randall Degges",
@@ -2177,13 +1554,6 @@
       "_type": "rss",
       "_xmlUrl": "https://matthewstrom.com/feed.xml",
       "_htmlUrl": "https://matthewstrom.com"
-    },
-    {
-      "_text": "Serg Hospodarets Blog",
-      "_title": "Serg Hospodarets Blog",
-      "_type": "rss",
-      "_xmlUrl": "https://hospodarets.com/feed.xml",
-      "_htmlUrl": "https://hospodarets.com"
     },
     {
       "_text": "the frontendian",
@@ -2221,25 +1591,11 @@
       "_htmlUrl": "https://twobithistory.org/"
     },
     {
-      "_text": "Hello my name is Niels Leenheer",
-      "_title": "Hello my name is Niels Leenheer",
-      "_type": "rss",
-      "_xmlUrl": "https://nielsleenheer.com/feed/",
-      "_htmlUrl": "https://nielsleenheer.com"
-    },
-    {
       "_text": "Advancing WebRTC",
       "_title": "Advancing WebRTC",
       "_type": "rss",
       "_xmlUrl": "https://blog.mozilla.org/webrtc/feed/",
       "_htmlUrl": "https://blog.mozilla.org/webrtc"
-    },
-    {
-      "_text": "Sealed Abstract",
-      "_title": "Sealed Abstract",
-      "_type": "rss",
-      "_xmlUrl": "https://sealedabstract.com/feed/",
-      "_htmlUrl": "http://sealedabstract.com"
     },
     {
       "_text": "Doug Sillars: Performance Expert and Developer Advocate",
@@ -2256,34 +1612,6 @@
       "_htmlUrl": "https://css-irl.info"
     },
     {
-      "_text": "Etienne Margraff",
-      "_title": "Etienne Margraff",
-      "_type": "rss",
-      "_xmlUrl": "https://meulta.com/en/feed/",
-      "_htmlUrl": "https://meulta.com"
-    },
-    {
-      "_text": "Stéphanie Walter – UX and UI Design, Mobile optimization",
-      "_title": "Stéphanie Walter – UX and UI Design, Mobile optimization",
-      "_type": "rss",
-      "_xmlUrl": "https://feedpress.me/inpixelitrust-blog-en",
-      "_htmlUrl": "https://stephaniewalter.design"
-    },
-    {
-      "_text": "Robin Berjon — Feed",
-      "_title": "Robin Berjon — Feed",
-      "_type": "rss",
-      "_xmlUrl": "https://berjon.com/feed.atom",
-      "_htmlUrl": "https://berjon.com/"
-    },
-    {
-      "_text": "phabricator.wikimedia.org/phame/blog/feed/6",
-      "_title": "phabricator.wikimedia.org/phame/blog/feed/6",
-      "_type": "rss",
-      "_xmlUrl": "https://phabricator.wikimedia.org/phame/blog/feed/6/",
-      "_htmlUrl": "https://phabricator.wikimedia.org/phame/blog/feed/6/"
-    },
-    {
       "_text": "loxodrome.io - James Milner's personal blog",
       "_title": "loxodrome.io - James Milner's personal blog",
       "_type": "rss",
@@ -2298,32 +1626,11 @@
       "_htmlUrl": "https://bubblin.io/blog/"
     },
     {
-      "_text": "Firefox Data",
-      "_title": "Firefox Data",
-      "_type": "rss",
-      "_xmlUrl": "https://blog.mozilla.org/data/feed/",
-      "_htmlUrl": "https://blog.mozilla.org/data"
-    },
-    {
       "_text": "Burke Knows Words",
       "_title": "Burke Knows Words",
       "_type": "rss",
       "_xmlUrl": "https://burkeknowswords.com/feed",
       "_htmlUrl": "https://burkeknowswords.com?source=rss----4589066e7886---4"
-    },
-    {
-      "_text": "Nothing new",
-      "_title": "Nothing new",
-      "_type": "rss",
-      "_xmlUrl": "https://birtles.wordpress.com/feed/",
-      "_htmlUrl": "https://birtles.wordpress.com"
-    },
-    {
-      "_text": "Engineering Blog",
-      "_title": "Engineering Blog",
-      "_type": "rss",
-      "_xmlUrl": "http://engineering.curiositymedia.com/blog?format=RSS",
-      "_htmlUrl": "http://engineering.curiositymedia.com/blog/"
     },
     {
       "_text": "Web of Things Interest Group",
@@ -2347,39 +1654,11 @@
       "_htmlUrl": "https://www.w3.org/community/web-adv"
     },
     {
-      "_text": "Filip Bruun Bech-Larsen",
-      "_title": "Filip Bruun Bech-Larsen",
-      "_type": "rss",
-      "_xmlUrl": "http://filipbech.github.io/feed.xml",
-      "_htmlUrl": "https://filipbech.github.io"
-    },
-    {
       "_text": "Building Calibre",
       "_title": "Building Calibre",
       "_type": "rss",
       "_xmlUrl": "https://calibreapp.com/blog/rss.xml",
       "_htmlUrl": "https://calibreapp.com"
-    },
-    {
-      "_text": "AIR is a three letter word",
-      "_title": "AIR is a three letter word",
-      "_type": "rss",
-      "_xmlUrl": "https://air.ghost.io/rss/",
-      "_htmlUrl": "https://air.ghost.io/"
-    },
-    {
-      "_text": "The Traffic Blog",
-      "_title": "The Traffic Blog",
-      "_type": "rss",
-      "_xmlUrl": "https://phabricator.wikimedia.org/phame/blog/feed/11/",
-      "_htmlUrl": "https://phabricator.wikimedia.org/phame/blog/feed/11/"
-    },
-    {
-      "_text": "Matt Smith",
-      "_title": "Matt Smith",
-      "_type": "rss",
-      "_xmlUrl": "https://allthingssmitty.com/atom.xml",
-      "_htmlUrl": "https://allthingssmitty.com/"
     },
     {
       "_text": "Blog – Snyk",
@@ -2389,25 +1668,11 @@
       "_htmlUrl": "https://snyk.io"
     },
     {
-      "_text": "Jason Williams",
-      "_title": "Jason Williams",
-      "_type": "rss",
-      "_xmlUrl": "https://jason-williams.co.uk/feed/",
-      "_htmlUrl": "https://jason-williams.co.uk"
-    },
-    {
       "_text": "Didoo",
       "_title": "Didoo",
       "_type": "rss",
       "_xmlUrl": "http://www.didoo.net/feed/",
       "_htmlUrl": "http://www.didoo.net"
-    },
-    {
-      "_text": "CodeUtopia",
-      "_title": "CodeUtopia",
-      "_type": "rss",
-      "_xmlUrl": "https://codeutopia.net/feed/",
-      "_htmlUrl": "https://codeutopia.net"
     },
     {
       "_text": "Overreacted",
@@ -2431,6 +1696,13 @@
       "_htmlUrl": "https://github.blog"
     },
     {
+      "_text": "Andrea Giammarchi on Medium",
+      "_title": "Andrea Giammarchi on Medium",
+      "_type": "rss",
+      "_xmlUrl": "https://medium.com/feed/@WebReflection",
+      "_htmlUrl": "https://medium.com/@WebReflection?source=rss-cc83da4b8256------2"
+    },
+    {
       "_text": "Koos Looijesteijn",
       "_title": "Koos Looijesteijn",
       "_type": "rss",
@@ -2438,11 +1710,11 @@
       "_htmlUrl": "https://www.kooslooijesteijn.net/"
     },
     {
-      "_text": "Typekit Practice",
-      "_title": "Typekit Practice",
+      "_text": "A List Apart",
+      "_title": "A List Apart",
       "_type": "rss",
-      "_xmlUrl": "https://practice.typekit.com/rss.xml",
-      "_htmlUrl": "http://practice.typekit.com"
+      "_xmlUrl": "https://alistapart.com/main/feed/",
+      "_htmlUrl": "https://alistapart.com"
     },
     {
       "_text": "blog.izs.me",
@@ -2450,13 +1722,6 @@
       "_type": "rss",
       "_xmlUrl": "https://blog.izs.me/rss.xml",
       "_htmlUrl": "http://github.com/dylang/node-rss"
-    },
-    {
-      "_text": "Blake Embrey",
-      "_title": "Blake Embrey",
-      "_type": "rss",
-      "_xmlUrl": "http://blakeembrey.com/rss.xml",
-      "_htmlUrl": "http://blakeembrey.com"
     },
     {
       "_text": "Matt Andrews",
@@ -2478,13 +1743,6 @@
       "_type": "rss",
       "_xmlUrl": "https://hakim.se/rss.xml",
       "_htmlUrl": "http://hakim.se/"
-    },
-    {
-      "_text": "Chris Wright Design RSS Feed",
-      "_title": "Chris Wright Design RSS Feed",
-      "_type": "rss",
-      "_xmlUrl": "https://chriswrightdesign.com/website.xml",
-      "_htmlUrl": "http://www.chriswrightdesign.com/"
     },
     {
       "_text": "Matt Hinchliffe",
@@ -2515,6 +1773,13 @@
       "_htmlUrl": "https://jeremydormitzer.com/blog"
     },
     {
+      "_text": "DanMall.me",
+      "_title": "DanMall.me",
+      "_type": "rss",
+      "_xmlUrl": "https://danmall.me/rss/full.xml",
+      "_htmlUrl": "http://danmall.me/"
+    },
+    {
       "_text": "@mdo",
       "_title": "@mdo",
       "_type": "rss",
@@ -2527,6 +1792,13 @@
       "_type": "rss",
       "_xmlUrl": "https://hindenburgresearch.com/feed/",
       "_htmlUrl": "https://hindenburgresearch.com"
+    },
+    {
+      "_text": "Understand Legacy Code",
+      "_title": "Understand Legacy Code",
+      "_type": "rss",
+      "_xmlUrl": "https://understandlegacycode.com/rss.xml",
+      "_htmlUrl": "https://understandlegacycode.com"
     },
     {
       "_text": "Modern Web Development: Tales of a Developer Advocate",
@@ -2554,7 +1826,7 @@
       "_title": "UX Magazine",
       "_type": "rss",
       "_xmlUrl": "https://feeds.uxmag.com/uxm",
-      "_htmlUrl": "http://uxmag.com/uxm.xml/favicon.ico/favicon.ico"
+      "_htmlUrl": "https://uxmag.com/uxm.xml"
     }
   ]
 }
