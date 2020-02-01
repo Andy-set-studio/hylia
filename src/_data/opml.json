@@ -1,5 +1,5 @@
 {
-  "dateCreated": "Sat, 01 Feb 2020 02:46:08 +0000",
+  "dateCreated": "Sat, 01 Feb 2020 08:30:12 +0000",
   "items": [
     {
       "_title": "24 Accessibility",
@@ -25,11 +25,6 @@
       "_title": "Aaron Gustafson: Latest Posts &amp; Links",
       "_xmlUrl": "http://aaron-gustafson.com/atom.xml",
       "_htmlUrl": "https://www.aaron-gustafson.com/"
-    },
-    {
-      "_title": "Accessibility Wins",
-      "_xmlUrl": "https://a11ywins.tumblr.com/rss",
-      "_htmlUrl": "https://a11ywins.tumblr.com/"
     },
     {
       "_title": "Accessibility in government",
@@ -72,6 +67,11 @@
       "_htmlUrl": "https://medium.com/airbnb-engineering?source=rss----53c7c27702d5---4"
     },
     {
+      "_title": "All that Malarkey",
+      "_xmlUrl": "https://stuffandnonsense.co.uk/blog/feed",
+      "_htmlUrl": "https://stuffandnonsense.co.uk"
+    },
+    {
       "_title": "Almost Profound",
       "_xmlUrl": "http://una.im/feed.xml",
       "_htmlUrl": "http://una.github.io"
@@ -82,39 +82,14 @@
       "_htmlUrl": "https://medium.com/@WebReflection?source=rss-cc83da4b8256------2"
     },
     {
-      "_title": "André Staltz",
-      "_xmlUrl": "http://staltz.com/feed.xml",
-      "_htmlUrl": "https://staltz.com/"
-    },
-    {
-      "_title": "Andy Davies",
-      "_xmlUrl": "http://feeds.feedburner.com/andydavies",
-      "_htmlUrl": "https://andydavies.me/"
-    },
-    {
-      "_title": "Angular Blog",
-      "_xmlUrl": "https://blog.angular.io/feed",
-      "_htmlUrl": "https://blog.angular.io?source=rss----447683c3d9a3---4"
-    },
-    {
-      "_title": "Articles &amp; Experiments by Roman Komarov on kizu.ru",
-      "_xmlUrl": "http://feeds.feedburner.com/kizuruen",
-      "_htmlUrl": "https://www.kizu.ru/"
+      "_title": "Andrew Betts",
+      "_xmlUrl": "https://trib.tv/feed/",
+      "_htmlUrl": "https://trib.tv"
     },
     {
       "_title": "Articles – Cloud Four",
       "_xmlUrl": "http://feeds.feedburner.com/cloudfour",
       "_htmlUrl": "https://cloudfour.com"
-    },
-    {
-      "_title": "Assortment - For the practical developer",
-      "_xmlUrl": "http://feeds.feedburner.com/Assortmentio",
-      "_htmlUrl": "http://github.com/dylang/node-rss"
-    },
-    {
-      "_title": "Atom Blog",
-      "_xmlUrl": "http://blog.atom.io/feed.xml",
-      "_htmlUrl": "https://blog.atom.io/"
     },
     {
       "_title": "Axess Lab",
@@ -217,11 +192,6 @@
       "_htmlUrl": "https://calibreapp.com"
     },
     {
-      "_title": "Burke Knows Words",
-      "_xmlUrl": "https://burkeknowswords.com/feed",
-      "_htmlUrl": "https://burkeknowswords.com?source=rss----4589066e7886---4"
-    },
-    {
       "_title": "CSS WG Blog",
       "_xmlUrl": "http://www.w3.org/blog/CSS/feed/atom/",
       "_htmlUrl": "https://www.w3.org/blog/CSS"
@@ -292,11 +262,6 @@
       "_htmlUrl": "https://tympanus.net/codrops"
     },
     {
-      "_title": "Continuing Intermittent Incoherency",
-      "_xmlUrl": "http://infrequently.org/feed/atom/",
-      "_htmlUrl": "https://infrequently.org"
-    },
-    {
       "_title": "DanMall.me",
       "_xmlUrl": "https://danmall.me/rss/full.xml",
       "_htmlUrl": "http://danmall.me/"
@@ -320,11 +285,6 @@
       "_title": "Deque",
       "_xmlUrl": "https://www.deque.com/feed/",
       "_htmlUrl": "https://www.deque.com"
-    },
-    {
-      "_title": "Design Staff",
-      "_xmlUrl": "http://feeds.feedburner.com/DesignStaff",
-      "_htmlUrl": "https://library.gv.com?source=rss----dfc85068874c---4"
     },
     {
       "_title": "Design.org",
@@ -372,9 +332,9 @@
       "_htmlUrl": "https://ethanmarcotte.com"
     },
     {
-      "_title": "FT Labs Blog",
-      "_xmlUrl": "https://labs.ft.com/feed.xml",
-      "_htmlUrl": "https://labs.ft.com/"
+      "_title": "FT Product &amp; Technology - Medium",
+      "_xmlUrl": "https://medium.com/feed/ft-product-technology",
+      "_htmlUrl": "https://medium.com/ft-product-technology?source=rss----4949a34ae285---4"
     },
     {
       "_title": "Facebook Developer Blog",
@@ -395,11 +355,6 @@
       "_title": "Feeding the Cloud",
       "_xmlUrl": "https://feeding.cloud.geek.nz/index.rss",
       "_htmlUrl": "http://feeding.cloud.geek.nz/"
-    },
-    {
-      "_title": "Feross.org",
-      "_xmlUrl": "https://feross.org/atom.xml",
-      "_htmlUrl": "https://feross.org"
     },
     {
       "_title": "Filament Group, Inc: Lab",
@@ -452,11 +407,6 @@
       "_htmlUrl": "http://developers.googleblog.com/"
     },
     {
-      "_title": "Google Ventures Blog",
-      "_xmlUrl": "http://feeds.feedburner.com/GoogleVenturesBlog",
-      "_htmlUrl": "https://library.gv.com?source=rss----dfc85068874c---4"
-    },
-    {
       "_title": "Google Webmaster Central Blog",
       "_xmlUrl": "http://feeds.feedburner.com/blogspot/amDG",
       "_htmlUrl": "http://webmasters.googleblog.com/"
@@ -492,11 +442,6 @@
       "_htmlUrl": "https://ilovetypography.com"
     },
     {
-      "_title": "Impressive Webs",
-      "_xmlUrl": "http://feeds.feedburner.com/ImpressiveWebs",
-      "_htmlUrl": "https://www.impressivewebs.com"
-    },
-    {
       "_title": "Improving Web Advertising Business Group",
       "_xmlUrl": "https://www.w3.org/community/web-adv/feed/",
       "_htmlUrl": "https://www.w3.org/community/web-adv"
@@ -515,11 +460,6 @@
       "_title": "Irrational Exuberance",
       "_xmlUrl": "https://lethain.com/feeds/",
       "_htmlUrl": "https://lethain.com/"
-    },
-    {
-      "_title": "JASON Format",
-      "_xmlUrl": "https://jasonformat.com/rss/",
-      "_htmlUrl": "http://jasonformat.com/"
     },
     {
       "_title": "Jake Archibald's Blog",
@@ -547,11 +487,6 @@
       "_htmlUrl": "http://www.zeldman.com"
     },
     {
-      "_title": "Jeremy Dormitzer's blog",
-      "_xmlUrl": "https://jeremydormitzer.com/blog/feed.xml",
-      "_htmlUrl": "https://jeremydormitzer.com/blog"
-    },
-    {
       "_title": "Joe Dolson Web Accessibility",
       "_xmlUrl": "https://www.joedolson.com/feed/",
       "_htmlUrl": "https://www.joedolson.com"
@@ -577,16 +512,6 @@
       "_htmlUrl": "http://jster.net/"
     },
     {
-      "_title": "Kazuho's Weblog",
-      "_xmlUrl": "http://blog.kazuhooku.com/feeds/posts/default",
-      "_htmlUrl": "http://blog.kazuhooku.com/"
-    },
-    {
-      "_title": "Keith Clark",
-      "_xmlUrl": "http://keithclark.co.uk/feed.xml",
-      "_htmlUrl": "https://keithclark.co.uk/"
-    },
-    {
       "_title": "Koos Looijesteijn",
       "_xmlUrl": "https://www.kooslooijesteijn.net/feed.xml",
       "_htmlUrl": "https://www.kooslooijesteijn.net/"
@@ -600,11 +525,6 @@
       "_title": "LinkedIn Engineering",
       "_xmlUrl": "https://engineering.linkedin.com/blog.rss",
       "_htmlUrl": "https://engineering.linkedin.com/blog.rss.html"
-    },
-    {
-      "_title": "Louder Than Ten Issues",
-      "_xmlUrl": "http://louderthanten.com/feed/issues.atom",
-      "_htmlUrl": "https://louderthanten.com/coax"
     },
     {
       "_title": "Marco's Accessibility Blog",
@@ -627,11 +547,6 @@
       "_htmlUrl": "https://mattandre.ws/"
     },
     {
-      "_title": "Matt Hinchliffe",
-      "_xmlUrl": "https://www.matthinchliffe.dev/atom.xml",
-      "_htmlUrl": "https://www.matthinchliffe.dev"
-    },
-    {
       "_title": "Max Ogden Blog",
       "_xmlUrl": "http://maxogden.com/rss.xml",
       "_htmlUrl": "http://maxogden.com/"
@@ -640,11 +555,6 @@
       "_title": "Microsoft Edge Blog",
       "_xmlUrl": "https://blogs.windows.com/msedgedev/feed/",
       "_htmlUrl": "https://blogs.windows.com/msedgedev"
-    },
-    {
-      "_title": "Mike Taylr Dot Com Web Blog",
-      "_xmlUrl": "https://miketaylr.com/posts/rss.xml",
-      "_htmlUrl": "https://miketaylr.com/posts"
     },
     {
       "_title": "Mobify",
@@ -660,11 +570,6 @@
       "_title": "Mozilla Hacks",
       "_xmlUrl": "http://hacks.mozilla.org/feed/",
       "_htmlUrl": "https://hacks.mozilla.org"
-    },
-    {
-      "_title": "Nathan's Blog",
-      "_xmlUrl": "http://blog.mozilla.org/nfroyd/feed/",
-      "_htmlUrl": "https://blog.mozilla.org/nfroyd"
     },
     {
       "_title": "Nick Fitzgerald",
@@ -685,11 +590,6 @@
       "_title": "Nir and Far",
       "_xmlUrl": "https://www.nirandfar.com/feed",
       "_htmlUrl": "https://www.nirandfar.com"
-    },
-    {
-      "_title": "Occam's Razor by Avinash Kaushik",
-      "_xmlUrl": "http://feeds.feedburner.com/OccamsRazorByAvinash",
-      "_htmlUrl": "https://www.kaushik.net/avinash"
     },
     {
       "_title": "Opera Mobile",
@@ -717,19 +617,9 @@
       "_htmlUrl": "https://philipwalton.com/"
     },
     {
-      "_title": "Phoboslab",
-      "_xmlUrl": "http://phoboslab.org/log/feed",
-      "_htmlUrl": "https://phoboslab.org/log"
-    },
-    {
       "_title": "Planet WebKit",
       "_xmlUrl": "http://planet.webkit.org/atom.xml",
       "_htmlUrl": "http://planet.webkit.org/"
-    },
-    {
-      "_title": "Platformability",
-      "_xmlUrl": "http://blog.caplin.com/feed/",
-      "_htmlUrl": "https://blog.caplin.com"
     },
     {
       "_title": "Pony Foo",
@@ -782,16 +672,6 @@
       "_htmlUrl": "https://rigor.com"
     },
     {
-      "_title": "Robert O'Callahan",
-      "_xmlUrl": "http://robert.ocallahan.org/feeds/posts/default/-/Mozilla",
-      "_htmlUrl": "http://robert.ocallahan.org/search/label/Mozilla"
-    },
-    {
-      "_title": "Robert's talk",
-      "_xmlUrl": "http://feeds.feedburner.com/robertnyman",
-      "_htmlUrl": "https://robertnyman.com"
-    },
-    {
       "_title": "Samsung Internet Developers - Medium",
       "_xmlUrl": "https://medium.com/feed/samsung-internet-dev",
       "_htmlUrl": "https://medium.com/samsung-internet-dev?source=rss----42759d5da545---4"
@@ -802,19 +682,9 @@
       "_htmlUrl": "https://scottberkun.com"
     },
     {
-      "_title": "Scott O’Hara UX developer, designer &amp; accessibility engineer",
-      "_xmlUrl": "http://www.scottohara.me/feed.xml",
-      "_htmlUrl": "https://scottohara.me//"
-    },
-    {
       "_title": "Search",
       "_xmlUrl": "http://feeds.feedburner.com/InsideSearch",
       "_htmlUrl": "https://www.blog.google/products/search/"
-    },
-    {
-      "_title": "Servo Blog",
-      "_xmlUrl": "http://blog.servo.org/feed.xml",
-      "_htmlUrl": "https://blog.servo.org/"
     },
     {
       "_title": "Shopify Engineering - Shopify Engineering",
@@ -852,11 +722,6 @@
       "_htmlUrl": "http://www.standardista.com"
     },
     {
-      "_title": "Stefan Baumgarnter's blog",
-      "_xmlUrl": "http://fettblog.eu/atom.xml",
-      "_htmlUrl": "https://fettblog.eu/"
-    },
-    {
       "_title": "Stefan Judis Web Development",
       "_xmlUrl": "https://www.stefanjudis.com/rss.xml",
       "_htmlUrl": "https://www.stefanjudis.com"
@@ -865,11 +730,6 @@
       "_title": "Stubbornella",
       "_xmlUrl": "http://www.stubbornella.org/content/feed/",
       "_htmlUrl": "http://www.stubbornella.org/content"
-    },
-    {
-      "_title": "Stuff and Nonsense",
-      "_xmlUrl": "http://feeds.feedburner.com/co/LHdE",
-      "_htmlUrl": "http://www.stuffandnonsense.co.uk"
     },
     {
       "_title": "Subtraction.com",
@@ -957,11 +817,6 @@
       "_htmlUrl": "https://paulbakaus.com"
     },
     {
-      "_title": "The Typekit Blog",
-      "_xmlUrl": "https://blog.typekit.com/feed/",
-      "_htmlUrl": "https://blog.typekit.com"
-    },
-    {
       "_title": "The WHATWG Blog",
       "_xmlUrl": "https://blog.whatwg.org/feed",
       "_htmlUrl": "https://blog.whatwg.org"
@@ -1007,11 +862,6 @@
       "_htmlUrl": "https://www.toptal.com/blog"
     },
     {
-      "_title": "Two-Bit History",
-      "_xmlUrl": "https://twobithistory.org/feed.xml",
-      "_htmlUrl": "https://twobithistory.org/"
-    },
-    {
       "_title": "UX Magazine",
       "_xmlUrl": "https://feeds.uxmag.com/uxm",
       "_htmlUrl": "https://uxmag.com/uxm.xml"
@@ -1032,24 +882,9 @@
       "_htmlUrl": "https://usabilitygeek.com"
     },
     {
-      "_title": "Usabilla Blog",
-      "_xmlUrl": "http://feeds.feedburner.com/usabilla",
-      "_htmlUrl": "https://usabilla.com/blog"
-    },
-    {
-      "_title": "Use Tables!",
-      "_xmlUrl": "http://www.gijsk.com/blog/feed/",
-      "_htmlUrl": "https://www.gijsk.com/blog"
-    },
-    {
       "_title": "Viget Articles",
       "_xmlUrl": "https://feeds.feedburner.com/Viget",
       "_htmlUrl": "https://www.viget.com/"
-    },
-    {
-      "_title": "Viljami Salminen",
-      "_xmlUrl": "https://viljamis.com/atom.xml",
-      "_htmlUrl": "https://viljamis.com/"
     },
     {
       "_title": "Vivaldi Browser",
@@ -1067,19 +902,9 @@
       "_htmlUrl": "https://www.w3.org/blog/news"
     },
     {
-      "_title": "WPOStats.com",
-      "_xmlUrl": "https://wpostats.com/feed.xml",
-      "_htmlUrl": "https://wpostats.com"
-    },
-    {
       "_title": "Warpspire",
       "_xmlUrl": "http://feeds.feedburner.com/warpspire",
       "_htmlUrl": "http://warpspire.com/"
-    },
-    {
-      "_title": "We build Envato",
-      "_xmlUrl": "http://webuild.envato.com/atom.xml",
-      "_htmlUrl": "http://webuild.envato.com/"
     },
     {
       "_title": "Web Axe",
@@ -1097,24 +922,9 @@
       "_htmlUrl": "http://jrsinclair.com"
     },
     {
-      "_title": "Web Platform News",
-      "_xmlUrl": "https://webplatform.news/feed.xml",
-      "_htmlUrl": "https://webplatform.news/"
-    },
-    {
       "_title": "Web Updates",
       "_xmlUrl": "https://developers.google.com/web/updates/atom.xml",
       "_htmlUrl": "https://developers.google.com/web/updates/?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=updates_feed"
-    },
-    {
-      "_title": "Web of Things Interest Group",
-      "_xmlUrl": "https://www.w3.org/blog/wotig/feed/",
-      "_htmlUrl": "https://www.w3.org/blog/wotig"
-    },
-    {
-      "_title": "Weston Ruter",
-      "_xmlUrl": "http://feeds.feedburner.com/westonruter",
-      "_htmlUrl": "https://weston.ruter.net"
     },
     {
       "_title": "Yoav's blog thing",
@@ -1140,11 +950,6 @@
       "_title": "blog.izs.me",
       "_xmlUrl": "https://blog.izs.me/rss.xml",
       "_htmlUrl": "http://github.com/dylang/node-rss"
-    },
-    {
-      "_title": "chuttenblog",
-      "_xmlUrl": "https://chuttenblog.wordpress.com/feed/",
-      "_htmlUrl": "https://chuttenblog.wordpress.com"
     },
     {
       "_title": "codahale.com",
@@ -1177,19 +982,9 @@
       "_htmlUrl": "https://www.freecodecamp.org/news"
     },
     {
-      "_title": "furbo.org",
-      "_xmlUrl": "http://furbo.org/feed/",
-      "_htmlUrl": "https://furbo.org"
-    },
-    {
       "_title": "giant robots smashing into other giant robots",
       "_xmlUrl": "http://feeds.feedburner.com/GiantRobotsSmashingIntoOtherGiantRobots",
       "_htmlUrl": "https://thoughtbot.com/blog"
-    },
-    {
-      "_title": "goer.org",
-      "_xmlUrl": "http://goer.org/Journal/feed",
-      "_htmlUrl": "http://goer.org/Journal"
     },
     {
       "_title": "hakim.se",
@@ -1227,11 +1022,6 @@
       "_htmlUrl": "https://www.kirupa.com/"
     },
     {
-      "_title": "loxodrome.io - James Milner's personal blog",
-      "_xmlUrl": "https://www.loxodrome.io//index.xml",
-      "_htmlUrl": "https://www.loxodrome.io/"
-    },
-    {
       "_title": "michael gooding dot me",
       "_xmlUrl": "https://michaelgooding.me/feed/",
       "_htmlUrl": "https://michaelgooding.me"
@@ -1245,11 +1035,6 @@
       "_title": "otsukare",
       "_xmlUrl": "http://www.otsukare.info/feeds/atom.xml",
       "_htmlUrl": "http://www.otsukare.info/"
-    },
-    {
-      "_title": "pawelgrzybek.com",
-      "_xmlUrl": "https://pawelgrzybek.com/feed.xml",
-      "_htmlUrl": "https://pawelgrzybek.com/"
     },
     {
       "_title": "phpied.com",
@@ -1290,11 +1075,6 @@
       "_title": "text/plain",
       "_xmlUrl": "http://textslashplain.com/feed/",
       "_htmlUrl": "https://textslashplain.com"
-    },
-    {
-      "_title": "the frontendian",
-      "_xmlUrl": "https://frontendian.co/feed.xml",
-      "_htmlUrl": "https://frontendian.co/feed.xml"
     },
     {
       "_title": "trivago tech blog",
