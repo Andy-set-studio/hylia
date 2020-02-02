@@ -40,6 +40,7 @@ async function main() {
     };
 
     const parsed = parser.parse(opml, options, true);
+
     const json = JSON.stringify(parsed, null, 2);
     const blogroll = await transformJSON(json);
 
