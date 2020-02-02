@@ -5,7 +5,7 @@
 {% set introHeading = title %}
 {% set introSummary %}
   <p class="[ intro__meta ] [ text-500 leading-tight ]">
-    Frontend Weeklyは以下の{{ opml.items | length }}にのぼる素晴らしいブログのコンテンツをベースに成り立っています。<br>
+    Frontend Weeklyは以下の{{ opml.items | length }}の素晴らしいコンテンツ達をベースに成り立っています。<br>
     この場を借りて、すべての書き手に感謝致します。<br><br>
     最終更新日: <time class="font-serif" datetime="{{ opml.dateCreated | w3DateFilter }}" class="dt-published">{{ opml.dateCreated | dateFilter }}</time>
   </p>
