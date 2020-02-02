@@ -29,7 +29,6 @@
     "bl": "^4.0.0",
     "chokidar-cli": "^2.1.0",
     "cross-env": "^7.0.0",
-    "fast-xml-parser": "^3.16.0",
     "make-dir-cli": "^2.0.0",
     "minimist": "^1.2.0",
     "node-jq": "^1.11.0",
@@ -47,7 +46,8 @@
     "serve": "cross-env ELEVENTY_ENV=development npx eleventy --serve",
     "serve:lambda": "netlify-lambda serve _lambda",
     "build:lambda": "netlify-lambda build _lambda",
-    "production": "npm run sass:process && npm run cms:precompile && npm run cms:bundle && npm run build:lambda && npx eleventy",
+    "build:blogroll": "node _task/node-opml-to-blogroll.js",
+    "production": "npm run sass:process && npm run cms:precompile && npm run cms:bundle && npm run build:lambda && build:blogroll && npx eleventy",
     "post:new": "node _task/node-trello-contents.js"
   },
   "repository": {
