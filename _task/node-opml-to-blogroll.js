@@ -50,8 +50,15 @@ const transformJSON = async json => {
   const removeDupe = '.items |= unique_by(.feed_url)';
   const sortByTitle = '.items |= sort_by(.title)';
   const AListApartURLFix = '.items |= map(if .title == "A List Apart" then .site_url = "https://alistapart.com" else . end)';
+<<<<<<< HEAD
 
   const filter = `${baseSchema} | ${removeUnusedKey} | ${removeDupe} | ${sortByTitle} | ${AListApartURLFix}`;
+=======
+  const flagTwitter = '.items |= map(if .title|test("^Twitter List*.*") then .+ {twitter: true} else . end)';
+  const flagNewsletter = '.items |= map(if .feed_url|test(".*\\\\?[0-9a-f]{5,40}") then .+ {newsletter: true} else . end)';
+
+  const filter = `${baseSchema} | ${removeUnusedKey} | ${removeDupe} | ${sortByTitle} | ${AListApartURLFix} | ${flagTwitter} | ${flagNewsletter}`;
+>>>>>>> feat: Use feedbin api to generate blogroll
 
   const option = {
     input: 'string'
