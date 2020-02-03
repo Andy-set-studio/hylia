@@ -1,5 +1,5 @@
 {
-  "dateCreated": "2020-02-01T23:13:22.823838Z",
+  "dateCreated": "2020-02-02T18:41:01.227084Z",
   "items": [
     {
       "created_at": "2019-06-10T00:06:37.350704Z",
@@ -23,7 +23,7 @@
       "created_at": "2020-02-01T02:39:31.123749Z",
       "title": "A List Apart",
       "feed_url": "https://alistapart.com/main/feed/",
-      "site_url": "\n\t\t\thttps://alistapart.com\t\t"
+      "site_url": "https://alistapart.com"
     },
     {
       "created_at": "2020-01-14T05:05:40.986864Z",
@@ -738,6 +738,12 @@
       "title": "Maggie at illustrated.dev",
       "feed_url": "http://illustrated.dev?90697eb18d07104981abbdbda6d0aa9ff90b346d",
       "site_url": "http://illustrated.dev"
+    },
+    {
+      "created_at": "2020-02-02T18:41:01.227084Z",
+      "title": "Manuela from Fellow.app",
+      "feed_url": "http://fellow.app?ad61aebb3fdfcd4d905ae224737ed28cedce3dbe",
+      "site_url": "http://fellow.app"
     },
     {
       "created_at": "2019-06-10T00:06:36.893593Z",

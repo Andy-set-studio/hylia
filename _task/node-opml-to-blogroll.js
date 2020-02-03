@@ -45,7 +45,13 @@ const getSubscription = async () => {
 
 /// Function to transform JSON using node-jq
 const transformJSON = async json => {
-  const filter = '{dateCreated: .[0].created_at, items: [.[]]} | .items|=map(del(.id, .feed_id)) | .items|=unique_by(.feed_url) | .items|=sort_by(.title)';
+  const baseSchema = '{dateCreated: .[0].created_at, items: [.[]]}';
+  const removeUnusedKey = '.items |= map(del(.id, .feed_id))';
+  const removeDupe = '.items |= unique_by(.feed_url)';
+  const sortByTitle = '.items |= sort_by(.title)';
+  const AListApartURLFix = '.items |= map(if .title == "A List Apart" then .site_url = "https://alistapart.com" else . end)';
+
+  const filter = `${baseSchema} | ${removeUnusedKey} | ${removeDupe} | ${sortByTitle} | ${AListApartURLFix}`;
 
   const option = {
     input: 'string'
