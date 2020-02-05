@@ -107,7 +107,7 @@ const generatePost = tmplData => {
   const makeTitle = vol => `title: Vol.${vol}`;
   const makeDate = date => `date: ${date}`;
   const makeDesc = () => `desc: '3 OF TRANSLATED TITLE、ほか計${tmplData.length}リンク'`;
-  const makePermalink = vol => `permalink: /posts/${vol}`;
+  const makePermalink = vol => `permalink: /posts/${vol}/`;
 
   const frontMatter = () =>
     `---
