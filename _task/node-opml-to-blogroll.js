@@ -17,7 +17,7 @@ const FEEDBIN_API_URL = 'https://api.feedbin.com/v2/subscriptions.json';
 const FEEDBIN_API_OPTION = {
   'method': "GET",
   'headers': {
-    'Authorization': `Basic ${ process.env.FEEDBIN_API_TOKEN}`
+    'Authorization': `Basic ${process.env.FEEDBIN_API_TOKEN}`
   }
 };
 

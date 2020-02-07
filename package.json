@@ -47,7 +47,7 @@
     "serve:lambda": "netlify-lambda serve _lambda",
     "build:lambda": "netlify-lambda build _lambda",
     "build:blogroll": "node _task/node-opml-to-blogroll.js",
-    "production": "npm run sass:process && npm run cms:precompile && npm run cms:bundle && npm run build:lambda && npm run build:blogroll && npx eleventy",
+    "production": "npm run sass:process && npm run cms:precompile && npm run cms:bundle && npm run build:lambda && npx eleventy",
     "post:new": "node _task/node-trello-contents.js"
   },
   "repository": {
