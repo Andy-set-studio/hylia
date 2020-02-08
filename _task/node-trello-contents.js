@@ -2,6 +2,7 @@ const querystring = require('querystring');
 const path = require('path');
 const fs = require('fs');
 
+const jq = require('node-jq');
 const fetch = require('node-fetch');
 const dotenv = require('dotenv');
 const minimist = require('minimist');
@@ -10,18 +11,6 @@ const opts = minimist(process.argv.slice(2));
 dotenv.config();
 
 // Configuration
-/// Trello API URL
-const TRELLO_API_URL_PREFIX = 'https://api.trello.com/1/lists/';
-
-/// Configure Trello API Client
-const TRELLO_API = {
-  access_token_key: process.env.TRELLO_API_TOKEN_KEY,
-  access_token_secret: process.env.TRELLO_API_TOKEN_SECRET
-};
-
-/// Configure list. Our list is "Curated"
-const TRELLO_FE_WEEKLY_LIST = process.env.TRELLO_FE_WEEKLY_LIST;
-
 /// Posts location
 const POSTS_DIR = path.resolve(process.env.PWD, 'src/posts');
 
@@ -30,57 +19,6 @@ const POSTS_DIR = path.resolve(process.env.PWD, 'src/posts');
 const handleError = err => {
   console.error(err);
   process.exit(1);
-};
-
-/// Generate querystring for Trello cards API
-const params = () => {
-  return querystring.stringify({
-    attachments: true,
-    card_attachment_fields: 'url',
-    fields: 'id,name,desc,labels',
-    key: TRELLO_API.access_token_key,
-    token: TRELLO_API.access_token_secret
-  });
-};
-
-/// Prepare Template
-const prepareTemplateData = response => {
-  // Strip URL and /n from desc
-  const removeNoise = value => {
-    const regex = /(\\n|\\r)|http(s):\/\/\S*/gm;
-    return value.replace(regex, '').trim();
-  };
-
-  const transformCallBack = (accumulator, currentElement) => {
-    const transform = {
-      ...currentElement,
-      desc: removeNoise(currentElement.desc),
-      attachments: currentElement.attachments[0].url,
-      labels: currentElement.labels[0].name
-    };
-
-    // Return the value for the next step by using the array from the previous step and
-    // replace desc and attachments
-    return [...accumulator, transform];
-  };
-
-  return response.reduce(transformCallBack, []);
-};
-
-/// Fetch cards from Trello
-const getCards = async () => {
-  try {
-    const response = await fetch(
-      `${TRELLO_API_URL_PREFIX}${TRELLO_FE_WEEKLY_LIST}/cards?${params()}`,
-      {
-        method: 'GET'
-      }
-    );
-
-    return prepareTemplateData(await response.json());
-  } catch (err) {
-    handleError(err);
-  }
 };
 
 /// option handler
@@ -96,29 +34,85 @@ const optionHandler = () => {
       `opts.date is REQUIRED. Please add post vol using the '--date=YYYY-MM-DD' parameter`
     );
   }
+};
 
-  return opts;
+/// Prepare Template
+const prepareTemplateData = async response => {
+  /// Function to transform response using node-jq
+  const transformResponse = async res => {
+    const json = JSON.stringify(res, null, 2);
+    const baseSchema = '.[] |= { id: .id, title: .name, desc: .desc, label: .labels[].name, url: .attachments[].url }';
+    const filter = `${baseSchema}`;
+
+    try {
+      const option = {
+        input: 'string'
+      };
+      return await jq.run(filter, json, option);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  return JSON.parse(await transformResponse(response));
+};
+
+/// Fetch cards from Trello
+const getCards = async () => {
+  /// Trello API URL
+  const TRELLO_API_URL_PREFIX = 'https://api.trello.com/1/lists/';
+
+  /// Configure Trello API Client
+  const TRELLO_API = {
+    access_token_key: process.env.TRELLO_API_TOKEN_KEY,
+    access_token_secret: process.env.TRELLO_API_TOKEN_SECRET
+  };
+
+  /// Configure list. Our list is "Curated"
+  const TRELLO_FE_WEEKLY_LIST = process.env.TRELLO_FE_WEEKLY_LIST;
+
+  /// Generate querystring for Trello cards API
+  const params = () => {
+    return querystring.stringify({
+      attachments: true,
+      card_attachment_fields: 'url',
+      fields: 'id,name,desc,labels',
+      key: TRELLO_API.access_token_key,
+      token: TRELLO_API.access_token_secret
+    });
+  };
+
+  try {
+    const requestURL = `${TRELLO_API_URL_PREFIX}${TRELLO_FE_WEEKLY_LIST}/cards?${params()}`;
+    const response = await fetch(requestURL, { method: 'GET' });
+    return prepareTemplateData(await response.json());
+  } catch (err) {
+    handleError(err);
+  }
 };
 
 /// Generate a post file
 const generatePost = tmplData => {
-  const options = optionHandler();
-
   const makeTitle = vol => `title: Vol.${vol}`;
   const makeDate = date => `date: ${date}`;
   const makeDesc = () => `desc: '3 OF TRANSLATED TITLE、ほか計${tmplData.length}リンク'`;
   const makePermalink = vol => `permalink: /posts/${vol}/`;
-
   const frontMatter = () =>
-    `---
-${makeTitle(options.vol)}
-${makeDate(options.date)}
+`---
+${makeTitle(opts.vol)}
+${makeDate(opts.date)}
 ${makeDesc()}
-${makePermalink()}
+${makePermalink(opts.vol)}
 ---
 `;
 
-  const description = element => (element ? element : `FILL ME`);
+  // Strip URL and /n from desc
+  const removeNoise = value => {
+    const regex = /(\\n|\\r)|http(s):\/\/\S*/gm;
+    return value.replace(regex, '').trim();
+  };
+
+  const description = element => (element ? removeNoise(element) : `FILL ME`);
 
   // A typical post would look like this:
   // ## [${Title}(${Link})
@@ -126,10 +120,11 @@ ${makePermalink()}
   // ${Excerpt}
   // ↑ We will have 3 of this.
   // In Trello, MUSTREAD MUST be labeled as MUSTREAD
-  const isMustRead = element => element.labels === 'MUSTREAD';
+  const isMustRead = element => element.label === 'MUSTREAD';
   const makeMustRead = element =>
-    `## [${element.name}](${element.attachments})
+`## [${element.title}](${element.url})
 #### TRANSLATED TITLE
+
 ${description(element.desc)}
 
 `;
@@ -138,9 +133,10 @@ ${description(element.desc)}
   // ${Excerpt}
   // ↑ We will have about 4 of this.
   // In Trello, FEATURED MUST be labeled as FEATURED
-  const isFeatured = element => element.labels === 'FEATURED';
+  const isFeatured = element => element.label === 'FEATURED';
   const makeFeatured = element =>
-    `## [${element.name}](${element.attachments})
+`## [${element.title}](${element.url})
+
 ${description(element.desc)}
 
 `;
@@ -152,10 +148,10 @@ ${description(element.desc)}
   // - **[${Title}(${Link})]**: ${Translated Title}
   // ↑ We will have about 5 of this.
   // In Trello, INBRIEF MUST be labeled as INBRIEF
-  const isInBrief = element => element.labels === 'INBRIEF';
+  const isInBrief = element => element.label === 'INBRIEF';
   const makeInBrief = element =>
-    `
-- **[${element.name}](${element.attachments})**: TRANSLATED TITLE
+`
+- **[${element.title}](${element.url})**: TRANSLATED TITLE
 `;
 
   const mustread = tmplData
@@ -180,10 +176,9 @@ ${inBrief}`;
 
 /// Save post as md
 const savePost = post => {
-  const options = optionHandler();
-
+  const filePath = `${POSTS_DIR}/${opts.date}-v${opts.vol}.md`;
   try {
-    fs.writeFileSync(`${POSTS_DIR}/${options.date}-v${options.vol}.md`, post, 'utf-8');
+    fs.writeFileSync(filePath, post, 'utf-8');
   } catch (err) {
     handleError(err);
   }
@@ -191,6 +186,7 @@ const savePost = post => {
 
 // Main Function
 async function main() {
+  optionHandler();
   const tmplData = await getCards();
   const post = generatePost(tmplData);
   savePost(post);
