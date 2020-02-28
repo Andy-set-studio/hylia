@@ -72,7 +72,7 @@ async function main() {
     const json = JSON.stringify(subscription, null, 2);
     const blogroll = await transformJSON(json);
 
-    console.log(blogroll);
+    // console.log(blogroll);
 
     fs.writeFileSync(`${DATA_PATH}/opml.json`, blogroll, 'utf-8');
 }
