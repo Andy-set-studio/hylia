@@ -41,7 +41,8 @@ const prepareTemplateData = async response => {
   /// Function to transform response using node-jq
   const transformResponse = async res => {
     const json = JSON.stringify(res, null, 2);
-    const baseSchema = '.[] |= { id: .id, title: .name, desc: .desc, label: .labels[].name, url: .attachments[].url }';
+    const baseSchema =
+      '.[] |= { id: .id, title: .name, desc: .desc, label: .labels[].name, url: .attachments[].url }';
     const filter = `${baseSchema}`;
 
     try {
@@ -84,7 +85,7 @@ const getCards = async () => {
 
   try {
     const requestURL = `${TRELLO_API_URL_PREFIX}${TRELLO_FE_WEEKLY_LIST}/cards?${params()}`;
-    const response = await fetch(requestURL, { method: 'GET' });
+    const response = await fetch(requestURL, {method: 'GET'});
     return prepareTemplateData(await response.json());
   } catch (err) {
     handleError(err);
@@ -98,7 +99,7 @@ const generatePost = tmplData => {
   const makeDesc = () => `desc: '3 OF TRANSLATED TITLE、ほか計${tmplData.length}リンク'`;
   const makePermalink = vol => `permalink: /posts/${vol}/`;
   const frontMatter = () =>
-`---
+    `---
 ${makeTitle(opts.vol)}
 ${makeDate(opts.date)}
 ${makeDesc()}
@@ -122,7 +123,7 @@ ${makePermalink(opts.vol)}
   // In Trello, MUSTREAD MUST be labeled as MUSTREAD
   const isMustRead = element => element.label === 'MUSTREAD';
   const makeMustRead = element =>
-`## [${element.title}](${element.url})
+    `## [${element.title}](${element.url})
 #### TRANSLATED TITLE
 
 ${description(element.desc)}
@@ -135,7 +136,7 @@ ${description(element.desc)}
   // In Trello, FEATURED MUST be labeled as FEATURED
   const isFeatured = element => element.label === 'FEATURED';
   const makeFeatured = element =>
-`## [${element.title}](${element.url})
+    `## [${element.title}](${element.url})
 
 ${description(element.desc)}
 
@@ -150,7 +151,7 @@ ${description(element.desc)}
   // In Trello, INBRIEF MUST be labeled as INBRIEF
   const isInBrief = element => element.label === 'INBRIEF';
   const makeInBrief = element =>
-`
+    `
 - **[${element.title}](${element.url})**: TRANSLATED TITLE
 `;
 

@@ -1,21 +1,18 @@
 const CACHE_KEYS = {
+  /* eslint-disable no-undef */
   PRE_CACHE: `precache-${VERSION}`,
   RUNTIME: `runtime-${VERSION}`
+  /* eslint-enable */
 };
 
 // URLS that we don’t want to end up in the cache
-const EXCLUDED_URLS = [
-  'admin',
-  '.netlify',
-  'https://identity.netlify.com/v1/netlify-identity-widget.js',
-  'https://unpkg.com/netlify-cms@^2.9.3/dist/netlify-cms.js'
-];
+const EXCLUDED_URLS = ['admin', '.netlify'];
 
 // URLS that we want to be cached when the worker is installed
 const PRE_CACHE_URLS = ['/', '/fonts/'];
 
 // You might want to bypass a certain host
-const IGNORED_HOSTS = ['localhost', 'unpkg.com', ];
+const IGNORED_HOSTS = ['localhost', 'unpkg.com'];
 
 /**
  * Takes an array of strings and puts them in a named cache store
@@ -81,9 +78,7 @@ self.addEventListener('fetch', evt => {
               return response;
             });
           })
-          .catch(ex => {
-            return;
-          });
+          .catch(ex => {});
       });
     })
   );
