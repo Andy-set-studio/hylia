@@ -1,5 +1,5 @@
 {% if navigation.items %}
-  <nav class="nav">
+  <nav class="nav" aria-label="{{ariaLabel}}">
     <ul class="[ nav__list ] [ box-flex align-center md:space-before ]">
       {% for item in navigation.items %}
         {% set relAttribute = '' %}
