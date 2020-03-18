@@ -4,7 +4,7 @@ backend:
 publish_mode: editorial_workflow
 site_url: "https://example.com"
 media_folder: "src/images"
-public_folder: "images"
+public_folder: "/images"
 collections:
   - name: "pages"
     label: "Pages"
