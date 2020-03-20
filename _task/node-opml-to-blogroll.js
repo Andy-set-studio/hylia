@@ -32,7 +32,6 @@ const handleError = err => {
 const getSubscription = async () => {
   try {
     const response = await fetch(`${FEEDBIN_API_URL}`, FEEDBIN_API_OPTION);
-
     return await response.json();
   } catch (err) {
     handleError(err);
@@ -71,9 +70,10 @@ async function main() {
   const json = JSON.stringify(subscription, null, 2);
   const blogroll = await transformJSON(json);
 
-  // console.log(blogroll);
+  // console.log(subscription);
 
   fs.writeFileSync(`${DATA_PATH}/opml.json`, blogroll, 'utf-8');
+  console.log(`${DATA_PATH}/opml.json has been created.`);
 }
 
 main();
