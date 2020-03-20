@@ -1,6 +1,10 @@
 {% set pageTitle = title + ' - ' + site.name %}
-{% set pageDesc = '' %}
 {% set siteTitle = site.name %}
+
+{% if pageType == 'Homepage' %}
+  {% set pageTitle = site.name %}
+{% endif %}
+
 {% set currentUrl = site.url + page.url %}
 
 {% if metaTitle %}
@@ -9,6 +13,8 @@
 
 {% if desc %}
   {% set metaDesc = desc %}
+{% else %}
+  {% set metaDesc = shortDesc %}
 {% endif %}
 
 <title>{{ pageTitle }}</title>
