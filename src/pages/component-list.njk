@@ -27,10 +27,10 @@
       {{ confirm("Confirm this statement", "confirm") }}
     </li>
     <li class="field-list__field-group">
-      {{ radios("Radio Legend", "field-radio-name", [ "Yes", { label: "Not really", value: "No", note: "Note about choice." } ] ) }}
+      {{ radios("Radio Legend", "field-radio-name", [ "Yes", { label: "Not really", value: "No", note: "Note about choice." } ], { description: "Optional description." } ) }}
     </li>
     <li class="field-list__field-group">
-      {{ checkboxes("Checkbox Legend", "field-checkbox-name", [ "Choice 1", { label: "Choice 2", value: "Choice 2", note: "Note about choice." }, "Choice 3" ] ) }}
+      {{ checkboxes("Checkbox Legend", "field-checkbox-name", [ "Choice 1", { label: "Choice 2", value: "Choice 2", note: "Note about choice." }, "Choice 3" ], { description: "Optional description." } ) }}
     </li>
   </ol>
   {{ button("Send in your message") }}
