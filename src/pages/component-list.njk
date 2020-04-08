@@ -1,0 +1,37 @@
+
+
+
+<h2>Forms</h2>
+
+{% from "macros/form.njk" import label, field, textarea, confirm, select, radios, checkboxes, button %}
+
+<form name="contact" method="POST" data-netlify="true" action="/YOUR_THANK_YOU_PAGE/" netlify-honeypot="bot-field">
+  <ol class="field-list">
+    <li class="field-list__field-group">
+      {{ label("Text Label", "field-text-name") }}
+      {{ field( "text", "field-text-name", { required: true, placeholder: "Katherine Johnson", autocomplete: "name", autocorrect: "off", autocapitalize: "off", description: "Optional description. Note: This field type can take any valid input type." } ) }}
+    </li>
+    <li class="field-list__field-group">
+      {{ label("Email Label", "field-email-name") }}
+      {{ field( "email", "field-email-name", { required: true, placeholder: "katherine@johnson.tld", autocomplete: "email" } ) }}
+    </li>
+    <li class="field-list__field-group">
+      {{ label("Textarea Label", "field-textarea-name") }}
+      {{ textarea( "field-textarea-name", { required: true, autocapitalize: "sentences", spellcheck: "true" } ) }}
+    </li>
+    <li class="field-list__field-group">
+      {{ label("Select Label", "field-select-name") }}
+      {{ select( "select", [ "option 1", "option 2" ], { required: true, options_before: ["prepended option"], options_after: ["appended option"], description: "Optional description." } ) }}
+    </li>
+    <li class="field-list__field-group">
+      {{ confirm("Confirm this statement", "confirm") }}
+    </li>
+    <li class="field-list__field-group">
+      {{ radios("Radio Legend", "field-radio-name", [ "Yes", { label: "Not really", value: "No", note: "Note about choice." } ] ) }}
+    </li>
+    <li class="field-list__field-group">
+      {{ checkboxes("Checkbox Legend", "field-checkbox-name", [ "Choice 1", { label: "Choice 2", value: "Choice 2", note: "Note about choice." }, "Choice 3" ] ) }}
+    </li>
+  </ol>
+  {{ button("Send in your message") }}
+</form>
