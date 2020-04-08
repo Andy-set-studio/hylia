@@ -23,7 +23,7 @@
         >
   {% if data.description %}
     <br>
-    <em class="question__description" id="description-{{ name }}">{{ data.description | widont }}</em>
+    <em class="field-list__field-group__description" id="description-{{ name }}">{{ data.description | widont }}</em>
   {% endif %}
 {% endmacro %}
 
@@ -41,7 +41,7 @@
   </label>
   {% if data.description %}
     <br>
-    <em class="question__description" id="description-{{ name }}">{{ data.description | widont }}</em>
+    <em class="field-list__field-group__description" id="description-{{ name }}">{{ data.description | widont }}</em>
   {% endif %}
 {% endmacro %}
 
@@ -65,7 +65,7 @@
   </select>
   {% if data.description %}
     <br>
-    <em class="question__description" id="description-{{ name }}">{{ data.description | widont }}</em>
+    <em class="field-list__field-group__description" id="description-{{ name }}">{{ data.description | widont }}</em>
   {% endif %}
 {% endmacro %}
 
@@ -82,7 +82,7 @@
             {% if data.description %}aria-describedby="description-{{ name }}"{% endif %}
             ></textarea>
   {% if data.description %}
-    <em class="question__description" id="description-{{ name }}">{{ data.description | widont }}</em>
+    <em class="field-list__field-group__description" id="description-{{ name }}">{{ data.description | widont }}</em>
   {% endif %}
 {% endmacro %}
 
@@ -91,7 +91,7 @@
     <legend
       {% if data.description %}aria-describedby="description-{{ name }}"{% endif %}
       >{{ label }}</legend>
-    <ul class="question__list">
+    <ul class="field-list__field-group__list">
       {% for option in options %}
         <li>
           {% if option.value %}
@@ -112,13 +112,13 @@
           {% endif %}
           {% if option.note %}
             <br>
-            <em class="question__description" id="description-{{ name }}-{{ option.value }}">{{ option.note | widont }}</em>
+            <em class="field-list__field-group__description" id="description-{{ name }}-{{ option.value }}">{{ option.note | widont }}</em>
           {% endif %}
         </li>
       {% endfor %}
     </ul>
     {% if data.description %}
-      <em class="question__description" id="description-{{ name }}">{{ data.description | widont }}</em>
+      <em class="field-list__field-group__description" id="description-{{ name }}">{{ data.description | widont }}</em>
     {% endif %}
   </fieldset>
 {% endmacro %}
@@ -128,7 +128,7 @@
     <legend
       {% if data.description %}aria-describedby="description-{{ name }}"{% endif %}
       >{{ label }}</legend>
-    <ul class="question__list">
+    <ul class="field-list__field-group__list">
       {% for option in options %}
         <li>
           {% if option.value %}
@@ -149,13 +149,13 @@
           {% endif %}
           {% if option.note %}
             <br>
-            <em class="question__description" id="description-{{ name }}-{{ option.value }}">{{ option.note | widont }}</em>
+            <em class="field-list__field-group__description" id="description-{{ name }}-{{ option.value }}">{{ option.note | widont }}</em>
           {% endif %}
         </li>
       {% endfor %}
     </ul>
     {% if data.description %}
-      <em class="question__description" id="description-{{ name }}">{{ data.description | widont }}</em>
+      <em class="field-list__field-group__description" id="description-{{ name }}">{{ data.description | widont }}</em>
     {% endif %}
   </fieldset>
 {% endmacro %}

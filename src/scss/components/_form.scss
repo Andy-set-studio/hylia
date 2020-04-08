@@ -1,0 +1,78 @@
+/* Form */
+label {
+  display: block;
+  font-weight: 600;
+}
+form br {
+  display: none;
+}
+input,
+textarea,
+select {
+  background-color: #fff;
+  @include apply-utility('font', 'base');
+  font-size: 1.25rem;
+  border: 1px solid;
+  margin-top: .15rem;
+  padding: .25em .5em;
+  width: 100%;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  background-color: #ffffeb;
+}
+label input {
+  margin: -.25rem .5rem 0 0;
+  width: auto;
+  vertical-align: middle;
+}
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+legend {
+  display: block;
+  font-weight: bold;
+}
+
+.field-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.field-list__field-group {
+  margin-bottom: 2rem;
+  transition: transform .15s;
+
+  &__description {
+    display: block;
+    margin-top: .3rem;
+    font-size: .875rem;
+    line-height: 1.25;
+  }
+
+  textarea + &__description {
+    margin-top: 0;
+  }
+
+  &--confirm {
+    font-weight: normal;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+
+    label {
+      font-weight: normal;
+    }
+
+    .field-list__field-group__description {
+      margin: 0 0 0 1.35rem;
+    }
+  }
+}
+
+
