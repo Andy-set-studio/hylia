@@ -41,6 +41,11 @@ hr {
   margin: get-size(900) auto;
 }
 
+:focus {
+  outline: 1px solid var(--color-theme-primary-glare);
+  outline-offset: 0.25rem;
+}
+
 /**
  * PROJECT IMPORTS
  */

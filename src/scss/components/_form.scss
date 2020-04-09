@@ -31,13 +31,6 @@ select {
   @include apply-utility('font', 'base');
 }
 
-input:focus,
-select:focus,
-textarea:focus {
-  outline: 1px solid var(--color-theme-primary-glare);
-  outline-offset: 0.25rem;
-}
-
 label input {
   margin: -0.25rem 0.5rem 0 0;
   width: auto;
