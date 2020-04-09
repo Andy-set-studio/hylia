@@ -1,6 +1,6 @@
 {% from "macros/form.njk" import label, field, textarea, button %}
 
-<form name="contact" method="POST" data-netlify="true" action="/YOUR_THANK_YOU_PAGE/" netlify-honeypot="bot-field">
+<form name="contact" method="POST" data-netlify="true" action="/thank-you" netlify-honeypot="bot-field">
   <ol class="[ field-list ]">
     <li class="[ field-list__field-group ]">
       {{ label("What’s your name?", "name") }}
@@ -18,5 +18,5 @@
       <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
     </li>
   </ol>
-  {{ button("Send in your message") }}
+  {{ button("Send message") }}
 </form>

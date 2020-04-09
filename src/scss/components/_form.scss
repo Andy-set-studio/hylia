@@ -1,34 +1,45 @@
 /* Form */
-label {
-  display: block;
-  font-weight: 600;
+
+form {
+  max-width: 35rem;
 }
 
 form br {
   display: none;
 }
 
+label {
+  display: block;
+  font-weight: 600;
+}
+
+input,
+select {
+  line-height: 1;
+}
+
 input,
 textarea,
 select {
   background-color: #fff;
-  font-size: 1.25rem;
-  border: 1px solid;
-  margin-top: .15rem;
-  padding: .25em .5em;
+  font: inherit;
+  border: 1px solid var(--color-text);
+  margin-top: 0.15rem;
+  padding: 0.5rem 1rem;
   width: 100%;
-  
+
   @include apply-utility('font', 'base');
 }
 
 input:focus,
 select:focus,
 textarea:focus {
-  background-color: #ffffeb;
+  outline: 1px solid var(--color-theme-primary-glare);
+  outline-offset: 0.25rem;
 }
 
 label input {
-  margin: -.25rem .5rem 0 0;
+  margin: -0.25rem 0.5rem 0 0;
   width: auto;
   vertical-align: middle;
 }
@@ -56,8 +67,8 @@ legend {
 
   &__description {
     display: block;
-    margin-top: .3rem;
-    font-size: .875rem;
+    margin-top: 0.3rem;
+    font-size: 0.875rem;
     line-height: 1.25;
   }
 
@@ -82,5 +93,3 @@ legend {
     }
   }
 }
-
-

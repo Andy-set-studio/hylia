@@ -73,7 +73,7 @@
   <br>
   <textarea id="field-{{ name }}"
             name="{{ name }}"
-            {% if data.rows %}rows="{{ data.rows }}"{% else %}rows="10"{% endif %}
+            {% if data.rows %}rows="{{ data.rows }}"{% else %}rows="5"{% endif %}
             cols="100"
             {% if data.required %}required aria-required="true"{% endif %}
             {% if data.autocorrect %}autocorrect="{{ data.autocorrect }}"{% endif %}
