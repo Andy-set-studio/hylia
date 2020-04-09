@@ -1,0 +1,22 @@
+{% from "macros/form.njk" import label, field, textarea, button %}
+
+<form name="contact" method="POST" data-netlify="true" action="/YOUR_THANK_YOU_PAGE/" netlify-honeypot="bot-field">
+  <ol class="[ field-list ]">
+    <li class="[ field-list__field-group ]">
+      {{ label("What’s your name?", "name") }}
+      {{ field( "text", "name", { required: true, placeholder: "Katherine Johnson", autocomplete: "name", autocorrect: "off", autocapitalize: "off" } ) }}
+    </li>
+    <li class="[ field-list__field-group ]">
+      {{ label("What’s your email address?", "email") }}
+      {{ field( "email", "email", { required: true, placeholder: "katherine@johnson.tld", autocomplete: "email" } ) }}
+    </li>
+    <li class="[ field-list__field-group ]">
+      {{ label("What’s on your mind?", "message") }}
+      {{ textarea( "message", { required: true, autocapitalize: "sentences", spellcheck: "true" } ) }}
+    </li>
+    <li hidden>
+      <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+    </li>
+  </ol>
+  {{ button("Send in your message") }}
+</form>

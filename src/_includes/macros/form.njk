@@ -1,0 +1,165 @@
+{# ===================
+   Forms
+   =================== #}
+
+{% macro label( text, name ) %}
+  <label class="question__label" for="field-{{ name }}">{{ text }}</label>
+{% endmacro %}
+
+{% macro field( type, name, data ) %}
+  <br>
+  <input class="question__field"
+        type="{{ type }}"
+        name="{{ name }}"
+        id="field-{{ name }}"
+        {% if data.required %}required aria-required="true"{% endif %}
+        {% if data.placeholder %}placeholder="{{ data.placeholder }}"{% endif %}
+        {% if data.pattern %}pattern="{{ data.pattern }}"{% endif %}
+        {% if data.description %}aria-describedby="description-{{ name }}"{% endif %}
+        {% if data.autocomplete %}autocomplete="{{ data.autocomplete }}"{% endif %}
+        {% if data.autocorrect %}autocorrect="{{ data.autocorrect }}"{% endif %}
+        {% if data.spellcheck %}spellcheck="{{ data.spellcheck }}"{% endif %}
+        {% if data.autocapitalize %}autocapitalize="{{ data.autocapitalize }}"{% endif %}
+        >
+  {% if data.description %}
+    <br>
+    <em class="[ field-list__field-group__description ]" id="description-{{ name }}">{{ data.description }}</em>
+  {% endif %}
+{% endmacro %}
+
+{% macro confirm( text, name, data ) %}
+  <label for="field-{{ name }}" class="question--confirm">
+    <input class="question__field question__field--confirm"
+          type="checkbox"
+          name="{{ name }}"
+          id="field-{{ name }}"
+          value="1"
+          {% if data.required %}required aria-required="true"{% endif %}
+          {% if data.description %}aria-describedby="description-{{ name }}"{% endif %}
+          >
+    {{ text }}
+  </label>
+  {% if data.description %}
+    <br>
+    <em class="[ field-list__field-group__description ]" id="description-{{ name }}">{{ data.description }}</em>
+  {% endif %}
+{% endmacro %}
+
+{% macro select( name, options, data ) %}
+  <br>
+  <select id="field-{{ name }}"
+          name="{{ name }}"
+          {% if data.required %}required aria-required="true"{% endif %}
+          {% if data.multiple %}multiple{% endif %}
+          {% if data.description %}aria-describedby="description-{{ name }}"{% endif %}
+          >
+    {% for option in data.options_before %}
+      <option>{{ option }}</option>
+    {% endfor %}
+    {% for option in options %}
+      <option>{{ option }}</option>
+    {% endfor %}
+    {% for option in data.options_after %}
+      <option>{{ option }}</option>
+    {% endfor %}
+  </select>
+  {% if data.description %}
+    <br>
+    <em class="[ field-list__field-group__description ]" id="description-{{ name }}">{{ data.description }}</em>
+  {% endif %}
+{% endmacro %}
+
+{% macro textarea( name, data ) %}
+  <br>
+  <textarea id="field-{{ name }}"
+            name="{{ name }}"
+            {% if data.rows %}rows="{{ data.rows }}"{% else %}rows="10"{% endif %}
+            cols="100"
+            {% if data.required %}required aria-required="true"{% endif %}
+            {% if data.autocorrect %}autocorrect="{{ data.autocorrect }}"{% endif %}
+            {% if data.spellcheck %}spellcheck="{{ data.spellcheck }}"{% endif %}
+            {% if data.autocapitalize %}autocapitalize="{{ data.autocapitalize }}"{% endif %}
+            {% if data.description %}aria-describedby="description-{{ name }}"{% endif %}
+            ></textarea>
+  {% if data.description %}
+    <em class="[ field-list__field-group__description ]" id="description-{{ name }}">{{ data.description }}</em>
+  {% endif %}
+{% endmacro %}
+
+{% macro radios( label, name, options ) %}
+  <fieldset>
+    <legend
+      {% if data.description %}aria-describedby="description-{{ name }}"{% endif %}
+      >{{ label }}</legend>
+    <ul class="field-list__field-group__list">
+      {% for option in options %}
+        <li>
+          {% if option.value %}
+            <label for="field-{{ name }}-{{ option.value }}">
+              <input type="radio"
+                    name="{{ name }}"
+                    id="field-{{ name }}-{{ option.value }}"
+                    value="{{ option.value }}"
+                    {% if option.note %}aria-describedby="description-{{ name }}-{{ option.value }}"{% endif %}
+                    >{{ option.label }}</label>
+          {% else %}
+            <label for="field-{{ name }}-{{ option }}">
+              <input type="radio"
+                    name="{{ name }}"
+                    id="field-{{ name }}-{{ option }}"
+                    value="{{ option }}"
+                    >{{ option }}</label>
+          {% endif %}
+          {% if option.note %}
+            <br>
+            <em class="[ field-list__field-group__description ]" id="description-{{ name }}-{{ option.value }}">{{ option.note }}</em>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+    {% if data.description %}
+      <em class="[ field-list__field-group__description ]" id="description-{{ name }}">{{ data.description }}</em>
+    {% endif %}
+  </fieldset>
+{% endmacro %}
+
+{% macro checkboxes( label, name, options ) %}
+  <fieldset>
+    <legend
+      {% if data.description %}aria-describedby="description-{{ name }}"{% endif %}
+      >{{ label }}</legend>
+    <ul class="field-list__field-group__list">
+      {% for option in options %}
+        <li>
+          {% if option.value %}
+            <label for="field-{{ name }}-{{ option.value }}">
+              <input type="checkbox"
+                    name="{{ name }}[]"
+                    id="field-{{ name }}-{{ option.value }}"
+                    value="{{ option.value }}"
+                    {% if option.note %}aria-describedby="description-{{ name }}-{{ option.value }}"{% endif %}
+                    >{{ option.label }}</label>
+          {% else %}
+            <label for="field-{{ name }}-{{ option }}">
+              <input type="checkbox"
+                    name="{{ name }}[]"
+                    id="field-{{ name }}-{{ option }}"
+                    value="{{ option }}"
+                    >{{ option }}</label>
+          {% endif %}
+          {% if option.note %}
+            <br>
+            <em class="[ field-list__field-group__description ]" id="description-{{ name }}-{{ option.value }}">{{ option.note }}</em>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+    {% if data.description %}
+      <em class="[ field-list__field-group__description ]" id="description-{{ name }}">{{ data.description }}</em>
+    {% endif %}
+  </fieldset>
+{% endmacro %}
+
+{% macro button( text ) %}
+  <button type="submit" class="[ button ] [ font-base text-base weight-bold ]">{{ text }}</button>
+{% endmacro %}
