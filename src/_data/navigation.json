@@ -11,9 +11,9 @@
       "external": true
     },
     {
-      "text": "Twitter",
-      "url": "https://twitter.com/hankchizljaw",
-      "external": true
-    }
+      "text": "Example Contact Page",
+      "url": "/contact",
+      "external": false
+    },
   ]
 }
