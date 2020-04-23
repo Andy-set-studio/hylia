@@ -172,6 +172,10 @@
   <em class="[ field-list__field-group__description ]" id="description-{{ id }}">{{ html | safe }}</em>
 {% endmacro %}
 
+{% macro hidden_field( name, value ) %}
+  <input type="hidden" name="{{ name }}" id="field-{{ name }}" value="{{ value }}">
+{% endmacro %}
+
 {% macro button( text ) %}
   <button type="submit" class="[ button ] [ font-base text-base weight-bold ]">{{ text }}</button>
 {% endmacro %}
