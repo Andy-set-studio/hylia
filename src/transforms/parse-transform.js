@@ -11,7 +11,7 @@ module.exports = function(value, outputPath) {
     });
 
     const document = DOM.window.document;
-    const articleImages = [...document.querySelectorAll('main article img')];
+    const articleImages = [...document.querySelectorAll('main article img, main .intro img')];
     const articleHeadings = [
       ...document.querySelectorAll('main article h2, main article h3')
     ];
