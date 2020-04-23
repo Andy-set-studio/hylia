@@ -53,19 +53,27 @@
           {% if data.multiple %}multiple{% endif %}
           {% if data.description %}aria-describedby="description-{{ name }}"{% endif %}
           >
-    {% for option in data.options_before %}
-      <option>{{ option }}</option>
+    {% for opt in data.options_before %}
+      {{ option( opt ) }}
     {% endfor %}
-    {% for option in options %}
-      <option>{{ option }}</option>
+    {% for opt in options %}
+      {{ option( opt ) }}
     {% endfor %}
-    {% for option in data.options_after %}
-      <option>{{ option }}</option>
+    {% for opt in data.options_after %}
+      {{ option( opt ) }}
     {% endfor %}
   </select>
   {% if data.description %}
     <br>
     {{ description( name, data.description ) }}
+  {% endif %}
+{% endmacro %}
+
+{% macro option( data ) %}
+  {% if data.value %}
+    <option value="{{ data.value }}">{{ data.label }}</option>
+  {% else %}
+    <option>{{ data }}</option>
   {% endif %}
 {% endmacro %}
 
