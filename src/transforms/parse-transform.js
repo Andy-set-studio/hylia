@@ -11,7 +11,7 @@ module.exports = function(value, outputPath) {
     });
 
     const document = DOM.window.document;
-    const articleImages = [...document.querySelectorAll('main article img, main .intro img')];
+    const articleImages = [...document.querySelectorAll('main article img, .intro img')];
     const articleHeadings = [
       ...document.querySelectorAll('main article h2, main article h3')
     ];
@@ -21,9 +21,11 @@ module.exports = function(value, outputPath) {
       articleImages.forEach(image => {
         image.setAttribute('loading', 'lazy');
 
-        let file = image.getAttribute('src');
-        if ( file.indexOf('http') < 0 ) {
-          let dimensions = getSize('src' + file);
+        const file = image.getAttribute('src');
+        
+        if (file.indexOf('http') < 0) {
+          const dimensions = getSize('src' + file);
+          
           image.setAttribute('width', dimensions.width);
           image.setAttribute('height', dimensions.height);;
         }
