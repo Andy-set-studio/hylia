@@ -1,6 +1,6 @@
 {
   "name": "hylia",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "A simple Eleventy starter kit to help you have a blog of your own",
   "main": "index.js",
   "dependencies": {
@@ -10,6 +10,7 @@
     "@tbranyen/jsdom": "^13.0.0",
     "concurrently": "^4.1.2",
     "html-minifier": "^4.0.0",
+    "image-size": "^0.8.3",
     "json-to-scss": "^1.5.0",
     "sass": "^1.26.3",
     "semver": "^6.3.0",

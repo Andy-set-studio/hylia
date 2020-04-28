@@ -41,6 +41,11 @@ hr {
   margin: get-size(900) auto;
 }
 
+// For when metric attributes are added to img elements
+img {
+  height: auto;
+}
+
 :focus {
   outline: 1px solid var(--color-theme-primary-glare);
   outline-offset: 0.25rem;

@@ -2,6 +2,7 @@ const jsdom = require('@tbranyen/jsdom');
 const {JSDOM} = jsdom;
 const minify = require('../utils/minify.js');
 const slugify = require('slugify');
+const getSize = require('image-size');
 
 module.exports = function(value, outputPath) {
   if (outputPath.endsWith('.html')) {
@@ -10,7 +11,7 @@ module.exports = function(value, outputPath) {
     });
 
     const document = DOM.window.document;
-    const articleImages = [...document.querySelectorAll('main article img')];
+    const articleImages = [...document.querySelectorAll('main article img, .intro img')];
     const articleHeadings = [
       ...document.querySelectorAll('main article h2, main article h3')
     ];
@@ -19,6 +20,15 @@ module.exports = function(value, outputPath) {
     if (articleImages.length) {
       articleImages.forEach(image => {
         image.setAttribute('loading', 'lazy');
+
+        const file = image.getAttribute('src');
+        
+        if (file.indexOf('http') < 0) {
+          const dimensions = getSize('src' + file);
+          
+          image.setAttribute('width', dimensions.width);
+          image.setAttribute('height', dimensions.height);;
+        }
 
         // If an image has a title it means that the user added a caption
         // so replace the image with a figure containing that image and a caption
