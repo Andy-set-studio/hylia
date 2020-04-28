@@ -23,7 +23,7 @@
         >
   {% if data.description %}
     <br>
-    <em class="[ field-list__field-group__description ]" id="description-{{ name }}">{{ data.description }}</em>
+    {{ description( name, data.description ) }}
   {% endif %}
 {% endmacro %}
 
@@ -41,7 +41,7 @@
   </label>
   {% if data.description %}
     <br>
-    <em class="[ field-list__field-group__description ]" id="description-{{ name }}">{{ data.description }}</em>
+    {{ description( name, data.description ) }}
   {% endif %}
 {% endmacro %}
 
@@ -53,19 +53,27 @@
           {% if data.multiple %}multiple{% endif %}
           {% if data.description %}aria-describedby="description-{{ name }}"{% endif %}
           >
-    {% for option in data.options_before %}
-      <option>{{ option }}</option>
+    {% for opt in data.options_before %}
+      {{ option( opt ) }}
     {% endfor %}
-    {% for option in options %}
-      <option>{{ option }}</option>
+    {% for opt in options %}
+      {{ option( opt ) }}
     {% endfor %}
-    {% for option in data.options_after %}
-      <option>{{ option }}</option>
+    {% for opt in data.options_after %}
+      {{ option( opt ) }}
     {% endfor %}
   </select>
   {% if data.description %}
     <br>
-    <em class="[ field-list__field-group__description ]" id="description-{{ name }}">{{ data.description }}</em>
+    {{ description( name, data.description ) }}
+  {% endif %}
+{% endmacro %}
+
+{% macro option( data ) %}
+  {% if data.value %}
+    <option value="{{ data.value }}">{{ data.label }}</option>
+  {% else %}
+    <option>{{ data }}</option>
   {% endif %}
 {% endmacro %}
 
@@ -82,7 +90,7 @@
             {% if data.description %}aria-describedby="description-{{ name }}"{% endif %}
             ></textarea>
   {% if data.description %}
-    <em class="[ field-list__field-group__description ]" id="description-{{ name }}">{{ data.description }}</em>
+    {{ description( name, data.description ) }}
   {% endif %}
 {% endmacro %}
 
@@ -112,13 +120,13 @@
           {% endif %}
           {% if option.note %}
             <br>
-            <em class="[ field-list__field-group__description ]" id="description-{{ name }}-{{ option.value }}">{{ option.note }}</em>
+            {{ description( ( name + '-' + option.value ), option.note ) }}
           {% endif %}
         </li>
       {% endfor %}
     </ul>
     {% if data.description %}
-      <em class="[ field-list__field-group__description ]" id="description-{{ name }}">{{ data.description }}</em>
+      {{ description( name, data.description ) }}
     {% endif %}
   </fieldset>
 {% endmacro %}
@@ -149,15 +157,23 @@
           {% endif %}
           {% if option.note %}
             <br>
-            <em class="[ field-list__field-group__description ]" id="description-{{ name }}-{{ option.value }}">{{ option.note }}</em>
+            {{ description( ( name + '-' + option.value ), option.note ) }}
           {% endif %}
         </li>
       {% endfor %}
     </ul>
     {% if data.description %}
-      <em class="[ field-list__field-group__description ]" id="description-{{ name }}">{{ data.description }}</em>
+      {{ description( name, data.description ) }}
     {% endif %}
   </fieldset>
+{% endmacro %}
+
+{% macro description( id, html ) %}
+  <em class="[ field-list__field-group__description ]" id="description-{{ id }}">{{ html | safe }}</em>
+{% endmacro %}
+
+{% macro hidden_field( name, value ) %}
+  <input type="hidden" name="{{ name }}" id="field-{{ name }}" value="{{ value }}">
 {% endmacro %}
 
 {% macro button( text ) %}

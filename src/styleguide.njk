@@ -108,7 +108,7 @@ permalink: /styleguide/
         {% endfor %}
         
         <h2>Forms</h2>
-        {% from "macros/form.njk" import label, field, textarea, confirm, select, radios, checkboxes, button %}
+        {% from "macros/form.njk" import label, field, textarea, confirm, select, radios, checkboxes, hidden_field, button %}
         <form>
           <ol class="[ field-list ]">
             <li class="[ field-list__field-group ]">
@@ -125,7 +125,7 @@ permalink: /styleguide/
             </li>
             <li class="[ field-list__field-group ]">
               {{ label("Select Label", "field-select-name") }}
-              {{ select( "select", [ "option 1", "option 2" ], { required: true, options_before: ["prepended option"], options_after: ["appended option"], description: "Optional description." } ) }}
+              {{ select( "select", [ "option 1", {label: "Option II", value: "option 2"} ], { required: true, options_before: ["prepended option"], options_after: ["appended option"], description: "Optional description." } ) }}
             </li>
             <li class="[ field-list__field-group field-list__field-group--confirm ]">
               {{ confirm("Confirm this statement", "confirm") }}
@@ -135,6 +135,10 @@ permalink: /styleguide/
             </li>
             <li class="[ field-list__field-group ]">
               {{ checkboxes("Checkbox Legend", "field-checkbox-name", [ "Choice 1", { label: "Choice 2", value: "Choice 2", note: "Note about choice." }, "Choice 3" ], { description: "Optional description." } ) }}
+            </li>
+            <li class="[ field-list__field-group ]">
+              There is a hidden field here…
+              {{ hidden_field("hidden-name", "hidden-value") }}
             </li>
           </ol>
           {{ button("Button Text") }}
