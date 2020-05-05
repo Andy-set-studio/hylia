@@ -94,7 +94,7 @@
   {% endif %}
 {% endmacro %}
 
-{% macro radios( label, name, options ) %}
+{% macro radios( label, name, options, data ) %}
   <fieldset>
     <legend
       {% if data.description %}aria-describedby="description-{{ name }}"{% endif %}
@@ -131,7 +131,7 @@
   </fieldset>
 {% endmacro %}
 
-{% macro checkboxes( label, name, options ) %}
+{% macro checkboxes( label, name, options, data ) %}
   <fieldset>
     <legend
       {% if data.description %}aria-describedby="description-{{ name }}"{% endif %}
