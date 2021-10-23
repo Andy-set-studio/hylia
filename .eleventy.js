@@ -36,7 +36,7 @@ module.exports = function(config) {
   config.addPassthroughCopy('node_modules/nunjucks/browser/nunjucks-slim.js');
   config.addPassthroughCopy('src/robots.txt');
 
-  const now = new Date();
+  const now = new Date(new Date().toUTCString());
 
   // Custom collections
   const livePosts = post => post.date <= now && !post.data.draft;
