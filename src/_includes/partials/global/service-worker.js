@@ -7,14 +7,21 @@ const CACHE_KEYS = {
 const EXCLUDED_URLS = [
   'admin',
   '.netlify',
+  '/browser-sync/socket.io/',
   'https://identity.netlify.com/v1/netlify-identity-widget.js',
   'https://unpkg.com/netlify-cms@^2.9.3/dist/netlify-cms.js',
   '/contact',
   '/thank-you'
 ];
 
+const OFFLINE_PAGE = '/offline/index.html';
+
 // URLS that we want to be cached when the worker is installed
-const PRE_CACHE_URLS = ['/', '/fonts/lora-v13-latin-700.woff'];
+const PRE_CACHE_URLS = [
+  OFFLINE_PAGE,
+  '/',
+  '/fonts/lora-v13-latin-700.woff'
+];
 
 // You might want to bypass a certain host
 const IGNORED_HOSTS = ['localhost', 'unpkg.com', ];
@@ -63,9 +70,7 @@ self.addEventListener('fetch', evt => {
   }
 
   // Check we don't want to ignore this URL
-  if (EXCLUDED_URLS.some(page => evt.request.url.indexOf(page) > -1)) {
-    return;
-  }
+  const isExcluded = EXCLUDED_URLS.some(page => evt.request.url.indexOf(page) > -1);
 
   evt.respondWith(
     caches.match(evt.request).then(cachedResponse => {
@@ -73,18 +78,32 @@ self.addEventListener('fetch', evt => {
       if (cachedResponse) {
         return cachedResponse;
       }
-
+      
       // Nothing found so load up the request from the network
       return caches.open(CACHE_KEYS.RUNTIME).then(cache => {
         return fetch(evt.request)
           .then(response => {
-            // Put the new response in cache and return it
+            // URL is excluded, return network response directly
+            // without adding it to the cache first
+            if(isExcluded) {
+              return response;
+            }
+            
+            // Otherwise put the new response in cache and return it
             return cache.put(evt.request, response.clone()).then(() => {
               return response;
             });
           })
-          .catch(ex => {
-            return;
+          .catch(async (ex) => {
+            // for failed navigation requests, return 'offline' page
+            if(evt.request.destination === "document") {
+              const preCache = await caches.open(CACHE_KEYS.PRE_CACHE);
+              const offlinePage = await preCache.match(OFFLINE_PAGE);
+              return offlinePage || Response.error();
+            }
+            else {
+              return Response.error();
+            }
           });
       });
     })
